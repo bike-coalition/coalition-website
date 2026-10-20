@@ -19,6 +19,7 @@ The step-by-step version is in [docs/runbook.md](docs/runbook.md).
 | `manifest.json` | Every page, and whether it stays native Squarespace or gets custom code |
 | `docs/sitemap.md` | A proposed menu structure, on hold |
 | `docs/runbook.md` | How a change goes from this repo to the live site |
+| `docs/baseline/` | Records of the live site before custom code goes in |
 | `CLAUDE.md` | Rules for Claude when it works in this repo |
 
 ## Status
