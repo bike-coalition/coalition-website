@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+.env
+.env.*
+# Licensed font files never go in this public repo
+*.woff
+*.woff2
+*.otf
+*.ttf

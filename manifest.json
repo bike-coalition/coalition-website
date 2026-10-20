@@ -1,0 +1,34 @@
+{
+  "site": "https://sdbikecoalition.org",
+  "platform": "Squarespace 7.1",
+  "note": "build: native = stays Squarespace, custom = custom code from this repo, undecided = waiting on the native vs custom decision.",
+  "pages": [
+    { "path": "/", "title": "Homepage", "build": "custom", "status": "pilot, waiting on direction choice" },
+    { "path": "/calendar", "title": "Calendar", "build": "native" },
+    { "path": "/blog", "title": "News & Blog", "build": "native" },
+    { "path": "/shop", "title": "Merch Store", "build": "native" },
+    { "path": "/donate", "title": "Donate", "build": "undecided", "embeds": ["Givebutter"] },
+    { "path": "/volunteer", "title": "Volunteer", "build": "undecided", "embeds": ["Point"] },
+    { "path": "/newsletter", "title": "Newsletter", "build": "undecided", "embeds": ["Squarespace Newsletter block"] },
+    { "path": "/board-candidates", "title": "Board Election", "build": "custom", "status": "drafted, seasonal" },
+    { "path": "/classes", "title": "Classes", "build": "undecided" },
+    { "path": "/repair", "title": "Repair Clinic", "build": "undecided" },
+    { "path": "/clubs", "title": "Group Rides & Clubs", "build": "undecided" },
+    { "path": "/policy-statements", "title": "Policy Positions", "build": "undecided" },
+    { "path": "/ambassador-program", "title": "Be an Ambassador", "build": "undecided" },
+    { "path": "/meetings", "title": "Attend a Meeting", "build": "undecided" },
+    { "path": "/teach", "title": "Teach a Class", "build": "undecided" },
+    { "path": "/safety-tips", "title": "Riding Safely", "build": "undecided" },
+    { "path": "/e-bikes", "title": "E-Bikes", "build": "undecided" },
+    { "path": "/hazard", "title": "Report a Hazard", "build": "undecided" },
+    { "path": "/traffic-violence", "title": "After a Crash", "build": "undecided" },
+    { "path": "/mission", "title": "Mission & History", "build": "undecided" },
+    { "path": "/staff-board", "title": "Staff & Board", "build": "undecided" },
+    { "path": "/annual-reports", "title": "Impact & Reports", "build": "undecided" },
+    { "path": "/contact", "title": "Contact & FAQ", "build": "undecided" },
+    { "path": "/membership", "title": "Join", "build": "undecided" }
+  ],
+  "external": [
+    { "url": "https://bikethebay.net", "title": "Bike the Bay", "embeds": ["BikeReg"] }
+  ]
+}

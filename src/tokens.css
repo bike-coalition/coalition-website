@@ -1,0 +1,65 @@
+/*
+  San Diego County Bike Coalition design tokens.
+  Colors and type follow the 2025 brand guidelines from Feel For Design Practice.
+  Values marked "draft" come from the homepage directions on the design canvas
+  and are not in the brand guide yet. Confirm them before launch.
+*/
+
+:root {
+  /* Primary color set */
+  --bc-spring-green: #C7EC7A;
+  --bc-teal-green: #226550;
+  --bc-peachy: #FFCF90;
+  --bc-sky-blue: #7BD1F3;
+  --bc-lavender: #E4C7FF;
+  --bc-safety-red: #FF4900;
+  --bc-ultramarine: #0041FD;
+  --bc-magenta: #E747AC;
+  --bc-white: #FFFFFF;
+
+  /* Draft tints used in the homepage directions */
+  --bc-teal-deep: #1A4D3D;   /* draft: secondary text on white */
+  --bc-mist: #EEF3EA;        /* draft: light section background */
+
+  /* Roles */
+  --bc-ink: var(--bc-teal-green);
+  --bc-ink-muted: var(--bc-teal-deep);
+  --bc-surface: var(--bc-white);
+  --bc-surface-alt: var(--bc-mist);
+  --bc-surface-dark: var(--bc-teal-green);
+  --bc-highlight: var(--bc-spring-green);
+  --bc-link-hover: var(--bc-safety-red);
+
+  /* Type. Obviously is licensed and not hosted here; Archivo is the fallback. */
+  --bc-font-display: 'Obviously', 'Archivo Black', 'Archivo', system-ui, sans-serif;
+  --bc-font-body: 'Inter', system-ui, sans-serif;
+  --bc-text-body: 18px;
+  --bc-text-small: 16px;
+  --bc-leading-body: 1.55;
+  --bc-leading-display: 0.95;
+  --bc-tracking-display: -0.02em;
+  --bc-tracking-caps: 0.12em;
+
+  /* Layout */
+  --bc-max-width: 1320px;
+  --bc-gutter: 32px;
+  --bc-section-pad: 110px;
+  --bc-gap: 28px;
+
+  /* Shapes */
+  --bc-radius-pill: 999px;
+  --bc-radius-card: 24px;
+  --bc-radius-tile: 28px;
+  --bc-radius-arch: 999px 999px 0 0;  /* sprocket arch photo mask */
+
+  /* Buttons */
+  --bc-button-height: 52px;
+  --bc-button-height-compact: 44px;  /* minimum touch target */
+  --bc-button-pad: 0 26px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --bc-motion: none;
+  }
+}
