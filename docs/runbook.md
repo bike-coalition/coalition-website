@@ -4,15 +4,15 @@ Plain-English steps for anyone at the Coalition. You don't need to write code to
 
 ## The short version
 
-Change in a pull request → review and merge → make a release tag → test it on the hidden preview page → update the tag in Squarespace.
+Commit the change → make a release tag → test it on the hidden preview page → update the tag in Squarespace.
 
 ## 1. Make the change
 
-Claude or a volunteer opens a pull request (PR) on GitHub. The PR says what changed and links a screenshot. Automatic checks run on it once they're set up.
+Claude commits the change to `main` on GitHub and shares a screenshot. Nothing on the live site changes yet. (Only two people edit this repo right now, so there are no pull requests. Add them back when more people join.)
 
-## 2. Review and merge
+## 2. Look it over
 
-Someone at the Coalition reads the PR, looks at the screenshot, and clicks **Merge**. Nothing on the live site changes yet.
+Check the screenshot and the commit on GitHub. Ask for changes before anything gets tagged.
 
 ## 3. Make a release tag
 
@@ -39,4 +39,3 @@ Put the previous tag back in Code Injection and save. The site goes back to how 
 - The hidden preview page
 - The loader in Code Injection (pinned tag, integrity hash, preconnect)
 - Automatic checks for links, speed and accessibility
-- Branch protection: required PR review on `main`

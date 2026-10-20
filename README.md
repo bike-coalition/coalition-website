@@ -17,13 +17,13 @@ The step-by-step version is in [docs/runbook.md](docs/runbook.md).
 | --- | --- |
 | `src/tokens.css` | Brand colors, type, spacing and buttons as CSS variables |
 | `manifest.json` | Every page, and whether it stays native Squarespace or gets custom code |
-| `docs/sitemap.md` | The proposed menu structure (not chosen yet) |
+| `docs/sitemap.md` | A proposed menu structure, on hold |
 | `docs/runbook.md` | How a change goes from this repo to the live site |
 | `CLAUDE.md` | Rules for Claude when it works in this repo |
 
 ## Status
 
-Phase 3 of the website roadmap: repo and security. The homepage pilot build comes next, once a homepage direction and a nav option are chosen.
+Phase 3 of the website roadmap: repo and security. The current homepage and menus stay as they are for now. A new homepage and a nav reorganization are on hold.
 
 ## Contact
 

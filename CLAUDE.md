@@ -4,7 +4,8 @@ Custom code for sdbikecoalition.org, a Squarespace 7.1 site. Read `README.md` an
 
 ## Ground rules
 
-- Never change the live site directly. Work goes through a pull request, a release tag, and a hidden preview page before anyone updates the tag in Squarespace Code Injection.
+- Never change the live site directly. Commit to `main` (no pull requests for now: only two people edit this repo), then a release tag and a hidden preview page before anyone updates the tag in Squarespace Code Injection.
+- The current homepage and menus stay as they are for now. Don't build a new homepage or reorganize the nav unless asked.
 - Scheduled or automated runs open pull requests only. They never merge, tag, or publish.
 - Roll out one page at a time. Save a page's old content before replacing it.
 - Pages listed as `native` in `manifest.json` stay native Squarespace. Don't rebuild them in code.

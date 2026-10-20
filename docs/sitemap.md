@@ -1,6 +1,6 @@
 # Site map
 
-**Not chosen yet.** This is Option B, intent-based menus, recommended in the October 19 audit. Options A (light reorder of today's menus) and C (audience menus) are still open. This file gets finalized once a nav option is picked.
+**On hold.** The current menus stay as they are for now. This is Option B, intent-based menus, recommended in the October 19 audit, kept for when a nav reorganization is back on the table. Options A (light reorder of today's menus) and C (audience menus) are also still open.
 
 Join and Donate sit in the header as buttons, outside the menus.
 
