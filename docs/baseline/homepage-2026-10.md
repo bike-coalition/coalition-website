@@ -63,4 +63,4 @@ Measured with `getComputedStyle` at 1186 px. Footer values were not reliable; re
 
 - Homepage phone at exactly 390 px, if that 20 px difference matters.
 - Full-size originals of the homepage photos (not downloaded).
-- Every page other than the homepage, including /donate.
+- Every page other than the homepage was recreated on the design canvas on October 20, 2026. Issues found are in [site-issues-2026-10.md](site-issues-2026-10.md).
