@@ -43,6 +43,30 @@ The drafts are tidy, on-brand and honest about what they don't know. They are no
 - Giving Tuesday goal or match, and the impact ladder's amounts and outcomes.
 - The Champion membership tag "Go all in" is new wording.
 
+## Regrade, second pass (October 21)
+
+After the first round of fixes the drafts graded **B-**: the journey and fundraising problems were solved, but 30 inner pages still opened with the same teal hero and arch, the homepage had no Bike the Bay and an empty "happening now", Advocacy had no sense of urgency, and the longest pages were walls.
+
+After the second pass: **B+.**
+
+| Area | First | Now | What changed |
+| --- | --- | --- | --- |
+| Visual system | B | A- | Hero families by section: Learn pages open on Spring Green with a wide photo, Act pages on a full-bleed photo under Deep Teal, About and Join pages keep the sprocket arch, which is now a signature again. Utility pages stay compact. |
+| Storytelling | D | B+ | Homepage arc, plus Bike the Bay ("Once a year, the bridge is ours.") and the 18-cities ticker as the one moment of motion (still when reduced motion is on). |
+| Journey and curiosity | D | A- | "I want to: Ride, Learn, Speak up, Give" right under the homepage hero; Keep rolling band on every page; "On this page" jump links on the seven longest pages. |
+| Fundraising | C- | B+ | Unchanged this pass; held back by blank impact amounts. |
+| Urgency | n/a | B+ | Advocacy now opens with "Show up where it's decided": real items from Agenda Watch, sampled October 21, 2026. |
+| Proof and people | D | C+ | Real upcoming events on the homepage; named staff contacts on Classes, Teach, Advocacy and Bike Share. Still one testimonial and no approved stats. |
+| Accessibility | C | B+ | Spacing fixed; photo overlays raised to 86% so Spring Green headlines clear 4.5:1 even over white. Not yet tested at phone width or with a screen reader. |
+
+### What keeps it from an A
+
+1. Real stories: collect three to five rider stories with photos (a first-time commuter, a parent on a school route, a crash survivor who now advocates).
+2. Approved numbers for the homepage stat, the impact ladder and corporate claims.
+3. A Bike the Bay photo and date; a merch photo.
+4. Agenda Watch as a live feed rather than a dated sample, with real "attend or comment" links.
+5. A rendered check at desktop and phone width, and a mobile header with a menu button.
+
 ## Not fixed yet
 
 - Testimonials and rider stories: the site has eight testimonials, but only one quote's text was captured. Collect real stories and photos; don't write them.
