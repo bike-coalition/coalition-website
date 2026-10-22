@@ -2,7 +2,10 @@
   Footer: 18 cities band and ticker. Squarespace global footer, Code block.
   Styles: src/blocks/footer/cities-ticker.css, served from jsDelivr at the tag below.
   The extra "sdbc-cities" class stays until the Classes page block (which hides this band there) moves too.
+  The small inline style below is deliberate: it keeps the band one row tall before the stylesheet loads,
+  so the Squarespace editor never measures an unstyled 36-item list and grows the block (it did once: 88 rows).
 -->
+<style>.bc-cities{overflow:hidden;max-height:240px}.bc-cities__track,.bc-cities__set{display:flex;flex-wrap:nowrap;white-space:nowrap;list-style:none;margin:0;padding:0}.bc-cities__sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}</style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bike-coalition/coalition-website@v0.2.0/src/blocks/footer/cities-ticker.css" integrity="sha384-oaneqOGjbgIguyj/OByAAnSJG2R8PYC/9qtZMsz8G/uAGYG3MXMQVNXv3TSSp6KY" crossorigin="anonymous">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,700..900&family=Inter:wght@500&display=swap">
