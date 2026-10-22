@@ -35,7 +35,7 @@
       "styles": "src/blocks/footer/cities-ticker.css",
       "jsdelivr": {
         "tag": "v0.2.0",
-        "status": "released; Squarespace block not swapped yet"
+        "status": "live since 2026-10-21; verified on home, mission, classes, calendar"
       }
     },
     {
