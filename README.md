@@ -15,6 +15,10 @@ The step-by-step version is in [docs/runbook.md](docs/runbook.md).
 
 | Path | What it is |
 | --- | --- |
+| `src/site/` | Site-wide Custom CSS and header code, as they are in Squarespace today |
+| `src/blocks/` | Every Squarespace Code block, one file each, plus `registry.json` mapping each to its page and block ID |
+| `docs/code-map.md` | Where every piece of custom code lives on the live site |
+| `docs/jsdelivr-plan.md` | How the pasted code moves to jsDelivr, step by step |
 | `src/tokens.css` | Brand colors, type, spacing and buttons as CSS variables |
 | `src/pages/` | Page stylesheets, each loaded only on its own page |
 | `docs/pages/` | Step-by-step Squarespace build guides, one per page |

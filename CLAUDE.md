@@ -9,6 +9,7 @@ Custom code for sdbikecoalition.org, a Squarespace 7.1 site. Read `README.md` an
 - Scheduled or automated runs open pull requests only. They never merge, tag, or publish.
 - Roll out one page at a time. Save a page's old content before replacing it.
 - Pages listed as `native` in `manifest.json` stay native Squarespace. Don't rebuild them in code.
+- This repo is the source of truth for all custom code. `docs/code-map.md` and `src/blocks/registry.json` say where each file lives in Squarespace. Change the file here first, commit, then paste or release it. Never edit a Code block only in Squarespace.
 - This repo is public. Never commit passwords, API keys, donor or member data, or anything from a private document.
 
 ## Writing on the site

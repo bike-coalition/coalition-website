@@ -1,0 +1,193 @@
+{
+  "captured": "2026-10-21",
+  "source": "public HTML of all 293 sitemap URLs on sdbikecoalition.org",
+  "blocks": [
+    {
+      "file": "src/blocks/footer/candid-seal.html",
+      "title": "Footer: Candid transparency seal",
+      "squarespace_block_id": [
+        "block-yui_3_17_2_1_1773350234739_9508"
+      ],
+      "pages": "every page (global footer)",
+      "location": "footer",
+      "bytes": 301,
+      "has_css": false,
+      "has_js": false,
+      "external": [
+        "https://app.candid.org",
+        "https://widgets.guidestar.org"
+      ]
+    },
+    {
+      "file": "src/blocks/footer/cities-ticker.html",
+      "title": "Footer: 18 cities band and ticker",
+      "squarespace_block_id": [
+        "block-yui_3_17_2_1_1792000673895_11903"
+      ],
+      "pages": "every page (global footer)",
+      "location": "footer",
+      "bytes": 4356,
+      "has_css": true,
+      "has_js": false,
+      "external": [
+        "https://fonts.googleapis.com"
+      ]
+    },
+    {
+      "file": "src/blocks/events/bike-the-bay-festival-widget.html",
+      "title": "Event: Bike the Bay Festival Givebutter widget",
+      "squarespace_block_id": [
+        "block-yui_3_17_2_1_1786577759728_1925"
+      ],
+      "pages": [
+        "/calendar/bike-the-bay-festival"
+      ],
+      "location": "section 0",
+      "bytes": 52,
+      "has_css": false,
+      "has_js": false,
+      "external": []
+    },
+    {
+      "file": "src/blocks/home/testimonials.html",
+      "title": "Homepage: What people are saying (testimonials carousel)",
+      "squarespace_block_id": [
+        "block-yui_3_17_2_1_1792131330413_7810"
+      ],
+      "pages": [
+        "/home"
+      ],
+      "location": "section 0",
+      "bytes": 9946,
+      "has_css": true,
+      "has_js": true,
+      "external": []
+    },
+    {
+      "file": "src/blocks/classes/find-your-class.html",
+      "title": "Classes: class carousel, paths and FAQ",
+      "squarespace_block_id": [
+        "block-yui_3_17_2_1_1792134638560_5363"
+      ],
+      "pages": [
+        "/classes"
+      ],
+      "location": "section 0",
+      "bytes": 328780,
+      "has_css": true,
+      "has_js": true,
+      "external": [
+        "https://images.squarespace-cdn.com",
+        "https://www.sandag.org"
+      ]
+    },
+    {
+      "file": "src/blocks/classes/let-us-come-to-you.html",
+      "title": "Classes: free classes at your school or workplace",
+      "squarespace_block_id": [
+        "block-yui_3_17_2_1_1792134227057_4779"
+      ],
+      "pages": [
+        "/classes"
+      ],
+      "location": "section 0",
+      "bytes": 13748,
+      "has_css": true,
+      "has_js": false,
+      "external": [
+        "https://images.squarespace-cdn.com",
+        "https://www.sandag.org"
+      ]
+    },
+    {
+      "file": "src/blocks/board-candidates/candidates.html",
+      "title": "Board Candidates: full page",
+      "squarespace_block_id": [
+        "block-yui_3_17_2_1_1792447618665_775"
+      ],
+      "pages": [
+        "/board-candidates"
+      ],
+      "location": "section 0",
+      "bytes": 19081,
+      "has_css": true,
+      "has_js": true,
+      "external": [
+        "https://docs.google.com",
+        "https://fonts.googleapis.com"
+      ]
+    },
+    {
+      "file": "src/blocks/ciclosdias/ciclosdias.html",
+      "title": "CicloSDias: full page",
+      "squarespace_block_id": [
+        "block-yui_3_17_2_1_1792047490262_458"
+      ],
+      "pages": [
+        "/ciclosdias"
+      ],
+      "location": "section 0",
+      "bytes": 21909,
+      "has_css": true,
+      "has_js": false,
+      "external": [
+        "https://fonts.googleapis.com",
+        "https://sdbikecoalition.org",
+        "https://static1.squarespace.com",
+        "https://www.facebook.com",
+        "https://www.instagram.com"
+      ]
+    },
+    {
+      "file": "src/blocks/events/givebutter-ticket-widget.html",
+      "title": "Events: Givebutter ticket widget (template, one per event page)",
+      "squarespace_block_id": [
+        "block-6843f37bf249bf00227d",
+        "block-0dc31bda141dd4ad50b6",
+        "block-f20536e06de40d8c284c",
+        "block-21ef1a2ae31cc3443c52",
+        "block-yui_3_17_2_1_1791930451978_2534"
+      ],
+      "pages": [
+        "/calendar/080727-city-cycling-la-mesa",
+        "/calendar/061227-city-cycling-la-mesa",
+        "/calendar/052227-city-cycling-la-mesa",
+        "/calendar/031327-city-cycling-la-mesa",
+        "/calendar/012327-city-cycling-la-mesa"
+      ],
+      "location": "section 0",
+      "instances": [
+        {
+          "page": "/calendar/080727-city-cycling-la-mesa",
+          "widget_id": "LZoaX2",
+          "block_id": "block-6843f37bf249bf00227d",
+          "code_sha1": "40b467ac8f"
+        },
+        {
+          "page": "/calendar/061227-city-cycling-la-mesa",
+          "widget_id": "g8MXRw",
+          "block_id": "block-0dc31bda141dd4ad50b6",
+          "code_sha1": "c4bb316cd8"
+        },
+        {
+          "page": "/calendar/052227-city-cycling-la-mesa",
+          "widget_id": "prWZxz",
+          "block_id": "block-f20536e06de40d8c284c",
+          "code_sha1": "f9af89f554"
+        },
+        {
+          "page": "/calendar/031327-city-cycling-la-mesa",
+          "widget_id": "gBZXqd",
+          "block_id": "block-21ef1a2ae31cc3443c52",
+          "code_sha1": "a22f276021"
+        },
+        {
+          "page": "/calendar/012327-city-cycling-la-mesa",
+          "widget_id": "gJRroP",
+          "block_id": "block-yui_3_17_2_1_1791930451978_2534",
+          "code_sha1": "ef73c0fe5d"
+        }
+      ]
+    }
+  ]
+}
