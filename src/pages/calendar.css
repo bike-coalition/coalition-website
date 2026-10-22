@@ -1,0 +1,146 @@
+/*
+  Calendar page styling for native Squarespace Summary blocks.
+  Load on the Calendar page only (Page Settings > Advanced > Page Header
+  Code Injection), after src/tokens.css. Targets event Summary blocks
+  (Summary v2, any layout) and leaves every other block alone.
+  See docs/pages/calendar-build.md for the block settings this expects.
+*/
+
+/* Live site loads Obviously from Adobe Fonts as "obviously-wide" */
+:root {
+  --bc-cal-display: 'obviously-wide', var(--bc-font-display);
+}
+
+/* Block header: "Signature events", "Classes", etc. */
+[class*="summary-block-collection-type-events"] .summary-heading,
+[class*="summary-block-collection-type-events"] .summary-collection-title {
+  font-family: var(--bc-cal-display);
+  font-weight: 700;
+  letter-spacing: var(--bc-tracking-display);
+  color: var(--bc-ink);
+}
+
+/* Each event becomes a white card */
+.summary-item-record-type-event {
+  background: var(--bc-white);
+  border-radius: var(--bc-radius-card);
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.summary-item-record-type-event .summary-content {
+  padding: 20px 24px 26px;
+}
+
+/* Photo with rounded top; keeps Squarespace's own cropping */
+.summary-item-record-type-event .summary-thumbnail-container {
+  border-radius: var(--bc-radius-card) var(--bc-radius-card) 0 0;
+  overflow: hidden;
+}
+
+/* Date badge on the photo becomes a Spring Green pill */
+.summary-item-record-type-event .summary-thumbnail-event-date {
+  background: var(--bc-spring-green);
+  color: var(--bc-ink);
+  border-radius: var(--bc-radius-pill);
+  padding: 6px 14px;
+  top: 14px;
+  left: 14px;
+}
+
+.summary-item-record-type-event .summary-thumbnail-event-date-month,
+.summary-item-record-type-event .summary-thumbnail-event-date-day {
+  color: var(--bc-ink);
+  font-family: var(--bc-font-body);
+  font-weight: 700;
+}
+
+/* Title */
+.summary-item-record-type-event .summary-title,
+.summary-item-record-type-event .summary-title-link {
+  font-family: var(--bc-cal-display);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--bc-ink);
+  text-decoration: none;
+}
+
+.summary-item-record-type-event .summary-title-link:hover,
+.summary-item-record-type-event .summary-title-link:focus-visible {
+  color: var(--bc-ink-muted);
+  text-decoration: underline;
+}
+
+/* Date and time line */
+.summary-item-record-type-event .summary-metadata-item--date {
+  font-family: var(--bc-font-body);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: var(--bc-tracking-caps);
+  text-transform: uppercase;
+  color: var(--bc-ink-muted);
+}
+
+.summary-item-record-type-event .summary-excerpt {
+  color: var(--bc-ink-muted);
+  font-size: var(--bc-text-small);
+}
+
+/* "Read more" becomes a bold link with an arrow */
+.summary-item-record-type-event .summary-read-more-link {
+  font-family: var(--bc-font-body);
+  font-weight: 700;
+  color: var(--bc-ink);
+  text-decoration: none;
+  display: inline-flex;
+  min-height: var(--bc-button-height-compact);
+  align-items: center;
+}
+
+.summary-item-record-type-event .summary-read-more-link::after {
+  content: " \2192";
+}
+
+/* Carousel arrows: 48px round outline buttons */
+[class*="summary-block-collection-type-events"] .summary-carousel-pager-prev,
+[class*="summary-block-collection-type-events"] .summary-carousel-pager-next {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--bc-radius-pill);
+  border: 2px solid var(--bc-ink);
+  color: var(--bc-ink);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[class*="summary-block-collection-type-events"] .summary-carousel-pager-prev:focus-visible,
+[class*="summary-block-collection-type-events"] .summary-carousel-pager-next:focus-visible,
+.summary-item-record-type-event a:focus-visible {
+  outline: 3px solid var(--bc-ink);
+  outline-offset: 3px;
+}
+
+/* On teal sections, flip the controls so they stay visible */
+[data-section-theme="bright"] [class*="summary-block-collection-type-events"] .summary-heading,
+[data-section-theme="bright"] [class*="summary-block-collection-type-events"] .summary-collection-title,
+[data-section-theme="bright-inverse"] [class*="summary-block-collection-type-events"] .summary-heading,
+[data-section-theme="bright-inverse"] [class*="summary-block-collection-type-events"] .summary-collection-title {
+  color: var(--bc-spring-green);
+}
+
+[data-section-theme="bright"] [class*="summary-block-collection-type-events"] .summary-carousel-pager-prev,
+[data-section-theme="bright"] [class*="summary-block-collection-type-events"] .summary-carousel-pager-next,
+[data-section-theme="bright-inverse"] [class*="summary-block-collection-type-events"] .summary-carousel-pager-prev,
+[data-section-theme="bright-inverse"] [class*="summary-block-collection-type-events"] .summary-carousel-pager-next {
+  border-color: var(--bc-spring-green);
+  color: var(--bc-spring-green);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .summary-item-record-type-event,
+  .summary-item-record-type-event * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

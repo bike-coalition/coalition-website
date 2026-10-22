@@ -16,6 +16,8 @@ The step-by-step version is in [docs/runbook.md](docs/runbook.md).
 | Path | What it is |
 | --- | --- |
 | `src/tokens.css` | Brand colors, type, spacing and buttons as CSS variables |
+| `src/pages/` | Page stylesheets, each loaded only on its own page |
+| `docs/pages/` | Step-by-step Squarespace build guides, one per page |
 | `manifest.json` | Every page, and whether it stays native Squarespace or gets custom code |
 | `docs/sitemap.md` | A proposed menu structure, on hold |
 | `docs/runbook.md` | How a change goes from this repo to the live site |
