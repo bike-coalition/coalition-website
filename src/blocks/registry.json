@@ -27,11 +27,16 @@
       "pages": "every page (global footer)",
       "location": "footer",
       "bytes": 4356,
-      "has_css": true,
+      "has_css": false,
       "has_js": false,
       "external": [
         "https://fonts.googleapis.com"
-      ]
+      ],
+      "styles": "src/blocks/footer/cities-ticker.css",
+      "jsdelivr": {
+        "tag": "v0.2.0",
+        "status": "released; Squarespace block not swapped yet"
+      }
     },
     {
       "file": "src/blocks/events/bike-the-bay-festival-widget.html",

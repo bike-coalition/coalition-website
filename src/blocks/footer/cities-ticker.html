@@ -1,103 +1,31 @@
+<!--
+  Footer: 18 cities band and ticker. Squarespace global footer, Code block.
+  Styles: src/blocks/footer/cities-ticker.css, served from jsDelivr at the tag below.
+  The extra "sdbc-cities" class stays until the Classes page block (which hides this band there) moves too.
+-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bike-coalition/coalition-website@v0.2.0/src/blocks/footer/cities-ticker.css" integrity="sha384-oaneqOGjbgIguyj/OByAAnSJG2R8PYC/9qtZMsz8G/uAGYG3MXMQVNXv3TSSp6KY" crossorigin="anonymous">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,700..900&family=Inter:wght@500&display=swap">
 
-<section class="sdbc-cities" aria-labelledby="sdbc-cities-title">
-  <div class="sdbc-cities__head">
-    <h2 id="sdbc-cities-title" class="sdbc-cities__title">
-      <span class="sdbc-narrow">18 cities.</span>
-      <span class="sdbc-narrow">One county.</span>
+<section class="bc-cities sdbc-cities" aria-labelledby="bc-cities-title">
+  <div class="bc-cities__head">
+    <h2 id="bc-cities-title" class="bc-cities__title">
+      <span class="bc-cities__narrow">18 cities.</span>
+      <span class="bc-cities__narrow">One county.</span>
     </h2>
-    <p class="sdbc-cities__label">All connected by bike</p>
+    <p class="bc-cities__label">All connected by bike</p>
   </div>
 
-  <p class="sdbc-sr">The San Diego County Bike Coalition works in all 18 cities in San Diego County: Carlsbad, Chula Vista, Coronado, Del Mar, El Cajon, Encinitas, Escondido, Imperial Beach, La Mesa, Lemon Grove, National City, Oceanside, Poway, San Diego, San Marcos, Santee, Solana Beach, and Vista.</p>
+  <p class="bc-cities__sr">The San Diego County Bike Coalition works in all 18 cities in San Diego County: Carlsbad, Chula Vista, Coronado, Del Mar, El Cajon, Encinitas, Escondido, Imperial Beach, La Mesa, Lemon Grove, National City, Oceanside, Poway, San Diego, San Marcos, Santee, Solana Beach, and Vista.</p>
 
-  <div class="sdbc-cities__viewport" aria-hidden="true">
-    <div class="sdbc-cities__track">
-      <ul class="sdbc-cities__set">
+  <div class="bc-cities__viewport" aria-hidden="true">
+    <div class="bc-cities__track">
+      <ul class="bc-cities__set">
         <li>Carlsbad</li><li>/</li><li>Chula Vista</li><li>/</li><li>Coronado</li><li>/</li><li>Del Mar</li><li>/</li><li>El Cajon</li><li>/</li><li>Encinitas</li><li>/</li><li>Escondido</li><li>/</li><li>Imperial Beach</li><li>/</li><li>La Mesa</li><li>/</li><li>Lemon Grove</li><li>/</li><li>National City</li><li>/</li><li>Oceanside</li><li>/</li><li>Poway</li><li>/</li><li>San Diego</li><li>/</li><li>San Marcos</li><li>/</li><li>Santee</li><li>/</li><li>Solana Beach</li><li>/</li><li>Vista</li><li>/</li>
       </ul>
-      <ul class="sdbc-cities__set">
+      <ul class="bc-cities__set">
         <li>Carlsbad</li><li>/</li><li>Chula Vista</li><li>/</li><li>Coronado</li><li>/</li><li>Del Mar</li><li>/</li><li>El Cajon</li><li>/</li><li>Encinitas</li><li>/</li><li>Escondido</li><li>/</li><li>Imperial Beach</li><li>/</li><li>La Mesa</li><li>/</li><li>Lemon Grove</li><li>/</li><li>National City</li><li>/</li><li>Oceanside</li><li>/</li><li>Poway</li><li>/</li><li>San Diego</li><li>/</li><li>San Marcos</li><li>/</li><li>Santee</li><li>/</li><li>Solana Beach</li><li>/</li><li>Vista</li><li>/</li>
       </ul>
     </div>
   </div>
 </section>
-
-<style>
-  .sdbc-cities {
-    --sdbc-green: #C7EC7A;
-    --sdbc-teal: #226550;
-    --sdbc-speed: 40s;
-    background: var(--sdbc-green);
-    color: var(--sdbc-teal);
-    /* break out of the content width to go edge to edge */
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    overflow: hidden;
-    padding: 32px 0;
-  }
-  .sdbc-cities__head {
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 0 32px 12px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 16px;
-  }
-  .sdbc-cities__title,
-  .sdbc-cities__set {
-    font-family: 'Obviously', 'Archivo', system-ui, sans-serif;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: -0.02em;
-    line-height: 0.9;
-    color: var(--sdbc-teal);
-  }
-  .sdbc-cities__title { margin: 0; font-size: clamp(30px, 3.4vw, 50px); }
-  .sdbc-cities__big { font-size: 1.2em; }
-  .sdbc-wide { font-stretch: 125%; font-variation-settings: 'wdth' 125; }
-  .sdbc-narrow,
-  .sdbc-cities__set { font-stretch: 62%; font-variation-settings: 'wdth' 62; }
-  .sdbc-cities__label {
-    margin: 0;
-    font-family: 'Inter', system-ui, sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--sdbc-teal);
-  }
-  .sdbc-cities__viewport { overflow: hidden; padding-top: 10px; }
-  .sdbc-cities__track {
-    display: flex;
-    width: max-content;
-    animation: sdbc-tick var(--sdbc-speed) linear infinite;
-  }
-  .sdbc-cities__viewport:hover .sdbc-cities__track { animation-play-state: paused; }
-  .sdbc-cities__set {
-    display: flex;
-    gap: 48px;
-    padding: 0 48px 0 0; /* equals the gap so the loop seam is invisible */
-    margin: 0;
-    list-style: none;
-    white-space: nowrap;
-    font-size: clamp(30px, 3vw, 42px);
-  }
-  .sdbc-cities__set li { margin: 0; padding: 0; }
-  @keyframes sdbc-tick {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .sdbc-cities__track { animation: none; }
-  }
-  .sdbc-sr {
-    position: absolute !important;
-    width: 1px; height: 1px;
-    margin: -1px; padding: 0; overflow: hidden;
-    clip: rect(0 0 0 0); white-space: nowrap; border: 0;
-  }
-</style>

@@ -18,7 +18,7 @@ Machine-readable version, with Squarespace block IDs: [src/blocks/registry.json]
 | Page | What | Repo file | Size | Has | Notes |
 | --- | --- | --- | --- | --- | --- |
 | Every page (global footer) | Candid transparency seal | [footer/candid-seal.html](../src/blocks/footer/candid-seal.html) | 0.3 KB | HTML | Screen-reader label says "San Diego County Bicycle Coalition". Empty `alt` on the seal image. |
-| Every page (global footer) | 18 cities band and ticker | [footer/cities-ticker.html](../src/blocks/footer/cities-ticker.html) | 4.4 KB | HTML, CSS | Loads Archivo and Inter from Google Fonts. Uses `sdbc-` class names. |
+| Every page (global footer) | 18 cities band and ticker | [footer/cities-ticker.html](../src/blocks/footer/cities-ticker.html) + [.css](../src/blocks/footer/cities-ticker.css) | 3.1 KB block | HTML; CSS from jsDelivr v0.2.0 | Moved to jsDelivr in step 1 (block swap pending). Classes renamed to `bc-`; keeps `sdbc-cities` until the Classes block moves. Loads Archivo and Inter from Google Fonts. |
 | Homepage | What people are saying (testimonials carousel) | [home/testimonials.html](../src/blocks/home/testimonials.html) | 9.9 KB | HTML, CSS, JS | Uses `sdbc-` class names and the `sdbcQuotes` id. |
 | Classes | Class carousel, paths and FAQ | [classes/find-your-class.html](../src/blocks/classes/find-your-class.html) | 329 KB | HTML, CSS, JS | Two photos are embedded as base64 (most of the size), which slows the page. |
 | Classes | Free classes at your school or workplace | [classes/let-us-come-to-you.html](../src/blocks/classes/let-us-come-to-you.html) | 13.7 KB | HTML, CSS | Also hides the footer cities band on the Classes page, and sets `overflow-x: clip` on the whole page. |

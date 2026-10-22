@@ -1,0 +1,93 @@
+/*
+  Footer: 18 cities band and ticker.
+  Markup: src/blocks/footer/cities-ticker.html (the global footer Code block).
+  Served from jsDelivr at a pinned tag; see docs/jsdelivr-plan.md.
+  Colors fall back to the brand values until src/tokens.css loads site-wide.
+*/
+
+.bc-cities {
+  --bc-cities-ground: var(--bc-spring-green, #C7EC7A);
+  --bc-cities-ink: var(--bc-teal-green, #226550);
+  --bc-cities-speed: 40s;
+  background: var(--bc-cities-ground);
+  color: var(--bc-cities-ink);
+  /* break out of the content width to go edge to edge */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  overflow: hidden;
+  padding: 32px 0;
+}
+
+.bc-cities__head {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 32px 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.bc-cities__title,
+.bc-cities__set {
+  font-family: 'Obviously', 'Archivo', system-ui, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 0.9;
+  color: var(--bc-cities-ink);
+}
+
+.bc-cities__title { margin: 0; font-size: clamp(30px, 3.4vw, 50px); }
+
+.bc-cities__narrow,
+.bc-cities__set { font-stretch: 62%; font-variation-settings: 'wdth' 62; }
+
+.bc-cities__label {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bc-cities-ink);
+}
+
+.bc-cities__viewport { overflow: hidden; padding-top: 10px; }
+
+.bc-cities__track {
+  display: flex;
+  width: max-content;
+  animation: bc-cities-tick var(--bc-cities-speed) linear infinite;
+}
+
+.bc-cities__viewport:hover .bc-cities__track { animation-play-state: paused; }
+
+.bc-cities__set {
+  display: flex;
+  gap: 48px;
+  padding: 0 48px 0 0; /* equals the gap so the loop seam is invisible */
+  margin: 0;
+  list-style: none;
+  white-space: nowrap;
+  font-size: clamp(30px, 3vw, 42px);
+}
+
+.bc-cities__set li { margin: 0; padding: 0; }
+
+@keyframes bc-cities-tick {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bc-cities__track { animation: none; }
+}
+
+.bc-cities__sr {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
