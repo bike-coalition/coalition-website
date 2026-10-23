@@ -28,7 +28,7 @@ The preview page is **Code Preview** (`/code-preview`, under Not Linked, hidden 
 
 ## 5. Go live
 
-In Squarespace: **Settings › Developer tools › Code Injection › Header**. Change the old tag to the new one in the loader line, then save. The whole site now uses the new version.
+In Squarespace: **Pages › Code Injection (search "code injection" in the dashboard) › Header**. Change the old tag to the new one in the loader line, then save. The whole site now uses the new version.
 
 ## Undo
 

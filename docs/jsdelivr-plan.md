@@ -26,7 +26,7 @@ Scripts load once, from the site-wide loader, and only act when their block is o
 
 ## The site-wide loader
 
-Goes in Settings › Developer tools › Code Injection › Header, replacing nothing yet:
+Goes in Pages › Code Injection (search "code injection" in the dashboard) › Header, replacing nothing yet:
 
 ```html
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>

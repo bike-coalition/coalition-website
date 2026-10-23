@@ -9,7 +9,7 @@ Machine-readable version, with Squarespace block IDs: [src/blocks/registry.json]
 | What | Where in Squarespace | Repo file | Notes |
 | --- | --- | --- | --- |
 | Custom CSS (all pages) | Design › Custom CSS | [src/site/custom.css](../src/site/custom.css) | 28.7 KB live (version 53). Formatted here for reading; rules are identical. |
-| Header code (all pages) | Settings › Developer tools › Code Injection › Header | [src/site/header-injection.html](../src/site/header-injection.html) | Givebutter widget script only. Google Analytics and the cookie banner come from Squarespace settings, not code injection. |
+| Header code (all pages) | Pages › Code Injection (search "code injection" in the dashboard) › Header | [src/site/header-injection.html](../src/site/header-injection.html) | Givebutter widget script only. Google Analytics and the cookie banner come from Squarespace settings, not code injection. |
 | Footer code | Code Injection › Footer | none | Empty. |
 | Page-level header code | Page Settings › Advanced | none | No page has its own header code. |
 
