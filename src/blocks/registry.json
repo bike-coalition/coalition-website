@@ -64,10 +64,11 @@
         "/home"
       ],
       "location": "section 0",
-      "bytes": 9946,
+      "bytes": 6336,
       "has_css": true,
       "has_js": true,
-      "external": []
+      "external": [],
+      "status": "live since 2026-10-23 on jsDelivr v0.4.0 (testimonials.css, testimonials.js)"
     },
     {
       "file": "src/blocks/classes/find-your-class.html",

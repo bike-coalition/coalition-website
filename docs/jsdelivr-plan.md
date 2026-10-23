@@ -22,7 +22,7 @@ Each Code block shrinks to its markup plus one line:
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bike-coalition/coalition-website@vX.Y.Z/src/blocks/home/testimonials.css" integrity="sha384-..." crossorigin="anonymous">
 ```
 
-Scripts load once, from the site-wide loader, and only act when their block is on the page.
+A block with behavior also gets one `<script src="..." integrity="..." crossorigin="anonymous" defer>` line, so the script loads only on pages that have the block and releasing it never touches Code Injection. Each script only acts on its own blocks.
 
 ## The site-wide loader
 
@@ -43,7 +43,7 @@ Each step: split the block's CSS and JS out of its HTML, tag a release, test it 
 1. **Footer: cities ticker.** On every page, small, CSS only. **Done, live October 21, 2026, v0.2.0.** CSS split out, classes renamed, verified identical at 1440 and 390 px before release and on the live site after. Swap steps: [pages/footer-cities-ticker-swap.md](pages/footer-cities-ticker-swap.md).
 2. **Footer: Candid seal.** Fix the screen-reader label ("San Diego County Bike Coalition") and add the image's alt text. **Done, live October 22, 2026.** No CSS to move, so no tag needed. Checked live at 1440 and 390 px: seal 108 px, block grid area and footer rows unchanged.
 3. **Site Custom CSS.** Move Design › Custom CSS into `src/site/custom.css`, loaded by the loader. Then empty Custom CSS in Squarespace. Test every page template: home, a content page, the blog, an event, a product. **Done, live October 23, 2026, v0.3.0.** Computed styles matched on 9 page types at 1440 and 390 px before release, on the Code Preview page, and on the live site after Squarespace's copy was emptied. The accordion title size is pinned to the 1.4rem Squarespace actually served (its LESS compiler had broken the clamp). Rollback: paste [baseline/squarespace-custom-css-v53.less](baseline/squarespace-custom-css-v53.less) back into Custom CSS.
-4. **Homepage testimonials.** First block with JavaScript.
+4. **Homepage testimonials.** First block with JavaScript. **Done, live October 23, 2026, v0.4.0.** CSS and JS split out, classes renamed to `bc-quotes__`, brand colors from tokens.css. Verified identical locally (at rest, after Next, after a dot, keyboard, wrap-around) and on the live homepage at 1440, 1024 and 390 px: same grid area, block height and page height as before.
 5. **Classes, both blocks.** Move the two base64 photos out of the HTML (about 300 KB of the page) to Squarespace image uploads or the repo.
 6. **Board Candidates, CicloSDias.** Seasonal pages; do these when they're next updated.
 7. **Event ticket widgets.** Drop the duplicate Givebutter script from each block; the site-wide one already loads it. Test one event first.
