@@ -35,7 +35,7 @@
       "styles": "src/blocks/footer/cities-ticker.css",
       "jsdelivr": {
         "tag": "v0.2.0",
-        "status": "live since 2026-10-21; verified on home, mission, classes, calendar"
+        "status": "live since 2026-10-21; footer height fixed 2026-10-22 (block rows 2-10, section 9 rows desktop / 6 phone)"
       }
     },
     {

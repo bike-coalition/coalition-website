@@ -65,3 +65,12 @@ Each step: split the block's CSS and JS out of its HTML, tag a release, test it 
 6. Then update them on the live page or in Code Injection.
 
 To roll back, put the previous version and hashes back. jsDelivr keeps every tag.
+
+## Lessons from step 1: the footer that grew to 3,300 px
+
+On October 21, swapping the ticker block made the whole footer about 3,300 px tall on every page. Fixed October 22; the footer is back to 1,062 px on desktop.
+
+- **Why:** when code is pasted into a Code block, the Squarespace editor measures it right away, before an external stylesheet has loaded. The unstyled content (a 36-item list) was tall, so the editor grew the block from 8 grid rows to 88, and the section to 89, and saved that.
+- **Prevention, every block that moves:** keep a one-line inline `<style>` in the block with just enough layout (flex, no wrapping, a max height) that the unstyled content is already about the right size. See the first lines of `src/blocks/footer/cities-ticker.html`.
+- **Squarespace trap:** the editor redraws a section to fit its content while editing, so a section that saved too tall can look correct in the editor, and Save stays gray with nothing to save. The fix was to nudge the section so Save turned black, then save. Afterwards, check the published row count, not the editor.
+- **After every swap, check on the live site, logged out:** the block's grid size and its section's height at desktop and phone width, not just how the block itself looks.
