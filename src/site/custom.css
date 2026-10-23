@@ -3,8 +3,9 @@
   Source copied from Squarespace Design > Custom CSS on October 22, 2026 (live version 53),
   comments included. Plain CSS: the one LESS nesting rule is written out flat.
   Live today: still pasted in Squarespace. Moving it to jsDelivr is step 3 of docs/jsdelivr-plan.md.
-  Note: Squarespace's LESS compiler turns clamp(1.05rem, 1rem + .5vw, 1.4rem) into
-  clamp(1.05rem, 1.5rem, 1.4rem), so accordion titles never scale. Served as plain CSS, they will.
+  Note: the accordion title size was written as clamp(1.05rem, 1rem + .5vw, 1.4rem), but Squarespace's
+  LESS compiler broke the math, so live titles have always been a fixed 1.4rem. This file keeps 1.4rem
+  so the move changes nothing on screen. Letting titles shrink on phones is a separate, later change.
 */
 
 /* Keep the green hover state active while an accordion item is open */
@@ -92,7 +93,7 @@
   color: #226550;
   font-weight: 500;
   line-height: 1.35;
-  font-size: clamp(1.05rem, 1rem + .5vw, 1.4rem);
+  font-size: 1.4rem; /* what Squarespace actually served; see the note at the top */
   padding-right: 8px;
 }
 .sqs-block-accordion .accordion-icon-container {
