@@ -41,7 +41,7 @@ The existing Givebutter line stays.
 Each step: split the block's CSS and JS out of its HTML, tag a release, test it on a hidden copy of the page, then swap the live block. Keep the old pasted code in the repo history so any step can be undone by pasting it back.
 
 1. **Footer: cities ticker.** On every page, small, CSS only. **Done, live October 21, 2026, v0.2.0.** CSS split out, classes renamed, verified identical at 1440 and 390 px before release and on the live site after. Swap steps: [pages/footer-cities-ticker-swap.md](pages/footer-cities-ticker-swap.md).
-2. **Footer: Candid seal.** Fix the screen-reader label ("San Diego County Bike Coalition") and add the image's alt text.
+2. **Footer: Candid seal.** Fix the screen-reader label ("San Diego County Bike Coalition") and add the image's alt text. **Done, live October 22, 2026.** No CSS to move, so no tag needed. Checked live at 1440 and 390 px: seal 108 px, block grid area and footer rows unchanged.
 3. **Site Custom CSS.** Move Design › Custom CSS into `src/site/custom.css`, loaded by the loader. Then empty Custom CSS in Squarespace. Test every page template: home, a content page, the blog, an event, a product.
 4. **Homepage testimonials.** First block with JavaScript.
 5. **Classes, both blocks.** Move the two base64 photos out of the HTML (about 300 KB of the page) to Squarespace image uploads or the repo.

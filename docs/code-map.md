@@ -17,7 +17,7 @@ Machine-readable version, with Squarespace block IDs: [src/blocks/registry.json]
 
 | Page | What | Repo file | Size | Has | Notes |
 | --- | --- | --- | --- | --- | --- |
-| Every page (global footer) | Candid transparency seal | [footer/candid-seal.html](../src/blocks/footer/candid-seal.html) | 0.5 KB | HTML | Repo copy fixes the screen-reader label (was "San Diego County Bicycle Coalition") and adds `alt` text. Not pasted into Squarespace yet (step 2). |
+| Every page (global footer) | Candid transparency seal | [footer/candid-seal.html](../src/blocks/footer/candid-seal.html) | 0.5 KB | HTML | Repo copy fixes the screen-reader label (was "San Diego County Bicycle Coalition") and adds `alt` text. Live since October 22, 2026 (step 2); seal size and footer layout unchanged. |
 | Every page (global footer) | 18 cities band and ticker | [footer/cities-ticker.html](../src/blocks/footer/cities-ticker.html) + [.css](../src/blocks/footer/cities-ticker.css) | 3.1 KB block | HTML; CSS from jsDelivr v0.2.0 | Live on jsDelivr since October 21, 2026 (step 1). Classes renamed to `bc-`; keeps `sdbc-cities` until the Classes block moves. Loads Archivo and Inter from Google Fonts. |
 | Homepage | What people are saying (testimonials carousel) | [home/testimonials.html](../src/blocks/home/testimonials.html) | 9.9 KB | HTML, CSS, JS | Uses `sdbc-` class names and the `sdbcQuotes` id. |
 | Classes | Class carousel, paths and FAQ | [classes/find-your-class.html](../src/blocks/classes/find-your-class.html) | 329 KB | HTML, CSS, JS | Two photos are embedded as base64 (most of the size), which slows the page. |

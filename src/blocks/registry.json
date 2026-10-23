@@ -10,13 +10,14 @@
       ],
       "pages": "every page (global footer)",
       "location": "footer",
-      "bytes": 301,
+      "bytes": 560,
       "has_css": false,
       "has_js": false,
       "external": [
         "https://app.candid.org",
         "https://widgets.guidestar.org"
-      ]
+      ],
+      "status": "live since 2026-10-22: screen-reader label and alt text fixed"
     },
     {
       "file": "src/blocks/footer/cities-ticker.html",
