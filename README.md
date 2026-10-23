@@ -15,7 +15,7 @@ The step-by-step version is in [docs/runbook.md](docs/runbook.md).
 
 | Path | What it is |
 | --- | --- |
-| `src/site/` | Site-wide Custom CSS and header code, as they are in Squarespace today |
+| `src/site/` | Site-wide CSS (served from jsDelivr since v0.3.0) and the Code Injection header that loads it |
 | `src/blocks/` | Every Squarespace Code block, one file each, plus `registry.json` mapping each to its page and block ID |
 | `docs/code-map.md` | Where every piece of custom code lives on the live site |
 | `docs/jsdelivr-plan.md` | How the pasted code moves to jsDelivr, step by step |

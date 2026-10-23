@@ -36,5 +36,4 @@ Put the previous tag back in Code Injection and save. The site goes back to how 
 
 ## Not set up yet
 
-- The loader in Code Injection (pinned tag, integrity hash, preconnect): going in with v0.3.0, October 2026
 - Automatic checks for links, speed and accessibility

@@ -8,7 +8,7 @@ Machine-readable version, with Squarespace block IDs: [src/blocks/registry.json]
 
 | What | Where in Squarespace | Repo file | Notes |
 | --- | --- | --- | --- |
-| Custom CSS (all pages) | Design › Custom CSS | [src/site/custom.css](../src/site/custom.css) | 28.7 KB live (version 53). Formatted here for reading; rules are identical. |
+| Custom CSS (all pages) | jsDelivr, loaded by Code Injection › Header (v0.3.0). Squarespace Pages › Custom CSS is empty except a pointer comment. | [src/site/custom.css](../src/site/custom.css) | Live from jsDelivr since October 23, 2026 (step 3). The last Squarespace version (53) is saved exactly in [docs/baseline/squarespace-custom-css-v53.less](baseline/squarespace-custom-css-v53.less). |
 | Header code (all pages) | Pages › Code Injection (search "code injection" in the dashboard) › Header | [src/site/header-injection.html](../src/site/header-injection.html) | Givebutter widget script only. Google Analytics and the cookie banner come from Squarespace settings, not code injection. |
 | Footer code | Code Injection › Footer | none | Empty. |
 | Page-level header code | Page Settings › Advanced | none | No page has its own header code. |
