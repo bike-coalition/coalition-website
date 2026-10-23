@@ -24,7 +24,7 @@ https://cdn.jsdelivr.net/gh/bike-coalition/coalition-website@v0.2.0/
 
 ## 4. Test on the hidden preview page
 
-The preview page in Squarespace loads the new tag. Check it on a phone and a laptop. Make sure donate, newsletter sign-up, the calendar and any other embeds still work.
+The preview page is **Code Preview** (`/code-preview`, under Not Linked, hidden from search). Its own header code, in Page Settings › Advanced, loads the new tag. Change the tag and hashes there first. Check it on a phone and a laptop. Make sure donate, newsletter sign-up, the calendar and any other embeds still work.
 
 ## 5. Go live
 
@@ -36,6 +36,5 @@ Put the previous tag back in Code Injection and save. The site goes back to how 
 
 ## Not set up yet
 
-- The hidden preview page
-- The loader in Code Injection (pinned tag, integrity hash, preconnect)
+- The loader in Code Injection (pinned tag, integrity hash, preconnect): going in with v0.3.0, October 2026
 - Automatic checks for links, speed and accessibility
