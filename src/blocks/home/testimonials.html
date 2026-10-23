@@ -1,173 +1,68 @@
-<div class="sdbc-quotes" id="sdbcQuotes" role="region" aria-roledescription="carousel" aria-label="What people are saying">
-  <p class="sdbc-eyebrow">What people are saying</p>
-  <h2 class="sdbc-title">About the San Diego County Bike Coalition</h2>
+<!--
+  Homepage: "What people are saying" testimonials carousel. Squarespace Code block on the homepage.
+  Styles: src/blocks/home/testimonials.css. Behavior: src/blocks/home/testimonials.js. Both from jsDelivr at the tag below.
+  The small inline style is deliberate: it gives the block its real layout before the stylesheet loads,
+  so the Squarespace editor never measures eight stacked, unstyled quotes and grows the block (see docs/jsdelivr-plan.md, step 1 lessons).
+  Every rule in it is copied unchanged from testimonials.css, which loads after it and wins.
+-->
+<style>.bc-quotes{position:relative;box-sizing:border-box;overflow:hidden;padding:56px clamp(24px,6vw,88px) 40px}.bc-quotes__eyebrow{margin:0 0 6px;font:700 13px/1.2 'obviously-wide',Inter,sans-serif}.bc-quotes__title{margin:0 0 28px;max-width:18ch;font:700 clamp(24px,3.4vw,40px)/1.1 'obviously-wide',Inter,sans-serif}.bc-quotes__stage{position:relative;padding-top:8px}.bc-quotes__mark{position:absolute;left:-6px;top:-34px}.bc-quotes__viewport{position:relative}.bc-quotes__slide{position:absolute;left:0;right:0;top:0;margin:0;visibility:hidden}.bc-quotes__slide.is-active{visibility:visible}.bc-quotes__controls{display:flex;align-items:center;gap:18px;margin-top:34px}.bc-quotes__btn{flex:none;width:46px;height:46px;padding:0}@media (max-width:600px){.bc-quotes{padding-top:48px;padding-bottom:48px;margin:36px 0}.bc-quotes__title{max-width:none}.bc-quotes__btn{width:40px;height:40px}}</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bike-coalition/coalition-website@v0.4.0/src/blocks/home/testimonials.css" integrity="sha384-OCbPJ36A3dfh5cw6y8ItKtz4Kkyy5B2ftN53BRSIhEHGQUrzdFdw60I0vacuOPBp" crossorigin="anonymous">
 
-  <div class="sdbc-stage">
-    <span class="sdbc-mark" aria-hidden="true">“</span>
+<div class="bc-quotes" id="bcQuotes" role="region" aria-roledescription="carousel" aria-label="What people are saying">
+  <p class="bc-quotes__eyebrow">What people are saying</p>
+  <h2 class="bc-quotes__title">About the San Diego County Bike Coalition</h2>
 
-    <div class="sdbc-viewport" aria-live="polite">
-      <figure class="sdbc-slide is-active">
+  <div class="bc-quotes__stage">
+    <span class="bc-quotes__mark" aria-hidden="true">“</span>
+
+    <div class="bc-quotes__viewport" aria-live="polite">
+      <figure class="bc-quotes__slide is-active">
         <blockquote>The ride felt very welcoming for kids, which was awesome since you never know how group rides with kids will go. I heard nothing but good things from all the people I knew that participated!</blockquote>
-        <figcaption><span class="sdbc-name">Khalisa B.</span></figcaption>
+        <figcaption><span class="bc-quotes__name">Khalisa B.</span></figcaption>
       </figure>
 
-      <figure class="sdbc-slide">
+      <figure class="bc-quotes__slide">
         <blockquote>Attended Smart Cycling 1 &amp; 2. They are super supportive, meet you where you are. All my questions were answered. You will definitely come out of the course with more knowledge, confidence and feel safer. I highly recommend for all levels. And the ride was very fun!</blockquote>
-        <figcaption><span class="sdbc-name">Greta S.</span><span class="sdbc-tag">Smart Cycling 1 &amp; 2</span></figcaption>
+        <figcaption><span class="bc-quotes__name">Greta S.</span><span class="bc-quotes__tag">Smart Cycling 1 &amp; 2</span></figcaption>
       </figure>
 
-      <figure class="sdbc-slide">
+      <figure class="bc-quotes__slide">
         <blockquote>I just want to send a big thank you for all of your work on CicloSDias. It was the best cycling event I have ever attended in San Diego! I met so many great sustainability related organizations that we will be able to work with at the library. I also got to visit with local businesses that I didn’t know about before the event.</blockquote>
-        <figcaption><span class="sdbc-name">Ocsar G.</span><span class="sdbc-tag">CicloSDias</span></figcaption>
+        <figcaption><span class="bc-quotes__name">Ocsar G.</span><span class="bc-quotes__tag">CicloSDias</span></figcaption>
       </figure>
 
-      <figure class="sdbc-slide">
+      <figure class="bc-quotes__slide">
         <blockquote>The ride was awesome, I felt incredibly safe amidst all of the people working with the coalition to make this bike ride as accessible and beginner friendly as possible. Thank you for all your efforts.</blockquote>
-        <figcaption><span class="sdbc-name">Dominic D.</span></figcaption>
+        <figcaption><span class="bc-quotes__name">Dominic D.</span></figcaption>
       </figure>
 
-      <figure class="sdbc-slide">
+      <figure class="bc-quotes__slide">
         <blockquote>I wanted to say what a wonderful event the Pride Ride was on Sunday! The ride leaders did a great job and it was neat that they led an activity at Ward Canyon Park. We also loved the cool stickers! That is the longest my 9 year son has ridden and I think the fun atmosphere and encouragement really helped.</blockquote>
-        <figcaption><span class="sdbc-name">K. Bolling</span><span class="sdbc-tag">Pride Ride</span></figcaption>
+        <figcaption><span class="bc-quotes__name">K. Bolling</span><span class="bc-quotes__tag">Pride Ride</span></figcaption>
       </figure>
 
-      <figure class="sdbc-slide">
+      <figure class="bc-quotes__slide">
         <blockquote>It was a great event, well organized and well attended. You can tell a lot of planning went into the ride. For my first SD Bike Coalition event, I felt welcomed and part of the gang, with none of the “clickiness” that is often felt being the new guy.</blockquote>
-        <figcaption><span class="sdbc-name">James T.</span></figcaption>
+        <figcaption><span class="bc-quotes__name">James T.</span></figcaption>
       </figure>
 
-      <figure class="sdbc-slide">
+      <figure class="bc-quotes__slide">
         <blockquote>On behalf of Watkins Wellness, I would like to extend a heartfelt thank you for your generous support and partnership. Your efforts in providing access to bike knowledge, safety resources, and hands-on education have made a meaningful impact on our team.</blockquote>
-        <figcaption><span class="sdbc-name">G. Rodriguez</span></figcaption>
+        <figcaption><span class="bc-quotes__name">G. Rodriguez</span></figcaption>
       </figure>
 
-      <figure class="sdbc-slide">
+      <figure class="bc-quotes__slide">
         <blockquote>The road teaches what the classroom can’t 🚴🏾‍♂️ 💡 Movement builds muscles and it builds connection 💪🏾 Grateful for a Sunday that recharged purpose and pedals 🙏🏾 From traffic safety to confidence-building, this was a reminder that wellness is communal.</blockquote>
-        <figcaption><span class="sdbc-name">Brian W.</span></figcaption>
+        <figcaption><span class="bc-quotes__name">Brian W.</span></figcaption>
       </figure>
     </div>
   </div>
 
-  <div class="sdbc-controls">
-    <button class="sdbc-btn" type="button" data-dir="-1" aria-label="Previous quote">←</button>
-    <div class="sdbc-dots" role="tablist" aria-label="Choose a quote"></div>
-    <button class="sdbc-btn" type="button" data-dir="1" aria-label="Next quote">→</button>
+  <div class="bc-quotes__controls">
+    <button class="bc-quotes__btn" type="button" data-dir="-1" aria-label="Previous quote">←</button>
+    <div class="bc-quotes__dots" role="tablist" aria-label="Choose a quote"></div>
+    <button class="bc-quotes__btn" type="button" data-dir="1" aria-label="Next quote">→</button>
   </div>
 </div>
 
-<style>
-  .sdbc-quotes{
-    --green:#226550; --lime:#C7EC7A; --ink:#161614; --cream:#F6FAEE; --line:#DADAD4;
-    position:relative; box-sizing:border-box; overflow:hidden;
-    background:#fff; color:var(--ink);
-    border-radius:28px; box-shadow:0 1px 0 var(--line), 0 18px 40px -24px rgba(34,101,80,.35); padding:56px clamp(24px,6vw,88px) 40px;
-    font-family:Inter,system-ui,sans-serif;
-  }
-  .sdbc-quotes *{box-sizing:border-box}
-  .sdbc-eyebrow{
-    margin:0 0 6px; color:var(--green); text-transform:uppercase; letter-spacing:.14em;
-    font:700 13px/1.2 'obviously-wide',Inter,sans-serif;
-  }
-  .sdbc-title{
-    margin:0 0 28px; color:var(--green); max-width:18ch;
-    font:700 clamp(24px,3.4vw,40px)/1.1 'obviously-wide',Inter,sans-serif;
-  }
-  .sdbc-stage{position:relative; padding-top:8px}
-  .sdbc-mark{
-    position:absolute; left:-6px; top:-34px; color:var(--lime); opacity:.95;
-    font:700 clamp(110px,16vw,190px)/1 'obviously-wide',Georgia,serif; pointer-events:none; user-select:none;
-  }
-  .sdbc-viewport{position:relative; transition:height .45s ease}
-  .sdbc-slide{
-    position:absolute; left:0; right:0; top:0; margin:0; padding:clamp(40px,7vw,78px) 0 0;
-    opacity:0; visibility:hidden; transform:translateY(12px);
-    transition:opacity .5s ease, transform .5s ease, visibility 0s linear .5s;
-  }
-  .sdbc-slide.is-active{opacity:1; visibility:visible; transform:none; transition-delay:0s}
-  .sdbc-slide blockquote{
-    margin:0; padding:0; border:0; max-width:34em;
-    font:500 clamp(19px,2.4vw,29px)/1.45 Inter,system-ui,sans-serif; color:var(--ink);
-    text-wrap:pretty;
-  }
-  .sdbc-slide figcaption{margin-top:26px; display:flex; flex-wrap:wrap; align-items:center; gap:10px 14px}
-  .sdbc-name{font:700 16px/1 'obviously-wide',Inter,sans-serif; color:var(--green); letter-spacing:.02em}
-  .sdbc-tag{
-    background:var(--lime); color:var(--ink); border-radius:999px; padding:6px 12px;
-    font:600 12px/1 Inter,sans-serif; letter-spacing:.03em;
-  }
-  .sdbc-controls{display:flex; align-items:center; gap:18px; margin-top:34px}
-  .sdbc-btn{
-    flex:none; width:46px; height:46px; border-radius:50%; cursor:pointer; padding:0;
-    border:2px solid var(--green); background:transparent; color:var(--green);
-    font:700 20px/1 Inter,sans-serif; transition:background .2s,color .2s;
-  }
-  .sdbc-btn:hover,.sdbc-btn:focus-visible{background:var(--green); color:#fff; outline:none}
-  .sdbc-dots{display:flex; gap:10px; flex-wrap:wrap}
-  .sdbc-dot{
-    width:12px; height:12px; padding:0; border-radius:999px; cursor:pointer;
-    border:2px solid var(--green); background:transparent; transition:width .3s, background .3s;
-  }
-  .sdbc-dot[aria-selected="true"]{width:34px; background:var(--green)}
-  .sdbc-dot:focus-visible,.sdbc-btn:focus-visible{outline:3px solid var(--green); outline-offset:3px}
-  @media (max-width:600px){
-    .sdbc-quotes{border-radius:20px; padding-top:48px; padding-bottom:48px; margin:36px 0}
-    .sdbc-title{max-width:none}
-    .sdbc-controls{gap:10px}
-    .sdbc-btn{width:40px; height:40px}
-    .sdbc-dots{gap:6px; flex-wrap:nowrap}
-    .sdbc-dot{width:10px; height:10px}
-    .sdbc-dot[aria-selected="true"]{width:24px}
-  }
-  @media (prefers-reduced-motion:reduce){
-    .sdbc-slide{transition:none; transform:none}
-  }
-</style>
-
-<script>
-(function(){
-  var root=document.getElementById('sdbcQuotes'); if(!root||root.dataset.ready) return; root.dataset.ready='1';
-  var slides=[].slice.call(root.querySelectorAll('.sdbc-slide'));
-  var dotsWrap=root.querySelector('.sdbc-dots'), dots=[], i=0, timer=null;
-  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  slides.forEach(function(s,n){
-    s.setAttribute('role','group'); s.setAttribute('aria-roledescription','slide');
-    s.setAttribute('aria-label',(n+1)+' of '+slides.length);
-    var d=document.createElement('button'); d.type='button'; d.className='sdbc-dot';
-    d.setAttribute('role','tab'); d.setAttribute('aria-label','Quote from '+s.querySelector('.sdbc-name').textContent);
-    d.addEventListener('click',function(){go(n);restart();});
-    dotsWrap.appendChild(d); dots.push(d);
-  });
-
-  var viewport=root.querySelector('.sdbc-viewport');
-  function fit(){ var h=0; slides.forEach(function(s){ if(s.offsetHeight>h) h=s.offsetHeight; }); viewport.style.height=h+'px'; }
-  window.addEventListener('resize',fit);
-  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
-  window.addEventListener('load',fit);
-
-  function go(n){
-    i=(n+slides.length)%slides.length;
-    slides.forEach(function(s,k){s.classList.toggle('is-active',k===i); s.setAttribute('aria-hidden',k===i?'false':'true');});
-    dots.forEach(function(d,k){d.setAttribute('aria-selected',k===i?'true':'false');});
-    fit();
-  }
-  function restart(){ stop(); if(!reduce) timer=setInterval(function(){go(i+1)},5000); }
-  function stop(){ if(timer){clearInterval(timer);timer=null;} }
-
-  root.querySelectorAll('.sdbc-btn').forEach(function(b){
-    b.addEventListener('click',function(){go(i+Number(b.dataset.dir));restart();});
-  });
-  root.addEventListener('mouseenter',stop); root.addEventListener('mouseleave',restart);
-  root.addEventListener('focusin',stop); root.addEventListener('focusout',restart);
-  root.addEventListener('keydown',function(e){
-    if(e.key==='ArrowRight'){go(i+1);restart();} else if(e.key==='ArrowLeft'){go(i-1);restart();}
-  });
-  var x0=null;
-  root.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
-  root.addEventListener('touchend',function(e){
-    if(x0===null) return; var dx=e.changedTouches[0].clientX-x0; x0=null;
-    if(Math.abs(dx)>45){go(i+(dx<0?1:-1));restart();}
-  });
-  go(0); restart();
-})();
-</script>
+<script src="https://cdn.jsdelivr.net/gh/bike-coalition/coalition-website@v0.4.0/src/blocks/home/testimonials.js" integrity="sha384-R5UDpVT9a3CKy9AHQPyZpBN+Hf2zephSeaju8kSGm1b9KrnKVh6emSp84JOuK6Wd" crossorigin="anonymous" defer></script>

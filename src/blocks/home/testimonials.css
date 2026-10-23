@@ -1,0 +1,70 @@
+/*
+  Homepage: "What people are saying" testimonials carousel.
+  Markup: src/blocks/home/testimonials.html (pasted in the Squarespace Code block).
+  Behavior: src/blocks/home/testimonials.js. Brand colors come from src/tokens.css, with the same hex as fallback.
+*/
+.bc-quotes{
+  --green:var(--bc-teal-green,#226550); --lime:var(--bc-spring-green,#C7EC7A); --ink:#161614; --cream:#F6FAEE; --line:#DADAD4;
+  position:relative; box-sizing:border-box; overflow:hidden;
+  background:#fff; color:var(--ink);
+  border-radius:28px; box-shadow:0 1px 0 var(--line), 0 18px 40px -24px rgba(34,101,80,.35); padding:56px clamp(24px,6vw,88px) 40px;
+  font-family:Inter,system-ui,sans-serif;
+}
+.bc-quotes *{box-sizing:border-box}
+.bc-quotes__eyebrow{
+  margin:0 0 6px; color:var(--green); text-transform:uppercase; letter-spacing:.14em;
+  font:700 13px/1.2 'obviously-wide',Inter,sans-serif;
+}
+.bc-quotes__title{
+  margin:0 0 28px; color:var(--green); max-width:18ch;
+  font:700 clamp(24px,3.4vw,40px)/1.1 'obviously-wide',Inter,sans-serif;
+}
+.bc-quotes__stage{position:relative; padding-top:8px}
+.bc-quotes__mark{
+  position:absolute; left:-6px; top:-34px; color:var(--lime); opacity:.95;
+  font:700 clamp(110px,16vw,190px)/1 'obviously-wide',Georgia,serif; pointer-events:none; user-select:none;
+}
+.bc-quotes__viewport{position:relative; transition:height .45s ease}
+.bc-quotes__slide{
+  position:absolute; left:0; right:0; top:0; margin:0; padding:clamp(40px,7vw,78px) 0 0;
+  opacity:0; visibility:hidden; transform:translateY(12px);
+  transition:opacity .5s ease, transform .5s ease, visibility 0s linear .5s;
+}
+.bc-quotes__slide.is-active{opacity:1; visibility:visible; transform:none; transition-delay:0s}
+.bc-quotes__slide blockquote{
+  margin:0; padding:0; border:0; max-width:34em;
+  font:500 clamp(19px,2.4vw,29px)/1.45 Inter,system-ui,sans-serif; color:var(--ink);
+  text-wrap:pretty;
+}
+.bc-quotes__slide figcaption{margin-top:26px; display:flex; flex-wrap:wrap; align-items:center; gap:10px 14px}
+.bc-quotes__name{font:700 16px/1 'obviously-wide',Inter,sans-serif; color:var(--green); letter-spacing:.02em}
+.bc-quotes__tag{
+  background:var(--lime); color:var(--ink); border-radius:999px; padding:6px 12px;
+  font:600 12px/1 Inter,sans-serif; letter-spacing:.03em;
+}
+.bc-quotes__controls{display:flex; align-items:center; gap:18px; margin-top:34px}
+.bc-quotes__btn{
+  flex:none; width:46px; height:46px; border-radius:50%; cursor:pointer; padding:0;
+  border:2px solid var(--green); background:transparent; color:var(--green);
+  font:700 20px/1 Inter,sans-serif; transition:background .2s,color .2s;
+}
+.bc-quotes__btn:hover,.bc-quotes__btn:focus-visible{background:var(--green); color:#fff; outline:none}
+.bc-quotes__dots{display:flex; gap:10px; flex-wrap:wrap}
+.bc-quotes__dot{
+  width:12px; height:12px; padding:0; border-radius:999px; cursor:pointer;
+  border:2px solid var(--green); background:transparent; transition:width .3s, background .3s;
+}
+.bc-quotes__dot[aria-selected="true"]{width:34px; background:var(--green)}
+.bc-quotes__dot:focus-visible,.bc-quotes__btn:focus-visible{outline:3px solid var(--green); outline-offset:3px}
+@media (max-width:600px){
+  .bc-quotes{border-radius:20px; padding-top:48px; padding-bottom:48px; margin:36px 0}
+  .bc-quotes__title{max-width:none}
+  .bc-quotes__controls{gap:10px}
+  .bc-quotes__btn{width:40px; height:40px}
+  .bc-quotes__dots{gap:6px; flex-wrap:nowrap}
+  .bc-quotes__dot{width:10px; height:10px}
+  .bc-quotes__dot[aria-selected="true"]{width:24px}
+}
+@media (prefers-reduced-motion:reduce){
+  .bc-quotes__slide{transition:none; transform:none}
+}
