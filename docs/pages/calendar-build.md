@@ -91,7 +91,8 @@ An All / Classes / Events filter needs a small script reading `/calendar?format=
 
 Separate from the redesign above. The current Calendar page loads [calendar-live.css](../../src/pages/calendar-live.css) from its Page Header Code Injection ([calendar-header-injection.html](../../src/pages/calendar-header-injection.html)):
 
-- **Class rows:** each class heading is a text block with the class name, then a paragraph that becomes the level pill (as on the Classes page), then a one-line description. To change a level, edit that paragraph's words; the pill style stays.
+- **Class rows:** each class heading is a text block with the class name, then a paragraph that becomes the level pill (as on the Classes page), then a one-line description. On the page the title (a step larger than other headings) and the pill share a line, with the description below; on phones the pill wraps under the title. To change a level, edit that paragraph's words; the pill style stays.
+- **Classes section rows** size to their content on the published page (v0.6.3), so the text blocks never leave empty space above a title. The editor shows Squarespace's normal grid.
 - **Group rides:** while the Rides Summary block has nothing to show, the Group Rides section and its jump button are hidden, and the other two buttons close up. Publishing a ride brings both back on their own. In the editor the section always shows.
-- **Carousel arrows** (v0.6.1): every event carousel on the page shows its previous and next arrows centered under the cards instead of at the top right. They only appear when a carousel has more events than fit.
+- **Carousel arrows** (v0.6.1, spacing v0.6.3): every event carousel on the page shows its previous and next arrows centered just under the cards (16 px), with clear space before the next heading, instead of at the top right. They only appear when a carousel has more events than fit.
 - The rules use this page's block IDs. If one of those blocks is deleted and re-added, or the jump buttons are rearranged, update the IDs and positions at the top of the file.
