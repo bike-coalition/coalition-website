@@ -93,4 +93,5 @@ Separate from the redesign above. The current Calendar page loads [calendar-live
 
 - **Class rows:** each class heading is a text block with the class name, then a paragraph that becomes the level pill (as on the Classes page), then a one-line description. To change a level, edit that paragraph's words; the pill style stays.
 - **Group rides:** while the Rides Summary block has nothing to show, the Group Rides section and its jump button are hidden, and the other two buttons close up. Publishing a ride brings both back on their own. In the editor the section always shows.
+- **Carousel arrows** (v0.6.1): every event carousel on the page shows its previous and next arrows centered under the cards instead of at the top right. They only appear when a carousel has more events than fit.
 - The rules use this page's block IDs. If one of those blocks is deleted and re-added, or the jump buttons are rearranged, update the IDs and positions at the top of the file.
