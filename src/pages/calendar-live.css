@@ -81,3 +81,33 @@ body:not(.sqs-edit-mode-active):has(#block-6a14a8a5e56c91f49e6c .sqs-blockStatus
   /* Two buttons need 6 of the 8 rows; drop the 2 empty rows at the bottom */
   body:not(.sqs-edit-mode-active):has(#block-6a14a8a5e56c91f49e6c .sqs-blockStatus) section[data-section-id="67897d2e5e083f378981fd29"] .fluid-engine { grid-template-rows: repeat(6, minmax(24px, auto)); }
 }
+
+/* ---------------------------------------------------------------
+   Carousel arrows: below the cards, centered (instead of top right).
+   Only the arrows move; the block's hidden title stays where Squarespace puts it.
+   The space above the arrows sits on the arrows themselves, so a carousel that
+   fits without arrows (Squarespace hides them) gets no extra gap.
+   --------------------------------------------------------------- */
+.summary-block-wrapper.sqs-gallery-design-carousel .summary-item-list-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-block-wrapper.sqs-gallery-design-carousel .summary-block-header {
+  display: contents;
+}
+
+.summary-block-wrapper.sqs-gallery-design-carousel .summary-carousel-pager {
+  order: 2;
+  float: none;
+  align-self: center;
+  justify-content: center;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.summary-block-wrapper.sqs-gallery-design-carousel .summary-carousel-pager-prev,
+.summary-block-wrapper.sqs-gallery-design-carousel .summary-carousel-pager-next {
+  margin: 24px 5px 0; /* 5px each side + Squarespace's 12px gap = the original 22px spacing, centered */
+}
