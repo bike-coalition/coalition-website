@@ -1,0 +1,83 @@
+/*
+  Calendar page (/calendar) as it is today: native Squarespace blocks, plus these rules.
+  Loaded from the page's own header code (Calendar page settings > Advanced > Page Header Code Injection).
+  src/pages/calendar.css is the separate, future redesign; this file is not that.
+
+  The rules target Squarespace block and section IDs on this page. If a block is deleted and
+  re-added, its ID changes: update the ID here. IDs were read from the live page on October 25, 2026.
+*/
+
+/* ---------------------------------------------------------------
+   Class level pills, matching the Classes page ("Find your class").
+   The first paragraph under each class heading becomes the pill:
+   City Cycling: Spring Green and Sky Blue dots. Smart Cycling: Sky Blue and black dots.
+   --------------------------------------------------------------- */
+#block-06dca50ed02d1a682df3 .sqs-html-content > p:first-of-type,
+#block-7c6a3226872dd98b16ad .sqs-html-content > p:first-of-type {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0 14px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--bc-white, #FFFFFF);
+  border: 2px solid var(--bc-teal-green, #226550);
+  color: var(--bc-teal-green, #226550);
+  font-family: Inter, system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+#block-06dca50ed02d1a682df3 .sqs-html-content > p:first-of-type::before,
+#block-06dca50ed02d1a682df3 .sqs-html-content > p:first-of-type::after,
+#block-7c6a3226872dd98b16ad .sqs-html-content > p:first-of-type::before,
+#block-7c6a3226872dd98b16ad .sqs-html-content > p:first-of-type::after {
+  content: "";
+  flex: none;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 2px solid var(--bc-teal-green, #226550);
+  box-sizing: border-box;
+}
+
+/* Both dots sit before the words; 4px apart, like the Classes page */
+#block-06dca50ed02d1a682df3 .sqs-html-content > p:first-of-type::before,
+#block-7c6a3226872dd98b16ad .sqs-html-content > p:first-of-type::before { order: -2; }
+#block-06dca50ed02d1a682df3 .sqs-html-content > p:first-of-type::after,
+#block-7c6a3226872dd98b16ad .sqs-html-content > p:first-of-type::after { order: -1; margin-left: -4px; }
+
+#block-06dca50ed02d1a682df3 .sqs-html-content > p:first-of-type::before { background: var(--bc-spring-green, #C7EC7A); }
+#block-06dca50ed02d1a682df3 .sqs-html-content > p:first-of-type::after { background: var(--bc-sky-blue, #7BD1F3); }
+#block-7c6a3226872dd98b16ad .sqs-html-content > p:first-of-type::before { background: var(--bc-sky-blue, #7BD1F3); }
+#block-7c6a3226872dd98b16ad .sqs-html-content > p:first-of-type::after { background: #161614; }
+
+/* ---------------------------------------------------------------
+   No upcoming group rides: hide the Group Rides section and its jump button.
+   When the Summary block (Calendar, category Rides) has nothing to show, Squarespace puts its
+   "This block has no content yet" box (.sqs-blockStatus) in it; it is not there when rides exist.
+   As soon as a ride is published, everything comes back on its own. If Squarespace ever renames
+   that box, nothing gets hidden (the page just shows the empty section again).
+   Not applied in the Squarespace editor, so staff can still see and edit the section.
+   --------------------------------------------------------------- */
+body:not(.sqs-edit-mode-active) section[data-section-id="69d028e32b29ce400af4ca7b"]:has(#block-6a14a8a5e56c91f49e6c .sqs-blockStatus) {
+  display: none;
+}
+
+body:not(.sqs-edit-mode-active):has(#block-6a14a8a5e56c91f49e6c .sqs-blockStatus) .fe-block-yui_3_17_2_1_1736972150639_63693 {
+  display: none;
+}
+
+/* Close the gap the hidden jump button leaves: on desktop the other two sit centered as a pair,
+   on phones they stack with no hole. These positions match the button layout of October 25, 2026
+   (three buttons: Calendar View, Group Rides, Bike Classes). Change them if the buttons move. */
+@media (min-width: 768px) {
+  body:not(.sqs-edit-mode-active):has(#block-6a14a8a5e56c91f49e6c .sqs-blockStatus) .fe-block-e9a0687bf1244af1aea1 { grid-area: 2 / 7 / 4 / 13; }
+  body:not(.sqs-edit-mode-active):has(#block-6a14a8a5e56c91f49e6c .sqs-blockStatus) .fe-block-39d61feebf827d475859 { grid-area: 2 / 15 / 4 / 21; }
+}
+@media (max-width: 767px) {
+  body:not(.sqs-edit-mode-active):has(#block-6a14a8a5e56c91f49e6c .sqs-blockStatus) .fe-block-39d61feebf827d475859 { grid-area: 4 / 4 / 6 / 8; }
+  /* Two buttons need 6 of the 8 rows; drop the 2 empty rows at the bottom */
+  body:not(.sqs-edit-mode-active):has(#block-6a14a8a5e56c91f49e6c .sqs-blockStatus) section[data-section-id="67897d2e5e083f378981fd29"] .fluid-engine { grid-template-rows: repeat(6, minmax(24px, auto)); }
+}
