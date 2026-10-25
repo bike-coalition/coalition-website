@@ -160,3 +160,22 @@ body:not(.sqs-edit-mode-active):has(#block-6a14a8a5e56c91f49e6c .sqs-blockStatus
      5px each side + Squarespace's 12px gap = the original 22px spacing, centered. */
   margin: -10px 5px 32px;
 }
+
+/* ---------------------------------------------------------------
+   Classes section: size its grid rows to their content.
+   Squarespace gives every row a minimum height, and these text blocks were sized for the old
+   stacked heading layout, which left empty rows above each class title. Letting rows size to
+   their content removes that space without depending on how many rows the section has.
+   The editor keeps Squarespace's own rows, so staff edit the section as usual.
+   --------------------------------------------------------------- */
+body:not(.sqs-edit-mode-active) section[data-section-id="69b0b56f01a68c38666a8d7b"] .fluid-engine {
+  grid-template-rows: none;
+  grid-auto-rows: minmax(0, auto);
+  padding-top: 24px; /* the empty top rows used to provide this space */
+}
+
+@media (min-width: 768px) {
+  body:not(.sqs-edit-mode-active) section[data-section-id="69b0b56f01a68c38666a8d7b"] .fluid-engine {
+    padding-top: 40px;
+  }
+}
