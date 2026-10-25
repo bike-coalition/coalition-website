@@ -80,13 +80,14 @@
         "/classes"
       ],
       "location": "section 0",
-      "bytes": 328780,
+      "bytes": 10530,
       "has_css": true,
       "has_js": true,
       "external": [
         "https://images.squarespace-cdn.com",
         "https://www.sandag.org"
-      ]
+      ],
+      "status": "live since 2026-10-25 on jsDelivr v0.5.0"
     },
     {
       "file": "src/blocks/classes/let-us-come-to-you.html",
@@ -98,13 +99,14 @@
         "/classes"
       ],
       "location": "section 0",
-      "bytes": 13748,
+      "bytes": 14006,
       "has_css": true,
       "has_js": false,
       "external": [
         "https://images.squarespace-cdn.com",
         "https://www.sandag.org"
-      ]
+      ],
+      "status": "live since 2026-10-25 on jsDelivr v0.5.0"
     },
     {
       "file": "src/blocks/board-candidates/candidates.html",
