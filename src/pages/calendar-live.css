@@ -9,10 +9,13 @@
 
 /* ---------------------------------------------------------------
    Class rows: title and level pill on one line, description below both.
-   On narrow phones the pill wraps under the title.
+   On narrow phones the pill wraps under the title. Each rule also matches the editor's
+   markup (.ProseMirror), so the Squarespace editor shows and sizes the block the same way.
    --------------------------------------------------------------- */
-#block-06dca50ed02d1a682df3 .sqs-html-content,
-#block-7c6a3226872dd98b16ad .sqs-html-content {
+#block-06dca50ed02d1a682df3 .sqs-html-content:has(> h2),
+#block-7c6a3226872dd98b16ad .sqs-html-content:has(> h2),
+#block-06dca50ed02d1a682df3 .ProseMirror,
+#block-7c6a3226872dd98b16ad .ProseMirror {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -21,13 +24,17 @@
 }
 
 #block-06dca50ed02d1a682df3 .sqs-html-content > h2,
-#block-7c6a3226872dd98b16ad .sqs-html-content > h2 {
+#block-7c6a3226872dd98b16ad .sqs-html-content > h2,
+#block-06dca50ed02d1a682df3 .ProseMirror > h2,
+#block-7c6a3226872dd98b16ad .ProseMirror > h2 {
   margin: 0;
   font-size: clamp(32px, 2.3vw + 12px, 46px); /* a step up from the site's h2: 45px at 1440, 36px at 1024, 32px on phones */
 }
 
 #block-06dca50ed02d1a682df3 .sqs-html-content > p:not(:first-of-type),
-#block-7c6a3226872dd98b16ad .sqs-html-content > p:not(:first-of-type) {
+#block-7c6a3226872dd98b16ad .sqs-html-content > p:not(:first-of-type),
+#block-06dca50ed02d1a682df3 .ProseMirror > p:not(:first-of-type),
+#block-7c6a3226872dd98b16ad .ProseMirror > p:not(:first-of-type) {
   flex: 1 0 100%;
   margin: 0;
 }
@@ -38,7 +45,9 @@
    City Cycling: Spring Green and Sky Blue dots. Smart Cycling: Sky Blue and black dots.
    --------------------------------------------------------------- */
 #block-06dca50ed02d1a682df3 .sqs-html-content > p:first-of-type,
-#block-7c6a3226872dd98b16ad .sqs-html-content > p:first-of-type {
+#block-7c6a3226872dd98b16ad .sqs-html-content > p:first-of-type,
+#block-06dca50ed02d1a682df3 .ProseMirror > p:first-of-type,
+#block-7c6a3226872dd98b16ad .ProseMirror > p:first-of-type {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -57,7 +66,11 @@
 #block-06dca50ed02d1a682df3 .sqs-html-content > p:first-of-type::before,
 #block-06dca50ed02d1a682df3 .sqs-html-content > p:first-of-type::after,
 #block-7c6a3226872dd98b16ad .sqs-html-content > p:first-of-type::before,
-#block-7c6a3226872dd98b16ad .sqs-html-content > p:first-of-type::after {
+#block-7c6a3226872dd98b16ad .sqs-html-content > p:first-of-type::after,
+#block-06dca50ed02d1a682df3 .ProseMirror > p:first-of-type::before,
+#block-06dca50ed02d1a682df3 .ProseMirror > p:first-of-type::after,
+#block-7c6a3226872dd98b16ad .ProseMirror > p:first-of-type::before,
+#block-7c6a3226872dd98b16ad .ProseMirror > p:first-of-type::after {
   content: "";
   flex: none;
   width: 11px;
@@ -69,14 +82,22 @@
 
 /* Both dots sit before the words; 4px apart, like the Classes page */
 #block-06dca50ed02d1a682df3 .sqs-html-content > p:first-of-type::before,
-#block-7c6a3226872dd98b16ad .sqs-html-content > p:first-of-type::before { order: -2; }
+#block-7c6a3226872dd98b16ad .sqs-html-content > p:first-of-type::before,
+#block-06dca50ed02d1a682df3 .ProseMirror > p:first-of-type::before,
+#block-7c6a3226872dd98b16ad .ProseMirror > p:first-of-type::before { order: -2; }
 #block-06dca50ed02d1a682df3 .sqs-html-content > p:first-of-type::after,
-#block-7c6a3226872dd98b16ad .sqs-html-content > p:first-of-type::after { order: -1; margin-left: -4px; }
+#block-7c6a3226872dd98b16ad .sqs-html-content > p:first-of-type::after,
+#block-06dca50ed02d1a682df3 .ProseMirror > p:first-of-type::after,
+#block-7c6a3226872dd98b16ad .ProseMirror > p:first-of-type::after { order: -1; margin-left: -4px; }
 
-#block-06dca50ed02d1a682df3 .sqs-html-content > p:first-of-type::before { background: var(--bc-spring-green, #C7EC7A); }
-#block-06dca50ed02d1a682df3 .sqs-html-content > p:first-of-type::after { background: var(--bc-sky-blue, #7BD1F3); }
-#block-7c6a3226872dd98b16ad .sqs-html-content > p:first-of-type::before { background: var(--bc-sky-blue, #7BD1F3); }
-#block-7c6a3226872dd98b16ad .sqs-html-content > p:first-of-type::after { background: #161614; }
+#block-06dca50ed02d1a682df3 .sqs-html-content > p:first-of-type::before,
+#block-06dca50ed02d1a682df3 .ProseMirror > p:first-of-type::before { background: var(--bc-spring-green, #C7EC7A); }
+#block-06dca50ed02d1a682df3 .sqs-html-content > p:first-of-type::after,
+#block-06dca50ed02d1a682df3 .ProseMirror > p:first-of-type::after { background: var(--bc-sky-blue, #7BD1F3); }
+#block-7c6a3226872dd98b16ad .sqs-html-content > p:first-of-type::before,
+#block-7c6a3226872dd98b16ad .ProseMirror > p:first-of-type::before { background: var(--bc-sky-blue, #7BD1F3); }
+#block-7c6a3226872dd98b16ad .sqs-html-content > p:first-of-type::after,
+#block-7c6a3226872dd98b16ad .ProseMirror > p:first-of-type::after { background: #161614; }
 
 /* ---------------------------------------------------------------
    No upcoming group rides: hide the Group Rides section and its jump button.
