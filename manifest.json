@@ -13,7 +13,7 @@
       "path": "/calendar",
       "title": "Calendar",
       "build": "native",
-      "status": "native blocks restyled with src/pages/calendar.css; build steps in docs/pages/calendar-build.md"
+      "status": "native blocks; live page styled by src/pages/calendar-live.css (Oct 25, 2026: class level pills, empty Group Rides hidden). Future redesign: src/pages/calendar.css and docs/pages/calendar-build.md"
     },
     {
       "path": "/blog",
