@@ -8,6 +8,31 @@
 */
 
 /* ---------------------------------------------------------------
+   Class rows: title and level pill on one line, description below both.
+   On narrow phones the pill wraps under the title.
+   --------------------------------------------------------------- */
+#block-06dca50ed02d1a682df3 .sqs-html-content,
+#block-7c6a3226872dd98b16ad .sqs-html-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 20px;
+  row-gap: 14px;
+}
+
+#block-06dca50ed02d1a682df3 .sqs-html-content > h2,
+#block-7c6a3226872dd98b16ad .sqs-html-content > h2 {
+  margin: 0;
+  font-size: clamp(32px, 2.3vw + 12px, 46px); /* a step up from the site's h2: 45px at 1440, 36px at 1024, 32px on phones */
+}
+
+#block-06dca50ed02d1a682df3 .sqs-html-content > p:not(:first-of-type),
+#block-7c6a3226872dd98b16ad .sqs-html-content > p:not(:first-of-type) {
+  flex: 1 0 100%;
+  margin: 0;
+}
+
+/* ---------------------------------------------------------------
    Class level pills, matching the Classes page ("Find your class").
    The first paragraph under each class heading becomes the pill:
    City Cycling: Spring Green and Sky Blue dots. Smart Cycling: Sky Blue and black dots.
@@ -17,7 +42,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin: 10px 0 14px;
+  margin: 0;
   padding: 6px 14px;
   border-radius: 999px;
   background: var(--bc-white, #FFFFFF);
@@ -83,7 +108,7 @@ body:not(.sqs-edit-mode-active):has(#block-6a14a8a5e56c91f49e6c .sqs-blockStatus
 }
 
 /* ---------------------------------------------------------------
-   Carousel arrows: below the cards, centered (instead of top right).
+   Carousel arrows: just below the cards, centered (instead of top right).
    Only the arrows move; the block's hidden title stays where Squarespace puts it.
    The space above the arrows sits on the arrows themselves, so a carousel that
    fits without arrows (Squarespace hides them) gets no extra gap.
@@ -109,5 +134,8 @@ body:not(.sqs-edit-mode-active):has(#block-6a14a8a5e56c91f49e6c .sqs-blockStatus
 
 .summary-block-wrapper.sqs-gallery-design-carousel .summary-carousel-pager-prev,
 .summary-block-wrapper.sqs-gallery-design-carousel .summary-carousel-pager-next {
-  margin: 24px 5px 0; /* 5px each side + Squarespace's 12px gap = the original 22px spacing, centered */
+  /* -10px top: the card list already ends 26px below the last line of text, so the arrows sit 16px under it.
+     32px bottom: clear space before the next heading, so the arrows read as part of the carousel.
+     5px each side + Squarespace's 12px gap = the original 22px spacing, centered. */
+  margin: -10px 5px 32px;
 }
