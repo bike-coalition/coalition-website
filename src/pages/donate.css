@@ -1,0 +1,99 @@
+/*
+  Donate page (/donate) redesign: native Squarespace blocks, plus these rules.
+  Load from the page's own header code (Donate page settings > Advanced > Page Header Code Injection).
+  tokens.css already loads site-wide. Block settings: docs/pages/donate-build.md.
+  Not tagged or loaded anywhere yet (October 26, 2026).
+
+  Rules hang off the section anchors set in the editor (Edit section > Anchor link):
+  start, giving-tuesday, give, bike-donation. Each selector matches the anchor whether
+  Squarespace puts it on the section itself or on an element inside it. If the editor has
+  no anchor field, swap each #name for [data-section-id="..."] read from the preview page.
+
+  Nothing here touches the Givebutter or Infinite Giving embeds. Without this file the page
+  still works: the band keeps its Light Bold theme and the tiles read as plain lists.
+*/
+
+/* ---------------------------------------------------------------
+   Hero photo: the sprocket arch (rounded top, square bottom).
+   --------------------------------------------------------------- */
+:is(#start, section:has(#start)) .sqs-block-image .fluid-image-container,
+:is(#start, section:has(#start)) .sqs-block-image .fluid-image-container.visitor-mode {
+  border-radius: var(--bc-radius-arch, 999px 999px 0 0) !important;
+  overflow: hidden;
+}
+
+/* ---------------------------------------------------------------
+   Giving Tuesday band: Peachy instead of the Light Bold green.
+   Teal text on Peachy is 4.79:1; Deep Teal body text is 6.71:1.
+   --------------------------------------------------------------- */
+:is(#giving-tuesday, section:has(#giving-tuesday)) .section-background {
+  background-color: var(--bc-peachy, #FFCF90) !important;
+}
+
+:is(#giving-tuesday, section:has(#giving-tuesday)) .sqs-html-content p {
+  color: var(--bc-ink-muted, #1A4D3D);
+}
+
+/* ---------------------------------------------------------------
+   Impact ladder: the bulleted list in the Give section becomes stacked tiles.
+   Each item is "<strong>amount</strong> what it funds". The last tile is teal.
+   Only text block lists match, so the Givebutter form is left alone.
+   --------------------------------------------------------------- */
+:is(#give, section:has(#give)) .sqs-html-content > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+:is(#give, section:has(#give)) .sqs-html-content > ul > li {
+  margin: 0;
+  padding: 22px 24px;
+  border-radius: var(--bc-radius-card, 24px);
+  background: var(--bc-mist, #EEF3EA);
+  color: var(--bc-ink-muted, #1A4D3D);
+}
+
+/* Squarespace draws list bullets as ::before on the item's first paragraph */
+:is(#give, section:has(#give)) .sqs-html-content > ul > li::marker,
+:is(#give, section:has(#give)) .sqs-html-content > ul > li > p::before {
+  content: none;
+}
+
+:is(#give, section:has(#give)) .sqs-html-content > ul > li > p {
+  margin: 0;
+}
+
+:is(#give, section:has(#give)) .sqs-html-content > ul > li strong {
+  display: block;
+  font-family: var(--bc-font-display);
+  font-size: 24px;
+  line-height: 1.1;
+  color: var(--bc-ink, #226550);
+}
+
+:is(#give, section:has(#give)) .sqs-html-content > ul > li:last-child {
+  background: var(--bc-teal-green, #226550);
+  color: var(--bc-white, #FFFFFF);
+}
+
+:is(#give, section:has(#give)) .sqs-html-content > ul > li:last-child strong {
+  color: var(--bc-spring-green, #C7EC7A);
+}
+
+/* ---------------------------------------------------------------
+   More ways to give: every text block that starts with a Heading 3 becomes a card.
+   The section's own heading is a Heading 2, so it stays plain.
+   Size the cards to the same rows in the editor so they line up.
+   --------------------------------------------------------------- */
+:is(#bike-donation, section:has(#bike-donation)) .fe-block:has(> .html-block .sqs-html-content > h3) {
+  padding: 24px;
+  border-radius: var(--bc-radius-card, 24px);
+  background: var(--bc-mist, #EEF3EA);
+}
+
+:is(#bike-donation, section:has(#bike-donation)) .fe-block:has(> .html-block .sqs-html-content > h3) p {
+  color: var(--bc-ink-muted, #1A4D3D);
+}
