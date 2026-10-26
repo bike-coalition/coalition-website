@@ -26,6 +26,8 @@ The step-by-step version is in [docs/runbook.md](docs/runbook.md).
 | `docs/sitemap.md` | A proposed menu structure, on hold |
 | `docs/runbook.md` | How a change goes from this repo to the live site |
 | `docs/baseline/` | Records of the live site before custom code goes in |
+| `tools/site-check.py` | Read-only check of the live site for broken links, missing alt text and page weight. Runs weekly on GitHub Actions (`.github/workflows/site-check.yml`); see the runbook |
+| `docs/reports/` | Site check reports, starting with the first run |
 | `CLAUDE.md` | Rules for Claude when it works in this repo |
 
 ## Status

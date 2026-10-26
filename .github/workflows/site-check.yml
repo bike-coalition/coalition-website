@@ -1,0 +1,41 @@
+# Weekly read-only check of the live site: broken links, image alt text, page weight.
+# Report only: it uploads the Markdown report as a workflow artifact and changes nothing.
+# No commits, no pull requests, no secrets. The run fails only if an internal link is broken.
+name: Site check
+
+on:
+  schedule:
+    - cron: '0 14 * * 1'  # Mondays, 7am Pacific in summer, 6am in winter
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check the live site
+        run: python3 tools/site-check.py --out site-check-report
+      - name: Add the report summary to the run page
+        if: always()
+        run: |
+          f=$(ls site-check-report/*.md 2>/dev/null | head -1)
+          [ -n "$f" ] && sed -n '1,/^Broken internal links make/p' "$f" >> "$GITHUB_STEP_SUMMARY" || echo "No report written." >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload the report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-check-report
+          path: site-check-report/
+          if-no-files-found: warn
+          retention-days: 90
