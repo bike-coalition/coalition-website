@@ -196,7 +196,10 @@
           "block_id": "block-yui_3_17_2_1_1791930451978_2534",
           "code_sha1": "ef73c0fe5d"
         }
-      ]
+      ],
+      "has_js": false,
+      "bytes": 59,
+      "status": "duplicate Givebutter script removed from all five blocks on 2026-10-26; relies on the site-wide script"
     }
   ]
 }

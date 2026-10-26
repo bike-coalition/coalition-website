@@ -27,7 +27,7 @@ Machine-readable version, with Squarespace block IDs: [src/blocks/registry.json]
 | Board Candidates | Full page | [board-candidates/candidates.html](../src/blocks/board-candidates/candidates.html) | 19.1 KB | HTML, CSS, JS | Loads Archivo Black and Inter. Seasonal (November 2026 election). |
 | CicloSDias | Full page | [ciclosdias/ciclosdias.html](../src/blocks/ciclosdias/ciclosdias.html) | 21.9 KB | HTML, CSS | Loads Montserrat and Open Sans; its own palette outside the brand. Still promotes the October 18, 2026 event. |
 | Bike the Bay Festival event | Givebutter widget | [events/bike-the-bay-festival-widget.html](../src/blocks/events/bike-the-bay-festival-widget.html) | 52 B | HTML | Relies on the site-wide Givebutter script. |
-| 5 City Cycling: La Mesa events | Givebutter ticket widget | [events/givebutter-ticket-widget.html](../src/blocks/events/givebutter-ticket-widget.html) | template | HTML, JS | One block per event, identical except the widget ID (table below). Each loads the Givebutter script again, on top of the site-wide one. |
+| 5 City Cycling: La Mesa events | Givebutter ticket widget | [events/givebutter-ticket-widget.html](../src/blocks/events/givebutter-ticket-widget.html) | template | HTML | One block per event, identical except the widget ID (table below). Since October 26, 2026 (step 7) each holds only the widget tag and relies on the site-wide Givebutter script, like every other event page. |
 
 ### Givebutter ticket widgets
 
