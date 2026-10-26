@@ -34,6 +34,18 @@ In Squarespace: **Pages › Code Injection (search "code injection" in the dashb
 
 Put the previous tag back in Code Injection and save. The site goes back to how it was within a few minutes.
 
+## Weekly site check
+
+Every Monday morning GitHub runs `tools/site-check.py` against the live site. It only reads pages, never changes anything, and goes slowly (about 2 requests a second) so visitors don't notice. It looks at every page in the sitemap and reports:
+
+- broken links, on our pages and to other sites
+- images with no alt text (the description screen readers read out)
+- how heavy each page is: HTML, images and scripts
+
+To read the latest report: on GitHub, open **Actions › Site check**, click the newest run, and download **site-check-report** at the bottom. The run's page also shows the summary. A red run means at least one link to one of our own pages is broken; fix those first. Everything else in the report is for review.
+
+To run it now: **Actions › Site check › Run workflow**. Or on a computer with Python: `python3 tools/site-check.py` (about 20 minutes; add `--limit 10` for a quick trial). Reports from local runs go in `docs/reports/`.
+
 ## Not set up yet
 
-- Automatic checks for links, speed and accessibility
+- Automatic speed scores (like Lighthouse) and full accessibility audits beyond alt text
