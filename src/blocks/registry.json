@@ -118,13 +118,18 @@
         "/board-candidates"
       ],
       "location": "section 0",
-      "bytes": 19081,
+      "bytes": 17050,
       "has_css": true,
       "has_js": true,
       "external": [
         "https://docs.google.com",
-        "https://fonts.googleapis.com"
-      ]
+        "https://fonts.googleapis.com",
+        "https://images.squarespace-cdn.com"
+      ],
+      "styles": "src/blocks/board-candidates/candidates.css",
+      "script": "src/blocks/board-candidates/candidates.js",
+      "page_header": "src/pages/board-candidates-header-injection.html",
+      "status": "split for jsDelivr v0.7.0 (step 6), not live; live block still the pasted version"
     },
     {
       "file": "src/blocks/ciclosdias/ciclosdias.html",
@@ -136,7 +141,7 @@
         "/ciclosdias"
       ],
       "location": "section 0",
-      "bytes": 21909,
+      "bytes": 22400,
       "has_css": true,
       "has_js": false,
       "external": [
@@ -145,7 +150,10 @@
         "https://static1.squarespace.com",
         "https://www.facebook.com",
         "https://www.instagram.com"
-      ]
+      ],
+      "styles": "src/blocks/ciclosdias/ciclosdias.css",
+      "page_header": "src/pages/ciclosdias-header-injection.html",
+      "status": "split for jsDelivr v0.7.0 (step 6), not live; live block still the pasted version"
     },
     {
       "file": "src/blocks/events/givebutter-ticket-widget.html",

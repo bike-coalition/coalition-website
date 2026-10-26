@@ -1,0 +1,32 @@
+/*
+  CicloSDias page: the whole page. Markup: src/blocks/ciclosdias/ciclosdias.html (pasted in the Squarespace Code block).
+  Most styling is inline in the markup; these rules add the base type, link motion and the section tweaks.
+  Page-wide rules for /ciclosdias (sideways clip, smooth scrolling) live in src/pages/ciclosdias.css.
+  The event uses its own palette (orange #FFA02F, blues), outside the brand colors in src/tokens.css; see docs/pages/step6-notes.md.
+*/
+.bc-ciclo{width:100vw;position:relative;left:50%;margin-left:-50vw;box-sizing:border-box;font-family:'Open Sans',system-ui,sans-serif;background:#FFF8EC;line-height:normal;text-align:left}
+.bc-ciclo *{box-sizing:border-box}
+.bc-ciclo a{color:inherit}
+.bc-ciclo img{max-width:none}
+/*
+  Buttons. These links used to carry Squarespace's own "btn" class, so the site's button style also applied:
+  position relative, a quick fade to 80% on hover (only on screens with a mouse), and its opacity transition
+  in place of this block's own. The rules below keep exactly what the live page did (checked in docs/pages/step6-notes.md).
+*/
+.bc-ciclo a.bc-ciclo__btn{position:relative;transition:opacity .1s linear;backface-visibility:hidden}
+.bc-ciclo a.bc-ciclo__btn:hover{transform:translateY(-2px)}
+@media (hover:hover){.bc-ciclo a.bc-ciclo__btn:hover{opacity:.8}}
+.bc-ciclo a.bc-ciclo__tile{transition:transform .2s ease}
+.bc-ciclo a.bc-ciclo__tile:hover{transform:translateY(-4px)}
+.bc-ciclo a:focus-visible{outline:3px solid #FFA02F;outline-offset:3px}
+.bc-ciclo h1,.bc-ciclo h2,.bc-ciclo h3{margin-top:0}
+.bc-ciclo h1,.bc-ciclo h2,.bc-ciclo h3,.bc-ciclo p,.bc-ciclo blockquote{color:inherit;font-style:normal;font-variant:normal}
+
+/* Let the block fill its Squarespace section edge to edge, with no section padding or grid placement. */
+section.page-section:has(.bc-ciclo){padding:0 !important;min-height:0 !important}
+section.page-section:has(.bc-ciclo) .content-wrapper{padding:0 !important;max-width:none !important}
+section.page-section:has(.bc-ciclo) .content{max-width:none !important;padding:0 !important}
+.fluid-engine:has(.bc-ciclo){display:block !important;overflow:visible !important;padding:0 !important}
+.fe-block:has(.bc-ciclo){grid-area:auto !important}
+.sqs-block:has(.bc-ciclo),.sqs-block-content:has(.bc-ciclo){padding:0 !important;overflow:visible !important}
+.bc-ciclo{width:100% !important;left:0 !important;margin-left:0 !important}
