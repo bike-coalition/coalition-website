@@ -1,0 +1,10 @@
+/*
+  CicloSDias page (/ciclosdias): page-wide rules. Loaded from the page's own header code
+  (Squarespace: CicloSDias page settings > Advanced > Page Header Code Injection), so they apply before the page draws.
+*/
+
+/* The block's sections run the full window width. Clip any sideways overflow. */
+html,body{overflow-x:clip}
+
+/* The "Get involved" button jumps down the page; scroll there smoothly. */
+html{scroll-behavior:smooth}

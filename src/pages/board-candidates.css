@@ -1,0 +1,7 @@
+/*
+  Board Candidates page (/board-candidates): page-wide rules. Loaded from the page's own header code
+  (Squarespace: Board Candidates page settings > Advanced > Page Header Code Injection), so they apply before the page draws.
+*/
+
+/* The block breaks out to the full window width (100vw). Clip the sideways overflow that causes. */
+html,body{overflow-x:clip}

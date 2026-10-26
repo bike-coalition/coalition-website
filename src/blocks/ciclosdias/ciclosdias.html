@@ -1,34 +1,22 @@
+<!--
+  CicloSDias page (/ciclosdias): the whole page, one Squarespace Code block. Seasonal: the yearly open streets event.
+  Styles: ciclosdias.css from jsDelivr at the tag below. Most styling is inline in the markup itself.
+  Page-wide rules: src/pages/ciclosdias.css.
+  The inline style is generated from the stylesheet (tools/make-guard.py): only its size and position rules (no colors, hovers or motion),
+  so the block has its real layout before the stylesheet loads and the Squarespace editor never measures it unstyled
+  (docs/jsdelivr-plan.md, step 1 lessons). The stylesheet loads after it and wins. Regenerate it when the CSS changes.
+-->
+<style>.bc-ciclo{width:100vw;position:relative;left:50%;margin-left:-50vw;box-sizing:border-box;font-family:'Open Sans',system-ui,sans-serif;line-height:normal}.bc-ciclo *{box-sizing:border-box}.bc-ciclo img{max-width:none}.bc-ciclo a.bc-ciclo__btn{position:relative}.bc-ciclo h1,.bc-ciclo h2,.bc-ciclo h3{margin-top:0}section.page-section:has(.bc-ciclo){padding:0 !important;min-height:0 !important}section.page-section:has(.bc-ciclo) .content-wrapper{padding:0 !important;max-width:none !important}section.page-section:has(.bc-ciclo) .content{max-width:none !important;padding:0 !important}.fluid-engine:has(.bc-ciclo){display:block !important;overflow:visible !important;padding:0 !important}.fe-block:has(.bc-ciclo){grid-area:auto !important}.sqs-block:has(.bc-ciclo),.sqs-block-content:has(.bc-ciclo){padding:0 !important;overflow:visible !important}.bc-ciclo{width:100% !important;left:0 !important;margin-left:0 !important}</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bike-coalition/coalition-website@v0.7.0/src/blocks/ciclosdias/ciclosdias.css" integrity="sha384-li0IvEZOVzoR6O1M25ShXtHRrboJ4MvwCc2Ci1Rw3BpY79O87f+eH6EjPcjlM5Dw" crossorigin="anonymous">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-html,body{overflow-x:clip}
-html{scroll-behavior:smooth}
-.cs-page{width:100vw;position:relative;left:50%;margin-left:-50vw;box-sizing:border-box;font-family:'Open Sans',system-ui,sans-serif;background:#FFF8EC;line-height:normal;text-align:left}
-.cs-page *{box-sizing:border-box}
-.cs-page a{color:inherit}
-.cs-page img{max-width:none}
-.cs-page a.btn{transition:transform .15s ease, background-color .15s ease}
-.cs-page a.btn:hover{transform:translateY(-2px)}
-.cs-page a.tile{transition:transform .2s ease}
-.cs-page a.tile:hover{transform:translateY(-4px)}
-.cs-page a:focus-visible{outline:3px solid #FFA02F;outline-offset:3px}
-.cs-page h1,.cs-page h2,.cs-page h3{margin-top:0}
-.cs-page h1,.cs-page h2,.cs-page h3,.cs-page p,.cs-page blockquote{color:inherit;font-style:normal;font-variant:normal}
-section.page-section:has(.cs-page){padding:0 !important;min-height:0 !important}
-section.page-section:has(.cs-page) .content-wrapper{padding:0 !important;max-width:none !important}
-section.page-section:has(.cs-page) .content{max-width:none !important;padding:0 !important}
-.fluid-engine:has(.cs-page){display:block !important;overflow:visible !important;padding:0 !important}
-.fe-block:has(.cs-page){grid-area:auto !important}
-.sqs-block:has(.cs-page),.sqs-block-content:has(.cs-page){padding:0 !important;overflow:visible !important}
-.cs-page{width:100% !important;left:0 !important;margin-left:0 !important}
-</style>
-<div class="cs-page" style="color:#0B2447;font-family:'Open Sans',system-ui,sans-serif">
+<div class="bc-ciclo" style="color:#0B2447;font-family:'Open Sans',system-ui,sans-serif">
 <section style="position:relative;min-height:880px;display:flex;flex-direction:column;justify-content:space-between;color:#ffffff;overflow:hidden;background:#00346E">
 <img src="https://static1.squarespace.com/static/673b90cbaf336204b2122a4a/t/6ad077ab3f5d974e5ab51d7c/1792047019717/ciclosdias-hero.jpg" alt="A young rider in white sunglasses and a purple helmet grins as she pedals a red kids bike down a closed street" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:50% 28%">
 <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to top, rgba(0,40,92,0.92) 0%, rgba(0,40,92,0.55) 36%, rgba(0,40,92,0) 66%)"></div>
 <div style="position:relative;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;padding:28px clamp(20px,5vw,64px)">
 <div style="font-family:'Montserrat',system-ui,sans-serif;font-weight:700;font-size:28px;letter-spacing:-0.01em;color:#ffffff;text-shadow:0 2px 12px rgba(0,30,70,0.5)">Ciclo<span style="color:#FFA02F;font-weight:900">SD</span>ias</div>
-<a class="btn" href="#involved" style="display:inline-flex;align-items:center;min-height:44px;padding:0 22px;border-radius:999px;background:#ffffff;color:#0B2447;font-family:'Montserrat',system-ui,sans-serif;font-weight:700;font-size:15px;text-decoration:none">Get involved</a>
+<a class="bc-ciclo__btn" href="#involved" style="display:inline-flex;align-items:center;min-height:44px;padding:0 22px;border-radius:999px;background:#ffffff;color:#0B2447;font-family:'Montserrat',system-ui,sans-serif;font-weight:700;font-size:15px;text-decoration:none">Get involved</a>
 </div>
 <div style="position:relative;display:flex;flex-direction:column;gap:24px;padding:0 clamp(20px,5vw,64px) clamp(40px,6vw,80px);max-width:1280px">
 <div style="display:flex;flex-wrap:wrap;gap:10px">
@@ -38,8 +26,8 @@ section.page-section:has(.cs-page) .content{max-width:none !important;padding:0 
 <h1 style="margin:0;font-family:'Montserrat',system-ui,sans-serif;font-weight:900;font-size:clamp(54px,10vw,148px);line-height:0.92;letter-spacing:-0.03em;text-transform:uppercase;text-wrap:balance">Streets are for <span style="color:#FFA02F">people.</span></h1>
 <p style="margin:0;max-width:640px;font-size:clamp(18px,2vw,24px);line-height:1.45;font-weight:600">For one day, over one mile of San Ysidro Boulevard goes car-free. Walk, roll, bike, skate, scoot and play. It's free, and it's for everyone.</p>
 <div style="display:flex;flex-wrap:wrap;gap:14px;padding-top:8px">
-<a class="btn" href="https://sdbikecoalition.org/volunteer" style="display:inline-flex;align-items:center;min-height:56px;padding:0 32px;border-radius:999px;background:#FFA02F;color:#0B2447;font-family:'Montserrat',system-ui,sans-serif;font-weight:800;font-size:18px;text-decoration:none">Volunteer with us</a>
-<a class="btn" href="https://sdbikecoalition.org/newsletter" style="display:inline-flex;align-items:center;min-height:56px;padding:0 32px;border-radius:999px;border:2px solid #ffffff;color:#ffffff;font-family:'Montserrat',system-ui,sans-serif;font-weight:800;font-size:18px;text-decoration:none">Get the latest</a>
+<a class="bc-ciclo__btn" href="https://sdbikecoalition.org/volunteer" style="display:inline-flex;align-items:center;min-height:56px;padding:0 32px;border-radius:999px;background:#FFA02F;color:#0B2447;font-family:'Montserrat',system-ui,sans-serif;font-weight:800;font-size:18px;text-decoration:none">Volunteer with us</a>
+<a class="bc-ciclo__btn" href="https://sdbikecoalition.org/newsletter" style="display:inline-flex;align-items:center;min-height:56px;padding:0 32px;border-radius:999px;border:2px solid #ffffff;color:#ffffff;font-family:'Montserrat',system-ui,sans-serif;font-weight:800;font-size:18px;text-decoration:none">Get the latest</a>
 </div>
 </div>
 </section>
@@ -153,21 +141,21 @@ section.page-section:has(.cs-page) .content{max-width:none !important;padding:0 
 <div style="max-width:1280px;margin:0 auto;display:flex;flex-direction:column;gap:48px">
 <h2 style="margin:0;font-family:'Montserrat',system-ui,sans-serif;font-weight:900;font-size:clamp(44px,7vw,104px);line-height:0.95;letter-spacing:-0.03em;text-transform:uppercase;max-width:960px">Be part of <span style="color:#FFA02F">the day.</span></h2>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px">
-<a class="tile" href="https://sdbikecoalition.org/volunteer" style="display:flex;flex-direction:column;justify-content:space-between;gap:40px;min-height:320px;padding:32px;background:#FFA02F;color:#0B2447;text-decoration:none">
+<a class="bc-ciclo__tile" href="https://sdbikecoalition.org/volunteer" style="display:flex;flex-direction:column;justify-content:space-between;gap:40px;min-height:320px;padding:32px;background:#FFA02F;color:#0B2447;text-decoration:none">
 <div style="display:flex;flex-direction:column;gap:12px">
 <div style="font-family:'Montserrat',system-ui,sans-serif;font-weight:900;font-size:clamp(30px,3vw,42px);line-height:1;text-transform:uppercase">Volunteer</div>
 <div style="font-size:18px;line-height:1.45">Help make the street feel like a celebration. Sign up to volunteer with the Coalition.</div>
 </div>
 <div style="font-family:'Montserrat',system-ui,sans-serif;font-weight:800;font-size:18px">Sign up to volunteer &rarr;</div>
 </a>
-<a class="tile" href="https://sdbikecoalition.org/ciclosdias-signup-form" style="display:flex;flex-direction:column;justify-content:space-between;gap:40px;min-height:320px;padding:32px;background:#ffffff;color:#0B2447;text-decoration:none">
+<a class="bc-ciclo__tile" href="https://sdbikecoalition.org/ciclosdias-signup-form" style="display:flex;flex-direction:column;justify-content:space-between;gap:40px;min-height:320px;padding:32px;background:#ffffff;color:#0B2447;text-decoration:none">
 <div style="display:flex;flex-direction:column;gap:12px">
 <div style="font-family:'Montserrat',system-ui,sans-serif;font-weight:900;font-size:clamp(30px,3vw,42px);line-height:1;text-transform:uppercase;color:#005BBB">Stay up to date</div>
 <div style="font-size:18px;line-height:1.45">Get the latest CicloSDias news, from route details to what's coming next.</div>
 </div>
 <div style="font-family:'Montserrat',system-ui,sans-serif;font-weight:800;font-size:18px">Get CicloSDias updates &rarr;</div>
 </a>
-<a class="tile" href="https://sdbikecoalition.org/newsletter" style="display:flex;flex-direction:column;justify-content:space-between;gap:40px;min-height:320px;padding:32px;background:#005BBB;color:#ffffff;text-decoration:none;border:2px solid #ffffff">
+<a class="bc-ciclo__tile" href="https://sdbikecoalition.org/newsletter" style="display:flex;flex-direction:column;justify-content:space-between;gap:40px;min-height:320px;padding:32px;background:#005BBB;color:#ffffff;text-decoration:none;border:2px solid #ffffff">
 <div style="display:flex;flex-direction:column;gap:12px">
 <div style="font-family:'Montserrat',system-ui,sans-serif;font-weight:900;font-size:clamp(30px,3vw,42px);line-height:1;text-transform:uppercase">Join the newsletter</div>
 <div style="font-size:18px;line-height:1.45">Always know what's next. The Coalition newsletter has CicloSDias news and everything else happening on San Diego's streets.</div>
@@ -177,8 +165,8 @@ section.page-section:has(.cs-page) .content{max-width:none !important;padding:0 
 </div>
 <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
 <span style="font-family:'Montserrat',system-ui,sans-serif;font-weight:700;font-size:16px;letter-spacing:0.06em;text-transform:uppercase">Follow along</span>
-<a class="btn" href="https://www.instagram.com/sdbikecoalition/" style="display:inline-flex;align-items:center;min-height:44px;padding:0 22px;border-radius:999px;border:2px solid #ffffff;color:#ffffff;font-family:'Montserrat',system-ui,sans-serif;font-weight:700;font-size:15px;text-decoration:none">Instagram</a>
-<a class="btn" href="https://www.facebook.com/sdbikecoalition" style="display:inline-flex;align-items:center;min-height:44px;padding:0 22px;border-radius:999px;border:2px solid #ffffff;color:#ffffff;font-family:'Montserrat',system-ui,sans-serif;font-weight:700;font-size:15px;text-decoration:none">Facebook</a>
+<a class="bc-ciclo__btn" href="https://www.instagram.com/sdbikecoalition/" style="display:inline-flex;align-items:center;min-height:44px;padding:0 22px;border-radius:999px;border:2px solid #ffffff;color:#ffffff;font-family:'Montserrat',system-ui,sans-serif;font-weight:700;font-size:15px;text-decoration:none">Instagram</a>
+<a class="bc-ciclo__btn" href="https://www.facebook.com/sdbikecoalition" style="display:inline-flex;align-items:center;min-height:44px;padding:0 22px;border-radius:999px;border:2px solid #ffffff;color:#ffffff;font-family:'Montserrat',system-ui,sans-serif;font-weight:700;font-size:15px;text-decoration:none">Facebook</a>
 </div>
 </div>
 </section>
