@@ -158,13 +158,25 @@
 .yui3-calendar-day.has-event { background: #B7E25E !important; border-radius: 8px !important; }
 .yui3-calendar-day.has-event .marker-daynum { color: #1F3D2E !important; font-weight: 700 !important; }
 
-/* Bigger, high-contrast prev/next arrows on event and class carousels */
+/* Bigger, high-contrast prev/next arrows on every summary carousel (blog, shop, events) */
 .summary-carousel-pager { overflow: visible !important; width: auto !important; gap: 12px !important; }
 .summary-carousel-pager-prev:not(.sqs-hidden), .summary-carousel-pager-next:not(.sqs-hidden) { display: flex !important; align-items: center !important; justify-content: center !important; width: 48px !important; height: 48px !important; border-radius: 50% !important; background: #2D5F4A !important; cursor: pointer !important; opacity: 1 !important; }
 .summary-carousel-pager-prev.sqs-disabled, .summary-carousel-pager-next.sqs-disabled { opacity: 0.35 !important; cursor: default !important; }
 .summary-carousel-pager-prev::before, .summary-carousel-pager-next::before { content: "" !important; position: static !important; display: block !important; width: 12px !important; height: 12px !important; margin: 0 !important; background: none !important; border: solid #fff !important; border-width: 0 3px 3px 0 !important; -webkit-mask: none !important; mask: none !important; }
 .summary-carousel-pager-next::before { transform: rotate(-45deg) !important; margin-right: 4px !important; }
 .summary-carousel-pager-prev::before { transform: rotate(135deg) !important; margin-left: 4px !important; }
+
+/* Carousel arrows below the cards, centered, instead of top right (blog, shop, events).
+   Only the arrows move; a block's hidden title stays where Squarespace puts it.
+   The space above the arrows sits on the arrows themselves, so a carousel that fits
+   without arrows (Squarespace hides them) gets no extra gap. */
+.summary-block-wrapper.sqs-gallery-design-carousel .summary-item-list-container { display: flex; flex-direction: column; }
+.summary-block-wrapper.sqs-gallery-design-carousel .summary-block-header { display: contents; }
+.summary-block-wrapper.sqs-gallery-design-carousel .summary-carousel-pager { order: 2; float: none; align-self: center; justify-content: center; height: auto; margin: 0; padding: 0; }
+/* -10px top: the card list ends 26px below its tallest card's text, so the arrows sit 16px under it.
+   32px bottom: clear space before what follows. 5px each side + the 12px gap = the original 22px spacing. */
+.summary-block-wrapper.sqs-gallery-design-carousel .summary-carousel-pager-prev,
+.summary-block-wrapper.sqs-gallery-design-carousel .summary-carousel-pager-next { margin: -10px 5px 32px; }
 
 /* Event date badge: brand-green circle, bottom right */
 .summary-thumbnail-event-date { width: 56px !important; height: 56px !important; padding: 0 !important; box-sizing: border-box !important; border-radius: 50% !important; background: #226550 !important; top: auto !important; bottom: 12px !important; right: 12px !important; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25) !important; overflow: hidden !important; }
