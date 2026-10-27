@@ -55,6 +55,10 @@ Each step: split the block's CSS and JS out of its HTML, tag a release, test it 
 - **Page-wide side effects:** ~~the Classes block hides the footer cities band and sets `overflow-x: clip` on the whole page~~ Done in step 5: both rules are now in `src/pages/classes.css`. The footer ticker still carries the old `sdbc-cities` class; nothing uses it any more, so it can be dropped next time the footer is edited.
 - **CicloSDias:** off-palette colors (the past event date was fixed in v0.7.0). Listed with the other content problems in [pages/step6-notes.md](pages/step6-notes.md); the step 6 split kept them as they are.
 
+## Releases after the plan
+
+- **v0.8.0, October 27, 2026.** Carousel arrows below the cards on every summary carousel: the four rules from `calendar-live.css` moved to `src/site/custom.css`. Measured on the live Home, Blog, Shop and Calendar pages with the new rules injected (arrows 16 px under the cards; the Calendar unchanged), then on the Code Preview page with a blog carousel at 1440, 1024 and 390 px. Live in Code Injection › Header and the Calendar page header the same day, and checked on Home, Blog, a blog category, Shop, a Shop category and the Calendar at all three widths. The Staff & Board list carousel is a different Squarespace type with side arrows and is unchanged. Known: on phones a Blog carousel is as tall as its tallest card, so with a long excerpt the arrows can sit well below the visible cards.
+
 ## Release checklist (every tag)
 
 1. Commit the change to `main`.
