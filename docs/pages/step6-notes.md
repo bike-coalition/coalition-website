@@ -1,6 +1,6 @@
 # Step 6: Board Candidates and CicloSDias blocks to jsDelivr
 
-Prepared October 26, 2026. **Not live.** Nothing in Squarespace has changed, and the `v0.7.0` tag the loader lines point to does not exist yet. Step 6 of [the jsDelivr plan](../jsdelivr-plan.md).
+Prepared October 26, 2026. **Live October 26, 2026, v0.7.0** (see [Go-live record](#go-live-record) below). Step 6 of [the jsDelivr plan](../jsdelivr-plan.md).
 
 ## What changed in the repo
 
@@ -122,11 +122,23 @@ git show 5cc3ab6:src/blocks/ciclosdias/ciclosdias.html
 git show 5cc3ab6:src/blocks/board-candidates/candidates.html
 ```
 
+## Go-live record
+
+October 26, 2026.
+
+1. **Copy update first:** the CicloSDias block now thanks October 18 riders and teases spring 2027 (hero pill and paragraph, street band, the "Spring 2027" tile, "Come as you are" paragraph, past-tense sponsor line). The CSS did not change, so the inline guard and hashes stayed the same.
+2. **Release:** tagged `v0.7.0`. jsDelivr served all five files with the hashes in the repo.
+3. **Code Preview test** (instead of duplicating each page): both page header files in the Code Preview header code, then each block in turn in a new section. The public page held each block file byte for byte. CicloSDias measured the same block and page height as the live page at 1440, 1024 and 390 px. Board Candidates measured the same block height at 1440 and 390, and the picker behaved the same. Its test section was 28.8 px shorter only because the live section has a section divider, which adds bottom padding; that is a section setting, not the block. Code Preview was put back afterwards: test section removed, header code restored to the step 3 lines it had.
+4. **Before the swap:** both live blocks still matched the old copies at `5cc3ab6` byte for byte.
+5. **Swap:** CicloSDias, then Board Candidates: page header code first, then the Code block. Logged out afterwards, each page holds the new block and header file byte for byte, and the old class names are gone.
+   - CicloSDias: block 7,876.8 / 8,199.7 / 10,367.6 px and page 8,939 / 9,022 / 11,764 px at 1440 / 1024 / 390, exactly as before. No sideways scroll, smooth scrolling on, buttons keep Squarespace's fade.
+   - Board Candidates: block 2,262.7 / 3,614.6 px, section 2,463.1 / 3,776.5 px, page 3,525 / 5,173 px at 1440 / 390, exactly as before, and the same after picking candidate 3. Next moves to the next candidate, the photo loads, Register to vote points to the Google Form.
+
 ## Open questions
 
 1. **Release Board Candidates at all?** The election is next month and the page will need results or to come down soon after. Moving it now is low risk but may be work for a page with weeks left. The plan says to do seasonal pages "when they're next updated".
-2. **CicloSDias timing:** release now, or with the content update for the next event (new date, recap, palette)?
-3. **Tag number:** is `v0.7.0` free, or is another release planned under it?
+2. ~~**CicloSDias timing.**~~ Released October 26 with a spring 2027 teaser. The date, route and palette still need updating for the next event.
+3. ~~**Tag number.**~~ `v0.7.0` was free and is used.
 4. **Board Candidates script without `defer`:** OK to differ from the step 4 pattern for this reason?
 5. **CicloSDias button motion:** keep Squarespace's fade with the jumpy lift, or let the lift animate as the block intended? That would be a small visible change, so it is left for later.
 6. **Short name:** `CLAUDE.md` says "the Coalition" after first reference and never "Bicycle Coalition". The organization's style instructions say "the Bike Coalition" after first reference, and allow "Bicycle" on first reference. Which one is right? Both pages use "the Coalition" today.

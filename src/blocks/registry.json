@@ -129,7 +129,7 @@
       "styles": "src/blocks/board-candidates/candidates.css",
       "script": "src/blocks/board-candidates/candidates.js",
       "page_header": "src/pages/board-candidates-header-injection.html",
-      "status": "split for jsDelivr v0.7.0 (step 6), not live; live block still the pasted version"
+      "status": "live since 2026-10-26 on jsDelivr v0.7.0 (step 6)"
     },
     {
       "file": "src/blocks/ciclosdias/ciclosdias.html",
@@ -141,7 +141,7 @@
         "/ciclosdias"
       ],
       "location": "section 0",
-      "bytes": 22400,
+      "bytes": 22444,
       "has_css": true,
       "has_js": false,
       "external": [
@@ -153,7 +153,7 @@
       ],
       "styles": "src/blocks/ciclosdias/ciclosdias.css",
       "page_header": "src/pages/ciclosdias-header-injection.html",
-      "status": "split for jsDelivr v0.7.0 (step 6), not live; live block still the pasted version"
+      "status": "live since 2026-10-26 on jsDelivr v0.7.0 (step 6)"
     },
     {
       "file": "src/blocks/events/givebutter-ticket-widget.html",
