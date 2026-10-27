@@ -67,7 +67,7 @@ Board Candidates (`/board-candidates`):
 
 CicloSDias (`/ciclosdias`):
 
-- Still promotes Sunday, October 18, 2026 as upcoming: the hero pill, the street band, the "10 to 3" stat and "Drop in anywhere along the route between 10 am and 3 pm".
+- ~~Still promotes Sunday, October 18, 2026 as upcoming.~~ Fixed before release (October 26): the hero pill, hero paragraph, street band, stat tile and "Come as you are" paragraph now thank people for October 18 and tease the next event in spring 2027, and the sponsor line is in the past tense. Update again once the spring date and route are set.
 - Colors outside the brand palette: orange `#FFA02F`, blues `#005BBB`, `#00346E`, `#0B2447`, `#001F45`, cream `#FFF8EC`.
 - Gradient overlays on the hero and street photos. The brand rules say no gradients.
 - Montserrat and Open Sans instead of Obviously and Inter.
