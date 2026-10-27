@@ -13,9 +13,10 @@
 .sqs-block-accordion .accordion-item[data-is-open="true"], .sqs-block-accordion .accordion-item:has([aria-expanded="true"]) { background: #F3FAE4 !important; }
 
 
-/* Lime carousel arrows on the bright theme only */
-[data-section-theme="bright"] .summary-carousel-pager-prev, [data-section-theme="bright"] .summary-carousel-pager-next { background-color: #C7EC7A; }
-[data-section-theme="bright"] .summary-carousel-pager-prev::before, [data-section-theme="bright"] .summary-carousel-pager-next::before { border-color: #226550; }
+/* Lime carousel arrows on the bright (dark green) theme only. !important and :not(.sqs-hidden) so they beat
+   the dark green arrow rule below, which otherwise left a dark green circle on a dark green section. */
+[data-section-theme="bright"] .summary-carousel-pager-prev:not(.sqs-hidden), [data-section-theme="bright"] .summary-carousel-pager-next:not(.sqs-hidden) { background: var(--bc-spring-green, #C7EC7A) !important; }
+[data-section-theme="bright"] .summary-carousel-pager-prev::before, [data-section-theme="bright"] .summary-carousel-pager-next::before { border-color: var(--bc-teal-green, #226550) !important; }
 /* Make the cart link impossible to miss, only when the cart has items */
 .header-actions-action--cart .cart-text-link:not(.cart-quantity-zero) { background: #C7EC7A; color: #161614 !important; font-weight: 700; padding: 10px 18px; border-radius: 999px; border: 2px solid #161614; box-shadow: 3px 3px 0 #161614; animation: cart-pulse 2s ease-in-out infinite; transition: transform .15s ease, box-shadow .15s ease; }
 .header-actions-action--cart .cart-text-link:not(.cart-quantity-zero):hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 #161614; }
@@ -177,6 +178,11 @@
    32px bottom: clear space before what follows. 5px each side + the 12px gap = the original 22px spacing. */
 .summary-block-wrapper.sqs-gallery-design-carousel .summary-carousel-pager-prev,
 .summary-block-wrapper.sqs-gallery-design-carousel .summary-carousel-pager-next { margin: -10px 5px 32px; }
+
+/* Carousel excerpts: at most 4 lines, so one long post doesn't make every card tall. Only where the block
+   shows excerpts; Squarespace forces display: block on them, hence !important. The row of cards is then
+   fitted to the cards on screen by src/site/carousel-fit.js. */
+.summary-block-setting-design-carousel.summary-block-setting-show-excerpt .summary-excerpt { display: -webkit-box !important; -webkit-box-orient: vertical; -webkit-line-clamp: 4; overflow: hidden; }
 
 /* Event date badge: brand-green circle, bottom right */
 .summary-thumbnail-event-date { width: 56px !important; height: 56px !important; padding: 0 !important; box-sizing: border-box !important; border-radius: 50% !important; background: #226550 !important; top: auto !important; bottom: 12px !important; right: 12px !important; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25) !important; overflow: hidden !important; }

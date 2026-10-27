@@ -1,0 +1,35 @@
+/*
+  Blog page (/blog, and its category and tag views): native Squarespace sections, plus these rules.
+  Loaded from the page's own header code (Blog page settings > Advanced > Page Header Code Injection).
+  The site-wide carousel rules (arrows, excerpt length, fitting the row to the cards on screen) are in
+  src/site/custom.css and src/site/carousel-fit.js; these only fix this page's section spacing.
+
+  Some rules target Squarespace section and block IDs on this page. If a section or block is deleted
+  and re-added, its ID changes: update the ID here. IDs were read from the live page on October 27, 2026.
+*/
+
+/* ---------------------------------------------------------------
+   Carousel sections: size their grid rows to their content.
+   Squarespace gives every row a fixed height, sized for the old, taller carousels. Now that a carousel
+   is only as tall as the cards on screen, those rows left empty space under the arrows. Letting rows
+   size to their content keeps the same space under every carousel.
+   The editor keeps Squarespace's own rows, so staff edit the sections as usual.
+   --------------------------------------------------------------- */
+body:not(.sqs-edit-mode-active) .fluid-engine:has(.summary-block-setting-design-carousel) {
+  grid-template-rows: none;
+  grid-auto-rows: minmax(0, auto);
+}
+
+/* "Bike Coalition In the News" has no bottom padding (custom section height 0), so its arrows sat
+   tight against the next section. Give it the same bottom padding as the other carousel sections
+   (Squarespace's small section height: 3.3vw, never under 29.7px). */
+section[data-section-id="69bdbd4dcadc056ef1811ca4"] .content-wrapper {
+  padding-bottom: max(29.7px, 3.3vw) !important;
+}
+
+/* "Letters of Support" on phones: the mobile layout put the heading under its carousel.
+   Put the heading first, like every other section. */
+@media (max-width: 767px) {
+  body:not(.sqs-edit-mode-active) .fe-block-51a58aa05a2047e28448 { grid-area: 1 / 2 / 2 / 10; }
+  body:not(.sqs-edit-mode-active) .fe-block-38fcd6114a19a4c7f6ce { grid-area: 2 / 2 / 3 / 10; }
+}
