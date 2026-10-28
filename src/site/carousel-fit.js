@@ -16,6 +16,8 @@
     if(!reduce) list.style.transition='transform 0.4s, height 0.4s';
 
     function fit(){
+      // The editor can switch on after this runs: leave its carousels as Squarespace draws them
+      if(document.body.classList.contains('sqs-edit-mode')){ if(list.style.height) list.style.height=''; return; }
       // Squarespace slides the row with translateX(-N%), a percentage of the row's own width
       var m=/translateX\((-?[\d.]+)%\)/.exec(list.style.transform||'');
       var left=m ? -parseFloat(m[1])/100*list.offsetWidth : 0, right=left+list.offsetWidth, h=0, mb=0;
