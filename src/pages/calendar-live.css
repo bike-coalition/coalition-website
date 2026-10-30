@@ -158,10 +158,13 @@ body:not(.sqs-edit-mode-active) section[data-section-id="69b0b56f01a68c38666a8d7
 /* ---------------------------------------------------------------
    Event pages (every event also loads this file through the Calendar page's header code).
    Squarespace makes the event at least one screen tall and then adds its top and bottom padding,
-   which left up to 400px of empty green under the previous and next event links on a short event.
-   End the page at those links, like a blog post. !important: Squarespace's own rule wins otherwise.
+   which left up to 400px of empty green under the previous and next event links on a short event,
+   and 144px above "Back to All Events" on top of the space it already leaves for the header.
+   End the page at those links, like a blog post, and use the site's small section padding at the top
+   (Squarespace's small section height: 3.3vw, never under 29.7px). !important: Squarespace's own rule wins otherwise.
    --------------------------------------------------------------- */
 .events-item-wrapper {
   min-height: 0 !important;
+  padding-top: max(29.7px, 3.3vw) !important;
   padding-bottom: 0 !important;
 }
