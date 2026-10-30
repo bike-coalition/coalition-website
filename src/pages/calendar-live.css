@@ -1,5 +1,5 @@
 /*
-  Calendar page (/calendar) as it is today: native Squarespace blocks, plus these rules.
+  Calendar page (/calendar) as it is today, and every event page: native Squarespace blocks, plus these rules.
   Loaded from the page's own header code (Calendar page settings > Advanced > Page Header Code Injection).
   src/pages/calendar.css is the separate, future redesign; this file is not that.
 
@@ -153,4 +153,15 @@ body:not(.sqs-edit-mode-active) section[data-section-id="69b0b56f01a68c38666a8d7
   body:not(.sqs-edit-mode-active) section[data-section-id="69b0b56f01a68c38666a8d7b"] .fluid-engine {
     padding-top: 40px;
   }
+}
+
+/* ---------------------------------------------------------------
+   Event pages (every event also loads this file through the Calendar page's header code).
+   Squarespace makes the event at least one screen tall and then adds its top and bottom padding,
+   which left up to 400px of empty green under the previous and next event links on a short event.
+   End the page at those links, like a blog post. !important: Squarespace's own rule wins otherwise.
+   --------------------------------------------------------------- */
+.events-item-wrapper {
+  min-height: 0 !important;
+  padding-bottom: 0 !important;
 }
