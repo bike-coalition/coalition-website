@@ -44,7 +44,8 @@
     {
       "path": "/newsletter",
       "title": "Newsletter",
-      "build": "undecided",
+      "build": "native",
+      "status": "native blocks; redesign (Join the ride) in progress: src/pages/newsletter.css and docs/pages/newsletter-build.md, not live yet",
       "embeds": [
         "Squarespace Newsletter block"
       ]

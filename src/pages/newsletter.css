@@ -1,0 +1,234 @@
+/*
+  Newsletter page (/newsletter) redesign, "Join the ride": native Squarespace blocks, plus these rules.
+  Load from the page's own header code (Newsletter page settings > Advanced > Page Header Code Injection).
+  tokens.css already loads site-wide. Block settings: docs/pages/newsletter-build.md.
+
+  The signup form is Squarespace's own Newsletter block. These rules only restyle it: what it asks for,
+  where signups go and the thank-you message stay in the block's settings. Every rule hangs off the
+  section that holds the form, so no section or block IDs are needed. Without this file the page still
+  works: the form keeps Squarespace's look.
+*/
+
+/* ---------------------------------------------------------------
+   Eyebrow and headline: a text block that starts with a short paragraph ("Newsletter")
+   and then a Heading 1 ("Join the ride."). The paragraph becomes the small caps label.
+   --------------------------------------------------------------- */
+section:has(.newsletter-form) .sqs-html-content > p:first-child:has(+ h1) {
+  margin: 0 0 20px;
+  font-family: var(--bc-font-body);
+  font-size: 14px !important;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: var(--bc-tracking-caps, 0.12em);
+  text-transform: uppercase;
+  color: var(--bc-spring-green, #C7EC7A);
+}
+
+section:has(.newsletter-form) .sqs-html-content > h1 {
+  margin: 0;
+  font-family: "obviously-wide", var(--bc-font-display);
+  font-weight: 700;
+  font-size: clamp(44px, 5.8vw, 92px);
+  line-height: var(--bc-leading-display, 0.95);
+  letter-spacing: var(--bc-tracking-display, -0.02em);
+  text-transform: uppercase;
+  color: var(--bc-spring-green, #C7EC7A);
+  text-wrap: balance;
+}
+
+section:has(.newsletter-form) .sqs-html-content > h1 + p {
+  margin-top: 28px;
+  max-width: 560px;
+  font-family: var(--bc-font-body);
+  font-size: clamp(18px, 1.5vw, 21px);
+  line-height: var(--bc-leading-body, 1.55);
+}
+
+/* ---------------------------------------------------------------
+   Hero photo: the sprocket arch (rounded top, square bottom).
+   --------------------------------------------------------------- */
+section:has(.newsletter-form) .sqs-block-image .fluid-image-container,
+section:has(.newsletter-form) .sqs-block-image .fluid-image-container.visitor-mode {
+  border-radius: var(--bc-radius-arch, 999px 999px 0 0) !important;
+  overflow: hidden;
+}
+
+/* ---------------------------------------------------------------
+   The form: a light green card with the labels above white fields and a Teal Green button.
+   Teal Green labels and text on the card are 6.12:1. The fields get a 2px border at 3.08:1
+   against the card, so they are easy to find (the mockup's white border would be 1.1:1).
+   --------------------------------------------------------------- */
+.newsletter-form-wrapper,
+.newsletter-form-wrapper .newsletter-form {
+  text-align: left !important;
+}
+
+.newsletter-form {
+  max-width: 620px;
+  margin: 0 !important;
+  padding: 32px;
+  border-radius: var(--bc-radius-card, 24px);
+  background: var(--bc-mist, #EEF3EA);
+  color: var(--bc-ink, #226550);
+  font-family: var(--bc-font-body);
+}
+
+/* If the block keeps a title or description, set them in the card's colors */
+.newsletter-form-header,
+.newsletter-form-header-title,
+.newsletter-form-header-description,
+.newsletter-form-header-description p {
+  color: var(--bc-ink, #226550) !important;
+  text-align: left !important;
+}
+
+/* Squarespace centers a narrow column of fields (288px wide on desktop): fill the card instead */
+.newsletter-form-body,
+.newsletter-form-fields-wrapper {
+  display: flex !important;
+  flex-direction: column;
+  align-items: stretch !important;
+  gap: 16px;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+.newsletter-form-name-fieldset {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  gap: 14px;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0;
+}
+
+.newsletter-form-field-wrapper {
+  display: flex !important;
+  flex-direction: column;
+  gap: 6px;
+  width: 100% !important;
+  min-width: 0 !important; /* Squarespace sets 288px, which pushed Last name out of the card */
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Squarespace hides the labels and shows only the placeholders. Show the labels above the fields,
+   which stay readable while someone types, and hide the placeholders that repeat them. */
+.newsletter-form-field-label {
+  visibility: visible !important;
+  height: auto !important;
+  margin: 0 !important;
+  font-family: var(--bc-font-body);
+  font-size: var(--bc-text-small, 16px) !important;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: left !important;
+  color: var(--bc-ink, #226550) !important;
+}
+
+.newsletter-form .newsletter-form-field-element {
+  box-sizing: border-box;
+  width: 100% !important;
+  min-width: 0;
+  height: auto !important;
+  min-height: var(--bc-button-height, 52px);
+  margin: 0 !important;
+  padding: 0 16px !important;
+  border: 2px solid color-mix(in srgb, var(--bc-teal-green, #226550) 70%, var(--bc-white, #FFFFFF)) !important;
+  border-radius: 14px !important;
+  background: var(--bc-white, #FFFFFF) !important;
+  color: var(--bc-ink-muted, #1A4D3D) !important;
+  font-family: var(--bc-font-body) !important;
+  font-size: var(--bc-text-body, 18px) !important;
+  font-weight: 400;
+}
+
+.newsletter-form .newsletter-form-field-element::placeholder {
+  color: transparent !important;
+  opacity: 0 !important;
+}
+
+/* The site stylesheet's pale lime focus ring is hard to see on the light card: use Teal Green */
+.newsletter-form .newsletter-form-field-element:focus {
+  border-color: var(--bc-teal-green, #226550) !important;
+  box-shadow: none !important;
+  outline: 3px solid var(--bc-teal-green, #226550) !important;
+  outline-offset: 2px;
+}
+
+.newsletter-form-button-wrapper {
+  margin: 8px 0 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+
+.newsletter-form .newsletter-form-button {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: auto !important;
+  min-width: 200px;
+  height: auto !important;
+  min-height: var(--bc-button-height, 52px);
+  padding: var(--bc-button-pad, 0 26px) !important;
+  border: none !important;
+  border-radius: var(--bc-radius-pill, 999px) !important;
+  background: var(--bc-teal-green, #226550) !important;
+  color: var(--bc-spring-green, #C7EC7A) !important;
+  font-family: var(--bc-font-body) !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  cursor: pointer;
+}
+
+.newsletter-form .newsletter-form-button:hover {
+  background: var(--bc-teal-deep, #1A4D3D) !important;
+  opacity: 1 !important;
+}
+
+.newsletter-form .newsletter-form-button:focus-visible {
+  outline: 3px solid var(--bc-teal-green, #226550);
+  outline-offset: 3px;
+}
+
+/* Squarespace always adds a footnote paragraph, empty unless the block's footnote is filled in.
+   Drop it while it's empty, and the body's bottom padding, so the card ends at the button. */
+.newsletter-form-body {
+  padding-bottom: 0 !important;
+}
+
+.newsletter-form-footnote:not(:has(p:not(:empty))) {
+  display: none;
+}
+
+/* After signing up, and when a field needs fixing */
+.newsletter-form-wrapper .form-submission-text,
+.newsletter-form-wrapper .newsletter-form-footnote,
+.newsletter-form-wrapper .newsletter-form-footnote p {
+  color: var(--bc-ink, #226550) !important;
+  font-family: var(--bc-font-body);
+  text-align: left !important;
+}
+
+.newsletter-form .field-error {
+  margin: 4px 0 0 !important;
+  padding: 8px 12px !important;
+  border-radius: 10px;
+  background: var(--bc-white, #FFFFFF) !important;
+  color: var(--bc-ink-muted, #1A4D3D) !important;
+  font-family: var(--bc-font-body);
+  font-size: 15px !important;
+}
+
+@media (max-width: 767px) {
+  .newsletter-form {
+    padding: 24px;
+  }
+}
