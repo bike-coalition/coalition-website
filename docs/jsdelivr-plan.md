@@ -53,7 +53,7 @@ Each step: split the block's CSS and JS out of its HTML, tag a release, test it 
 - **Class names:** the live code uses `sdbc-` prefixes (`sdbc-cities`, `sdbcQuotes`, `sdbc-slide`). Rename to `bc-` as each block moves, in the CSS, the JS and the markup together.
 - **Fonts:** three blocks load their own Google Fonts (Archivo, Archivo Black, Inter, Montserrat, Open Sans). The site already loads Obviously from Adobe Fonts. Settle on Obviously plus Inter and load them once.
 - **Page-wide side effects:** ~~the Classes block hides the footer cities band and sets `overflow-x: clip` on the whole page~~ Done in step 5: both rules are now in `src/pages/classes.css`. The footer ticker still carries the old `sdbc-cities` class; nothing uses it any more, so it can be dropped next time the footer is edited.
-- **CicloSDias:** off-palette colors (the past event date was fixed in v0.7.0). Listed with the other content problems in [pages/step6-notes.md](pages/step6-notes.md); the step 6 split kept them as they are.
+- ~~**CicloSDias:** off-palette colors (the past event date was fixed in v0.7.0).~~ Handled by staff (November 2, 2026). The step 6 list is in [pages/step6-notes.md](pages/step6-notes.md).
 
 ## Releases after the plan
 

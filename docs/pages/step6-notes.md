@@ -55,7 +55,7 @@ Visible content (all text, links, image sources and alt text, aria labels) is id
 
 ## Content problems noticed (not changed)
 
-Board Candidates (`/board-candidates`):
+Board Candidates (`/board-candidates`): Handled by staff (November 2, 2026). The list below is kept as a record.
 
 - Seasonal: built for the November 2026 board election (2027 to 2028 term). Once the vote closes it needs results, or to come down.
 - No voting dates anywhere. The steps say "Voting happens in November", and the markup has a note asking for the dates.
@@ -65,7 +65,7 @@ Board Candidates (`/board-candidates`):
 - Loads Archivo Black and Inter from Google Fonts; headings ask for Obviously first.
 - The button lift on hover has no reduced-motion opt-out.
 
-CicloSDias (`/ciclosdias`):
+CicloSDias (`/ciclosdias`): Handled by staff (November 2, 2026). The list below is kept as a record.
 
 - ~~Still promotes Sunday, October 18, 2026 as upcoming.~~ Fixed before release (October 26): the hero pill, hero paragraph, street band, stat tile and "Come as you are" paragraph now thank people for October 18 and tease the next event in spring 2027, and the sponsor line is in the past tense. Update again once the spring date and route are set.
 - Colors outside the brand palette: orange `#FFA02F`, blues `#005BBB`, `#00346E`, `#0B2447`, `#001F45`, cream `#FFF8EC`.
@@ -136,9 +136,9 @@ October 26, 2026.
 
 ## Open questions
 
-1. **Release Board Candidates at all?** The election is next month and the page will need results or to come down soon after. Moving it now is low risk but may be work for a page with weeks left. The plan says to do seasonal pages "when they're next updated".
-2. ~~**CicloSDias timing.**~~ Released October 26 with a spring 2027 teaser. The date, route and palette still need updating for the next event.
+1. ~~**Release Board Candidates at all?**~~ Released in v0.7.0; the page has since been handled by staff (November 2, 2026).
+2. ~~**CicloSDias timing.**~~ Released October 26 with a spring 2027 teaser. The follow-up content was handled by staff (November 2, 2026).
 3. ~~**Tag number.**~~ `v0.7.0` was free and is used.
 4. **Board Candidates script without `defer`:** OK to differ from the step 4 pattern for this reason?
-5. **CicloSDias button motion:** keep Squarespace's fade with the jumpy lift, or let the lift animate as the block intended? That would be a small visible change, so it is left for later.
+5. ~~**CicloSDias button motion:**~~ Handled by staff (November 2, 2026). Was: keep Squarespace's fade with the jumpy lift, or let the lift animate as the block intended? That would be a small visible change, so it is left for later.
 6. **Short name:** `CLAUDE.md` says "the Coalition" after first reference and never "Bicycle Coalition". The organization's style instructions say "the Bike Coalition" after first reference, and allow "Bicycle" on first reference. Which one is right? Both pages use "the Coalition" today.
