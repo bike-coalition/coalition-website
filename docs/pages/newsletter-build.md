@@ -23,9 +23,11 @@ One problem the stylesheet can't fix: Squarespace doesn't connect the First Name
 
 Duplicating keeps the Newsletter block and its storage, the photo and the SEO settings. Nothing changes on the live page until step 6.
 
-1. **Pages ›** Newsletter **› ⋯ › Duplicate.** Title the copy "Newsletter preview", slug `/newsletter-preview`.
-2. Move it to **Not Linked** right away, so it never shows in the menus. Turn on **Page Settings › SEO › Hide page from search results**.
+1. **Pages ›** Join the Newsletter (under Get Involved) **› Page settings › Duplicate Page › Confirm.** The copy lands in **Not Linked** on its own, so it never shows in the menus. Title it "Newsletter preview", slug `/newsletter-preview`.
+2. Turn on **Page Settings › SEO › Hide Page from Search Results**.
 3. Open the copy's Newsletter block, **Storage** tab, and check it sends signups to the same place as the live block. Don't change it.
+
+**Done November 2, 2026:** `/newsletter-preview` exists in Not Linked, hidden from search (the published page carries `noindex`), with the same form as the live page. Nothing else on it has changed yet; the Storage check in item 3 is still to do.
 
 ## 2. Hero section (keep its Bright Inverse theme)
 
