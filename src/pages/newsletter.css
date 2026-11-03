@@ -12,8 +12,11 @@
 /* ---------------------------------------------------------------
    Eyebrow and headline: a text block that starts with a short paragraph ("Newsletter")
    and then a Heading 1 ("Join the ride."). The paragraph becomes the small caps label.
+   Each rule also matches the editor's markup (.ProseMirror), so the Squarespace editor shows and
+   sizes the block the same way.
    --------------------------------------------------------------- */
-section:has(.newsletter-form) .sqs-html-content > p:first-child:has(+ h1) {
+section:has(.newsletter-form) .sqs-html-content > p:first-child:has(+ h1),
+section:has(.newsletter-form) .ProseMirror > p:first-child:has(+ h1) {
   margin: 0 0 20px;
   font-family: var(--bc-font-body);
   font-size: 14px !important;
@@ -24,7 +27,8 @@ section:has(.newsletter-form) .sqs-html-content > p:first-child:has(+ h1) {
   color: var(--bc-spring-green, #C7EC7A);
 }
 
-section:has(.newsletter-form) .sqs-html-content > h1 {
+section:has(.newsletter-form) .sqs-html-content > h1,
+section:has(.newsletter-form) .ProseMirror > h1 {
   margin: 0;
   font-family: "obviously-wide", var(--bc-font-display);
   font-weight: 700;
@@ -36,7 +40,8 @@ section:has(.newsletter-form) .sqs-html-content > h1 {
   text-wrap: balance;
 }
 
-section:has(.newsletter-form) .sqs-html-content > h1 + p {
+section:has(.newsletter-form) .sqs-html-content > h1 + p,
+section:has(.newsletter-form) .ProseMirror > h1 + p {
   margin-top: 28px;
   max-width: 560px;
   font-family: var(--bc-font-body);
