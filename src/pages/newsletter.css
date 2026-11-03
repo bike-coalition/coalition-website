@@ -28,7 +28,7 @@ section:has(.newsletter-form) .sqs-html-content > h1 {
   margin: 0;
   font-family: "obviously-wide", var(--bc-font-display);
   font-weight: 700;
-  font-size: clamp(44px, 5.8vw, 92px);
+  font-size: clamp(44px, 5vw, 76px); /* "JOIN THE" stays on one line in the left half: 72px at 1440 */
   line-height: var(--bc-leading-display, 0.95);
   letter-spacing: var(--bc-tracking-display, -0.02em);
   text-transform: uppercase;
