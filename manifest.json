@@ -45,7 +45,7 @@
       "path": "/newsletter",
       "title": "Newsletter",
       "build": "native",
-      "status": "native blocks; redesign (Join the ride) in progress: src/pages/newsletter.css and docs/pages/newsletter-build.md, not live yet",
+      "status": "native blocks; Join the ride redesign live November 2, 2026, styled by src/pages/newsletter.css (docs/pages/newsletter-build.md). Old page disabled at /newsletter-old",
       "embeds": [
         "Squarespace Newsletter block"
       ]

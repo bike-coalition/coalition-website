@@ -27,7 +27,7 @@ Duplicating keeps the Newsletter block and its storage, the photo and the SEO se
 2. Turn on **Page Settings › SEO › Hide Page from Search Results**.
 3. Open the copy's Newsletter block, **Storage › Squarespace**, and make it match the live block. **Duplicating does not copy this.** The live block (checked November 2, 2026) adds signups to the **Monthly Updates** mailing list and has **Send Confirmation Email** on, with reCAPTCHA on. The copy came out as "Newsletter Form 2" with no mailing list and the confirmation email off. Set the list and turn the confirmation email on, then open **Edit Confirmation Email** on both blocks and make the copy's email match the live one.
 
-**Done November 2, 2026:** `/newsletter-preview` exists in Not Linked, hidden from search (the published page carries `noindex`). **Not done:** item 3. Claude can't change a form's mailing list or confirmation email without your go-ahead, so the copy still has no list and no confirmation email.
+**Done November 2, 2026:** `/newsletter-preview` exists in Not Linked, hidden from search (the published page carries `noindex`). Item 3 done the same day with staff's go-ahead: Monthly Updates and the confirmation email on. The confirmation email itself is one site-wide email (Email Campaigns › Email Settings › Verification Options), so there was nothing per form to match. Storage changes alone don't turn the editor's Save on: make any small edit in the block's Content tab too, then save.
 
 ## 2. Hero section (keep its Bright Inverse theme)
 
@@ -69,7 +69,7 @@ Claude tags a release and gives you the line, which also goes in the repo as `sr
 ## 6. Go live
 
 1. **Save the old page.** It stays as it is and becomes the undo. Today's SEO title is "Newsletter | Stay Informed & Ride" (Squarespace adds the site name) and the description is "Subscribe to San Diego County Bike Coalition's newsletter for updates on biking events, advocacy, and community news to enhance your cycling experience."
-2. Change the old page's slug from `/newsletter` to `/newsletter-old`, hide it from search and give it a password.
+2. Change the old page's slug from `/newsletter` to `/newsletter-old` and turn off **Enable Page** (or give it a password).
 3. Change the preview page's title to "Newsletter", its navigation title to "Join the Newsletter" and its slug from `/newsletter-preview` to `/newsletter`. Footer and email links to `/newsletter` now reach the new page.
 4. **Swap the pages in the menu.** The Get Involved menu item is the old page itself, not a link to `/newsletter`, so after step 2 it would point to `/newsletter-old`. In **Pages**, drag the preview page into Get Involved where "Join the Newsletter" sits, and drag the old page to Not Linked.
 5. Check **Settings › Advanced › URL Mappings**: no rule should send `/newsletter` anywhere.
@@ -98,3 +98,11 @@ Read from the published page.
 | 1 | Join the Ride | Bright Inverse, with a section divider | Newsletter (title "Join the Ride", description "Subscribe to our newsletter for the latest biking news, events, and other local updates", First and Last Name, Email Address, "Sign Up"), Text ("Donations are welcome! All proceeds go directly towards making San Diego an amazing place to ride bikes!" linked to `/donate`), Image (two riders in red jerseys) |
 
 No page-level header code. No Heading 1 on the page.
+
+## Go-live record (November 2, 2026)
+
+- Stylesheet v0.10.3 in the page's header code ([src/pages/newsletter-header-injection.html](../../src/pages/newsletter-header-injection.html)).
+- Staff dragged the new page into Get Involved and the old one to Not Linked. Then: old page renamed "Join the Newsletter (old, Nov 2026)", slug `/newsletter-old`, disabled; new page titled "Join the Newsletter", slug `/newsletter`, Hide from Search off. Its SEO title and description are the old page's, unchanged.
+- Checked live, logged out: `/newsletter` loads the new page with no `noindex`; `/newsletter-preview` and `/newsletter-old` return 404; every "Join the Newsletter" menu link goes to `/newsletter`. At 1440, 1024 and 390 px: one Heading 1 on two lines, labels visible, fields and both buttons 52 px tall, arch photo, nothing scrolls sideways.
+- Not checked by Claude: a real signup. Sign up once with a staff address and confirm it reaches Monthly Updates and the confirmation email arrives.
+- Delete the old page after a month (early December 2026) if nothing needs it.
