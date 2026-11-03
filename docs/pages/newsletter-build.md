@@ -25,9 +25,9 @@ Duplicating keeps the Newsletter block and its storage, the photo and the SEO se
 
 1. **Pages ›** Join the Newsletter (under Get Involved) **› Page settings › Duplicate Page › Confirm.** The copy lands in **Not Linked** on its own, so it never shows in the menus. Title it "Newsletter preview", slug `/newsletter-preview`.
 2. Turn on **Page Settings › SEO › Hide Page from Search Results**.
-3. Open the copy's Newsletter block, **Storage** tab, and check it sends signups to the same place as the live block. Don't change it.
+3. Open the copy's Newsletter block, **Storage › Squarespace**, and make it match the live block. **Duplicating does not copy this.** The live block (checked November 2, 2026) adds signups to the **Monthly Updates** mailing list and has **Send Confirmation Email** on, with reCAPTCHA on. The copy came out as "Newsletter Form 2" with no mailing list and the confirmation email off. Set the list and turn the confirmation email on, then open **Edit Confirmation Email** on both blocks and make the copy's email match the live one.
 
-**Done November 2, 2026:** `/newsletter-preview` exists in Not Linked, hidden from search (the published page carries `noindex`), with the same form as the live page. Nothing else on it has changed yet; the Storage check in item 3 is still to do.
+**Done November 2, 2026:** `/newsletter-preview` exists in Not Linked, hidden from search (the published page carries `noindex`). **Not done:** item 3. Claude can't change a form's mailing list or confirmation email without your go-ahead, so the copy still has no list and no confirmation email.
 
 ## 2. Hero section (keep its Bright Inverse theme)
 
@@ -38,7 +38,7 @@ The section today holds three blocks: the Newsletter block, a text block ("Donat
    - Heading 1: `Join the ride.`
    - Paragraph: `Get the latest biking news, events and local updates from the San Diego County Bike Coalition, straight to your inbox.`
 
-   Move it to the top left, above the form. The donation line moves to the new band in step 3.
+   Move it to the top left, above the form, and widen it to the form's columns (on desktop, columns 2 to 11) so "JOIN THE" fits on one line. The donation line moves to the new band in step 3.
 2. **Newsletter block › Content:** clear the **Title** ("Join the Ride") and the **Description**, so the page doesn't say it twice. Keep the name and email fields as they are. Change the button label from "Sign Up" to `Sign up`.
 3. **Newsletter block:** put it under the text block, in the same columns (on desktop, the left half).
 4. **Photo:** keep it in the right half, about 4 wide to 5 tall, running to the bottom of the section. The stylesheet rounds its top into the arch.
@@ -49,10 +49,10 @@ The section today holds three blocks: the Newsletter block, a text block ("Donat
 
 Add a section right under the hero. Theme **Light Bold** (Spring Green).
 
-- **Text block:** Heading 2 `Want to do more than read about it?`, then a paragraph: `Donations are welcome. Every gift goes toward making San Diego an amazing place to ride a bike.`
-- **Button block:** `Donate`, linking to `/donate`. On desktop, to the right of the text; on phones, under it.
+- **Text block:** Heading 2 `Want to do more than read about it?`, then a paragraph: `Donations are welcome. Every gift goes toward making San Diego an amazing place to ride a bike.`, then a last paragraph that is only a link: `Donate`, linking to `/donate`. The stylesheet draws that link as a Teal Green button with Spring Green text, so no button block has to be placed.
+- **Section settings:** Fill Screen on, Height S, 9 grid rows. With Fill Screen off, the section loses its top and bottom padding.
 
-No stylesheet rule is needed here. If the theme's button isn't Teal Green with Spring Green text, tell Claude.
+The artboard puts the button to the right of the text. It sits under the text instead: in the editor, dragging blocks in this new section kept freezing, and under the text matches the phone layout.
 
 ## 4. Load the stylesheet on the preview page
 
@@ -69,11 +69,12 @@ Claude tags a release and gives you the line, which also goes in the repo as `sr
 ## 6. Go live
 
 1. **Save the old page.** It stays as it is and becomes the undo. Today's SEO title is "Newsletter | Stay Informed & Ride" (Squarespace adds the site name) and the description is "Subscribe to San Diego County Bike Coalition's newsletter for updates on biking events, advocacy, and community news to enhance your cycling experience."
-2. Change the old page's slug from `/newsletter` to `/newsletter-old`, move it to Not Linked, hide it from search and give it a password.
-3. Change the preview page's title to "Newsletter" and its slug from `/newsletter-preview` to `/newsletter`. Every menu, footer and email link to `/newsletter` now reaches the new page.
-4. Check **Settings › Advanced › URL Mappings**: no rule should send `/newsletter` anywhere.
-5. Run the step 5 checks again on `/newsletter`.
-6. In the repo: record the page in [code-map.md](../code-map.md) and set `/newsletter`'s status in `manifest.json`.
+2. Change the old page's slug from `/newsletter` to `/newsletter-old`, hide it from search and give it a password.
+3. Change the preview page's title to "Newsletter", its navigation title to "Join the Newsletter" and its slug from `/newsletter-preview` to `/newsletter`. Footer and email links to `/newsletter` now reach the new page.
+4. **Swap the pages in the menu.** The Get Involved menu item is the old page itself, not a link to `/newsletter`, so after step 2 it would point to `/newsletter-old`. In **Pages**, drag the preview page into Get Involved where "Join the Newsletter" sits, and drag the old page to Not Linked.
+5. Check **Settings › Advanced › URL Mappings**: no rule should send `/newsletter` anywhere.
+6. Run the step 5 checks again on `/newsletter`.
+7. In the repo: record the page in [code-map.md](../code-map.md) and set `/newsletter`'s status in `manifest.json`.
 
 ## Undo
 
