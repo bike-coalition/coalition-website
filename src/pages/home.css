@@ -1,0 +1,21 @@
+/*
+  Homepage (/): page-level fixes only. The homepage itself stays as it is for now.
+  Load from the homepage's own header code (Homepage page settings > Advanced > Page Header Code Injection).
+
+  "How do we get there from here?" goals accordion: close the gap below it on laptops and desktops.
+  The accordion block was sized in the editor with one goal open, so with every goal closed
+  (how the page loads) it left about 300px of empty grid rows before "Where do I start?".
+  These rules end the block where the closed list ends and drop the 7 empty rows below it. Grid rows
+  still grow to fit, so opening a goal pushes the next section down as before.
+  Phones need nothing: their layout already sizes the block to its content.
+
+  Targets one section ID and one block ID: update them if that section or the accordion is re-added.
+*/
+@media (min-width: 768px) {
+  body:not(.sqs-edit-mode-active) section[data-section-id="687e91a7a5495b16f870d3d7"] .fluid-engine {
+    grid-template-rows: repeat(15, minmax(calc(var(--container-width) * var(--row-height-scaling-factor)), auto));
+  }
+  body:not(.sqs-edit-mode-active) section[data-section-id="687e91a7a5495b16f870d3d7"] .fe-block-yui_3_17_2_1_1756086285033_4715 {
+    grid-area: 3 / 2 / 16 / 17;
+  }
+}
