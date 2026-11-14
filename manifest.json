@@ -7,7 +7,7 @@
       "path": "/",
       "title": "Homepage",
       "build": "native",
-      "status": "keeping the current homepage for now; new directions on hold"
+      "status": "keeping the current homepage for now; new directions on hold. Live page styled by src/pages/home.css (Nov 13, 2026: no empty space below the goals accordion)"
     },
     {
       "path": "/calendar",
