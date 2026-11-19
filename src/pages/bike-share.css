@@ -1,0 +1,10 @@
+/*
+  Bike Share page (/bike-share): page-wide rules. Loaded from the page's own header code
+  (Squarespace: Bike Share page settings > Advanced > Page Header Code Injection), so they apply before the page draws.
+*/
+
+/* The block breaks out to the full window width (100vw). Clip the sideways overflow that causes. */
+html,body{overflow-x:clip}
+
+/* In-page links (Sign the petition, I represent a group) glide instead of jumping, unless the visitor asks for less motion. */
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}

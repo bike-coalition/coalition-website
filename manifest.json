@@ -57,6 +57,16 @@
       "status": "published, seasonal"
     },
     {
+      "path": "/bike-share",
+      "title": "Bike Share",
+      "build": "custom",
+      "status": "redesign built November 19, 2026 as one Code block (src/blocks/bike-share, docs/pages/bike-share-build.md, release v0.12.0); old page saved in docs/baseline/bike-share-2026-11. Not live yet: hidden preview page first",
+      "embeds": [
+        "Action Network",
+        "YouTube"
+      ]
+    },
+    {
       "path": "/classes",
       "title": "Classes",
       "build": "undecided"
