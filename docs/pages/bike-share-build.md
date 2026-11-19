@@ -16,7 +16,7 @@ The old page is saved in [docs/baseline/bike-share-2026-11/](../baseline/bike-sh
 ## What stays live and connected
 
 - **Petition:** the same Action Network embed (`bring-bikeshare-back-to-san-diego`, full layout). The signature count updates itself. The card keeps the styling and text fixes it had on the old page (moved, unchanged, into `petition.css` and `petition.js`), so it is a Teal Green card rather than the white card drawn on the artboard.
-- **$1 pledge:** the section has the anchor `#support`, so `sdbikecoalition.org/bike-share#support` opens the page at it (added November 19, 2026, v0.12.1; staff asked for this link). It links to the Givebutter campaign at `givebutter.com/c/bikeshare`. No progress bar: the campaign has no Givebutter widget, and fixed numbers would go stale (decided November 19, 2026).
+- **$1 pledge:** the section has the anchor `#support`, so `sdbikecoalition.org/bike-share#support` opens the page at it (added November 19, 2026, v0.12.1; staff asked for this link). Since v0.12.2, `bike-share.js` holds a linked section in view while the petition embed loads above it, so the link lands on the section. It links to the Givebutter campaign at `givebutter.com/c/bikeshare`. No progress bar: the campaign has no Givebutter widget, and fixed numbers would go stale (decided November 19, 2026).
 - **FOX 5 video:** the same YouTube video as the old page (`FEBnMJSr1b0`), embedded from `youtube-nocookie.com`.
 - **Letter of support** (Google Form) and **join the Alliance** (email to Ian) links are unchanged.
 - Images already on the site (hero, docked station, riders, Alliance and Waymo logos, Ian's photo) load from Squarespace's image CDN, the same files the old page and the Staff & Board page use.
