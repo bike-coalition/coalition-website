@@ -52,6 +52,16 @@ Checked on the published preview, November 19, 2026: at 1440 px and 390 px nothi
 4. Run the step 2 checks again on `/bike-share`, logged out. Check the block's section isn't taller than the page (docs/jsdelivr-plan.md, step 1 lessons).
 5. In the repo: record the go-live below, in [code-map.md](../code-map.md) and in `manifest.json`.
 
+## Go-live record (November 19, 2026)
+
+- Done by Claude in the Squarespace editor, at Jason's go-ahead after the preview.
+- Old page: renamed "Bike Share (old, Nov 2026)", slug `/bike-share-old`, **Enable Page off**, moved to Not Linked. It still holds every original section, including its own petition block.
+- New page: title and navigation title "Bike Share", slug `/bike-share`, Hide from Search off, in the Advocacy menu after Campaigns (where the old page sat). Page header code: v0.12.0 line from `src/pages/bike-share-header-injection.html`.
+- URL Mappings: no rule mentions `/bike-share`.
+- Checked logged out: `/bike-share` serves the new block and header code with no `noindex`, and is in the sitemap; the menu links to `/bike-share`; `/bike-share-old` and `/bike-share-preview` return 404. In the browser: the petition loads with its live count, every image loads, nothing scrolls sideways, the pickers work.
+- Not checked by Claude: a real petition signature, the Givebutter checkout, and every outside link by hand. Click through them once.
+- Delete the old page after a month (late December 2026) if nothing needs it.
+
 ## Undo
 
 Swap the slugs back (new page to `/bike-share-preview`, old page to `/bike-share`, turn the old page back on). The old page still has its own petition block. Keep the old page for a month after go-live, then delete it.

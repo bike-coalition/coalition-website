@@ -60,7 +60,7 @@
       "path": "/bike-share",
       "title": "Bike Share",
       "build": "custom",
-      "status": "redesign built November 19, 2026 as one Code block (src/blocks/bike-share, docs/pages/bike-share-build.md, release v0.12.0); old page saved in docs/baseline/bike-share-2026-11. Not live yet: hidden preview page first",
+      "status": "custom Code block; redesign live November 19, 2026 (src/blocks/bike-share, docs/pages/bike-share-build.md, release v0.12.0). Old page saved in docs/baseline/bike-share-2026-11 and kept, disabled, at /bike-share-old",
       "embeds": [
         "Action Network",
         "YouTube"
