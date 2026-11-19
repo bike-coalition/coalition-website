@@ -32,6 +32,10 @@ Staff confirmed on November 19, 2026: the "Estimated 2028" launch, "0 cities in 
 3. On the copy, delete every section but one. In that section, delete every block and add one **Code** block. Paste the whole of `bike-share.html` into it and save.
 4. **Page Settings › Advanced › Page Header Code Injection:** paste `src/pages/bike-share-header-injection.html` and save.
 
+**Done November 19, 2026 (Claude, in the Squarespace editor):** "Bike Share preview" at `/bike-share-preview`, in Not Linked, Hide from Search on (it is left out of the sitemap, but Squarespace adds no `noindex` tag, so keep the page unlinked and short-lived). All 15 copied sections removed; one blank section holds one Code block with `bike-share.html` from v0.12.0 (its text matches the repo file exactly). Header code holds the v0.12.0 line. The live `/bike-share` page was not changed (it had no page header code).
+
+Checked on the published preview, November 19, 2026: at 1440 px and 390 px nothing scrolls sideways; the block fills its section with no extra height (the 100 px above it is the site header's space); every image loads; the petition loads with its live count; the step, stop and pillar buttons switch panels; the FOX 5 video is embedded. The site's fade-in animation also applies to the block's headings and paragraphs, as on other pages: each fades in as it scrolls into view, including panels shown by a button.
+
 ## 2. Check the preview page
 
 - Desktop and phone: it matches the artboard; nothing scrolls sideways at phone width.
