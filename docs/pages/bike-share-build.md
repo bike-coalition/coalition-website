@@ -72,6 +72,8 @@ Swap the slugs back (new page to `/bike-share-preview`, old page to `/bike-share
 
 - **v0.12.4 (November 19, 2026):** the hero's text column lines up with the top of the petition card instead of its middle.
 
+- **Action Network stylesheet (November 19, 2026):** the block loads `https://actionnetwork.org/css/style-embed-v3.css` right before the petition script. The old page loaded it, and the first build left it out. Without it, returning signers (whom Action Network greets with a "Welcome back" panel) see a loading spinner, bullet dots and a stray "Close Preferences" link. Another session first added it in Squarespace only; it is now in the repo file, so every rebuild keeps it. Keep this line whenever the block is regenerated.
+
 ## To change later
 
 - A local San Diego photo for the Unlock, Ride and Dock steps (today: Unsplash photos from France and a Honolulu station) and for the docked section.
