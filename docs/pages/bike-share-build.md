@@ -74,6 +74,8 @@ Swap the slugs back (new page to `/bike-share-preview`, old page to `/bike-share
 
 - **Action Network stylesheet (November 19, 2026):** the block loads `https://actionnetwork.org/css/style-embed-v3.css` right before the petition script. The old page loaded it, and the first build left it out. Without it, returning signers (whom Action Network greets with a "Welcome back" panel) see a loading spinner, bullet dots and a stray "Close Preferences" link. Another session first added it in Squarespace only; it is now in the repo file, so every rebuild keeps it. Keep this line whenever the block is regenerated.
 
+- **v0.12.6 (November 19, 2026):** the "0 cities" headline sets its own Spring Green. It had inherited the color from its band, and the site's heading style turned it dark green on the photo. Every heading in the block should name its color for this reason.
+
 ## To change later
 
 - A local San Diego photo for the Unlock, Ride and Dock steps (today: Unsplash photos from France and a Honolulu station) and for the docked section.
