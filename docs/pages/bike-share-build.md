@@ -70,6 +70,8 @@ Swap the slugs back (new page to `/bike-share-preview`, old page to `/bike-share
 
 - **v0.12.3 (November 19, 2026):** the hero is solid Spring Green with dark green text and Teal Green buttons (the Encinitas photo and frosted card are gone from it); the Encinitas photo now sits behind the "0 cities" band under a dark green tint, with Spring Green and white text. Matches the canvas artboard (Tweaks › Hero: lime).
 
+- **v0.12.4 (November 19, 2026):** the hero's text column lines up with the top of the petition card instead of its middle.
+
 ## To change later
 
 - A local San Diego photo for the Unlock, Ride and Dock steps (today: Unsplash photos from France and a Honolulu station) and for the docked section.
