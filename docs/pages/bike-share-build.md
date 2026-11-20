@@ -78,6 +78,8 @@ Swap the slugs back (new page to `/bike-share-preview`, old page to `/bike-share
 
 - **v0.12.7 (November 19, 2026):** "Docks rock" sits on the mist background with its photo in a rounded frame (option B on the canvas board "Bike Share: section transition options"), so it no longer meets the "0 cities" photo in a hard line.
 
+- **v0.12.8 (November 20, 2026):** "e-bike" and "electric assist" became "pedal-assist bike" and "pedal assist" everywhere in our own copy and alt text, so the page feels less intense to people on the fence (staff request). Left as is: the FOX 5 story's web address, and anything inside the Action Network petition, which Action Network serves.
+
 ## To change later
 
 - A local San Diego photo for the Unlock, Ride and Dock steps (today: Unsplash photos from France and a Honolulu station) and for the docked section.
