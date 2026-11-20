@@ -76,6 +76,8 @@ Swap the slugs back (new page to `/bike-share-preview`, old page to `/bike-share
 
 - **v0.12.6 (November 19, 2026):** the "0 cities" headline sets its own Spring Green. It had inherited the color from its band, and the site's heading style turned it dark green on the photo. Every heading in the block should name its color for this reason.
 
+- **v0.12.7 (November 19, 2026):** "Docks rock" sits on the mist background with its photo in a rounded frame (option B on the canvas board "Bike Share: section transition options"), so it no longer meets the "0 cities" photo in a hard line.
+
 ## To change later
 
 - A local San Diego photo for the Unlock, Ride and Dock steps (today: Unsplash photos from France and a Honolulu station) and for the docked section.
