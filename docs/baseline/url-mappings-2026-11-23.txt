@@ -1,0 +1,14 @@
+# Squarespace Settings > Developer Tools > URL Mappings, as found on November 23, 2026 (before /gala was repointed)
+/join -> /newsletter 301
+/learn -> /classes 301
+/events -> /calendar 301
+/full-calendar -> /calendar 301
+/volunteers -> /volunteer 301
+/bike-clubs -> /clubs 301
+/smart-cycling -> /full-calendar?category=Smart%20Cycling 301
+/gala -> /full-calendar/golden-gear-awards 301
+/ebike-classifications-and-laws -> /e-bikes 301
+/resources/be-safe-follow-the-rules -> /safety-tips 301
+/full-calendar/ciclosdias-1 -> /ciclosdias-signup-form 301
+/poolparty -> /calendar/memorial-day-pool-party 301
+/ciclosdias -> /calendar/ciclosdias-san-ysidro 301

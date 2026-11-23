@@ -56,6 +56,10 @@ The ticket stub looked off (its bottom notch hung below the card), so it was scr
 
 On laptop screens (about 1100 to 1499 px) the text column stretched while its words didn't, leaving up to 275 px between the text and the reel. The text column is now capped (680 px, or 1040 px at 1500 px and wider) and the text and reel sit centered as a pair, so the space between them stays about 75 to 95 px at every width.
 
+## v0.13.6 (November 23, 2026): "Get tickets" goes to /gala
+
+"Get tickets" now links to `/gala`, a URL mapping (Settings > Developer Tools > URL Mappings) that sends visitors to the invite page at `/calendar/golden-gear-gala`. The line was `/gala -> /full-calendar/golden-gear-awards 301` (last year's page, now a 404) and is now `/gala -> /calendar/golden-gear-gala 302`. It's a 302 so the link can be pointed at next year's gala without browsers holding on to this year's page. The full list as it was before the change is saved in `docs/baseline/url-mappings-2026-11-23.txt`. "Can't make it? Join in spirit" still goes straight to Givebutter.
+
 ## Remove after the gala
 
 Delete the section after December 15, 2026. Nothing else on the page depends on it.
