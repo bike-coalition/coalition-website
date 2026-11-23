@@ -15,7 +15,7 @@ What it shows, top to bottom:
 - "You're invited", the headline "An evening for safer streets", two short paragraphs and a Spring Green "Get tickets, $100" button. The gala reel plays muted on a loop in the sprocket arch beside the words (below them on narrow columns), with a pause button. It only plays when the visitor's device allows motion and pauses when scrolled out of view.
 - Four snapshots (the guests at the backdrop, charcuterie, bruschetta, kale salad), tilted like prints on a table. They straighten up when you point at them, unless the visitor's device asks for less motion.
 - "What to expect": five numbered tiles (bike valet, photo booth, hors d'oeuvres, a drink on us, fun times).
-- "What to wear": bold jewel tones with rich textures.
+- "What to wear": bold jewel tones (ruby red, emerald green, sapphire blue, amethyst purple) with rich textures (velvet, tweed, silk, satin).
 
 The words come from the event description staff wrote (saved in [docs/baseline/gala-event-2026-11-23.md](../baseline/gala-event-2026-11-23.md)), lightly edited. "Get tickets" scrolls down to the Givebutter widget on the same page; without JavaScript it opens the Givebutter page (givebutter.com/c/121526-golden-gear-gala).
 
@@ -33,5 +33,9 @@ The section sits in the event description column, which is about 900 px wide on 
 - **Watch out:** removing the image first made Squarespace merge the two text blocks on either side of it into one. Undone; remove a text block before the block that separates it from another text block.
 - Checked live: the description now runs section, "Tickets are $100" text, Givebutter widget. At 1440 px the reel sits beside the words and plays, the four snapshots and five tiles sit in rows, and "Get tickets" scrolls to the widget and moves focus there. At 390 px everything stacks inside the column and nothing from the section runs past it.
 - Not checked by Claude: buying a ticket.
+
+## "What to wear" details (November 23, 2026)
+
+Staff's fuller wording: "Bold jewel tones such as ruby red, emerald green, sapphire blue, and amethyst purple, paired with rich textures like velvet, tweed, silk, and satin." Markup only, so the stylesheet and script stay at v0.14.0; the block was pasted from this commit's file.
 
 Remove (or swap back to plain text) after December 15, 2026.
