@@ -24,6 +24,8 @@ A hidden copy of the homepage with this section added at the top: see "Test page
 - Checked on the published test page: at 1440 px the teaser is 632 px tall under the header and the hero follows it; at 390 px it stacks (text, then the reel), nothing scrolls sideways, and the reel plays muted on a loop.
 - The live homepage was not changed.
 
+**v0.13.1 (November 23, 2026):** works at every screen size. The text and reel stay side by side down to 641 px wide (the reel and headline shrink with the window), the section is shorter than 600 px below 1024 px wide, and phones (640 px and under) stack the text above a smaller reel. Checked at 390, 480, 600, 660, 745, 820, 1024, 1280, 1440 and 1920 px: nothing scrolls sideways.
+
 ## Go live
 
 Add a section at the very top of the live homepage, with one Code block holding `gala-teaser.html`. Check it logged out at 1440 and 390 px.
