@@ -29,7 +29,7 @@
 .bc-gev .bc-gev__pause[hidden]{display:none}
 
 /* Four snapshots tossed on the table: they straighten up when you point at them */
-.bc-gev .bc-gev__snaps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 16px;padding:8px 8px 0}
+.bc-gev .bc-gev__snaps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 14px;align-items:center;padding:8px 8px 0}
 .bc-gev .bc-gev__snap{background:#fff;padding:8px 8px 0;border-radius:6px;box-shadow:0 18px 40px -18px rgba(0,0,0,0.55);transform:rotate(var(--tilt,0deg));transition:transform .2s}
 .bc-gev .bc-gev__snap:nth-child(1){--tilt:-4deg}
 .bc-gev .bc-gev__snap:nth-child(2){--tilt:3deg;margin-top:14px}
@@ -37,7 +37,10 @@
 .bc-gev .bc-gev__snap:nth-child(4){--tilt:4deg;margin-top:14px}
 .bc-gev .bc-gev__snap:hover{transform:rotate(0deg) translateY(-6px)}
 .bc-gev .bc-gev__snap img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:2px}
-.bc-gev .bc-gev__snap figcaption{display:block;padding:8px 2px 10px;font-weight:700;font-size:15px;line-height:1.3;color:var(--teal);text-align:center}
+/* The group photo is shown whole (no one cropped out), so it's a wide print: a full row on phones, two columns' worth from 560 px */
+.bc-gev .bc-gev__snap.is-wide{grid-column:1 / -1}
+.bc-gev .bc-gev__snap.is-wide img{aspect-ratio:1000/795}
+.bc-gev .bc-gev__snap figcaption{display:block;padding:8px 2px 10px;font-weight:700;font-size:14px;line-height:1.3;color:var(--teal);text-align:center}
 
 /* What to expect: five numbered tiles */
 .bc-gev .bc-gev__expect{display:flex;flex-direction:column;gap:14px}
@@ -50,14 +53,29 @@
 /* What to wear */
 .bc-gev .bc-gev__wear{display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;border:2px solid var(--green);border-radius:20px;padding:20px 24px}
 .bc-gev .bc-gev__wear p{font-size:18px;color:#fff}
+/* Outfit ideas: five photos shown whole (no cropping), each in a white frame with a color pill.
+   Phones: three, then two. From 560 px: one row, every photo the same height (each one's width follows its shape). */
+.bc-gev .bc-gev__looks{flex:1 1 100%;list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-end;gap:22px 12px}
+.bc-gev .bc-gev__look{position:relative;flex:0 0 calc((100% - 24px) / 3);margin:0 0 10px;padding:0;transition:transform .2s}
+.bc-gev .bc-gev__look::before{content:none}
+.bc-gev .bc-gev__look img{display:block;width:100%;height:auto;border:4px solid #fff;border-radius:14px;background:var(--deep)}
+.bc-gev .bc-gev__pill{position:absolute;left:50%;bottom:-11px;transform:translateX(-50%);white-space:nowrap;background:var(--green);color:var(--teal);border-radius:999px;padding:3px 12px;font-weight:700;font-size:14px;line-height:1.3}
+.bc-gev .bc-gev__look:hover{transform:translateY(-4px)}
+.bc-gev .bc-gev__wear .bc-gev__credit{flex:1 1 100%;margin:2px 0 0;font-size:14px;line-height:1.4;color:var(--mist);text-align:center}
 
 /* Wider columns (a tablet or a laptop): four snapshots in a row, tiles in two columns */
 @container (min-width:560px){
- .bc-gev .bc-gev__snaps{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+ .bc-gev .bc-gev__snaps{grid-template-columns:minmax(0,2fr) repeat(3,minmax(0,1fr));gap:18px}
+ .bc-gev .bc-gev__snap.is-wide{grid-column:auto}
+ .bc-gev .bc-gev__snap figcaption{font-size:15px}
  .bc-gev .bc-gev__snap:nth-child(2){margin-top:18px}
  .bc-gev .bc-gev__snap:nth-child(4){margin-top:22px}
  .bc-gev .bc-gev__tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
  .bc-gev .bc-gev__tile:last-child{grid-column:1 / -1}
+ .bc-gev .bc-gev__looks{flex-wrap:nowrap;gap:16px}
+ .bc-gev .bc-gev__look{flex:0.6667 1 0;min-width:0}
+ .bc-gev .bc-gev__look.is-45{flex-grow:0.8}
+ .bc-gev .bc-gev__look:nth-child(even){margin-bottom:22px}
 }
 /* The laptop column (about 900 px): the reel beside the words, five tiles in a row */
 @container (min-width:720px){
@@ -74,7 +92,8 @@
 }
 
 @media (prefers-reduced-motion:reduce){
- .bc-gev .bc-gev__btn,.bc-gev .bc-gev__snap{transition:none}
+ .bc-gev .bc-gev__btn,.bc-gev .bc-gev__snap,.bc-gev .bc-gev__look{transition:none}
+ .bc-gev .bc-gev__look:hover{transform:none}
  .bc-gev .bc-gev__btn:hover{transform:none}
  .bc-gev .bc-gev__snap:hover{transform:rotate(var(--tilt,0deg))}
 }

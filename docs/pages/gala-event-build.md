@@ -38,4 +38,20 @@ The section sits in the event description column, which is about 900 px wide on 
 
 Staff's fuller wording: "Bold jewel tones such as ruby red, emerald green, sapphire blue, and amethyst purple, paired with rich textures like velvet, tweed, silk, and satin." Markup only, so the stylesheet and script stay at v0.14.0; the block was pasted from this commit's file.
 
+## v0.15.0 (November 23, 2026): no one cropped, outfit ideas, tiles reordered
+
+- **Group snapshot shows everyone.** The 4:5 crop cut people off at both edges, so "See you there" now shows the whole photo (`img/gala-crowd-full.jpg`, all eleven people) as a wide print: two columns' worth on laptops and tablets, a full row on phones. `img/gala-crowd.jpg` stays in the repo only so older tags keep working.
+- **Outfit ideas in "What to wear":** five Unsplash photos (Unsplash License, free to use), each shown whole in a white frame with a color pill, staff picks 5, 1, 3, 6 and 7 from the board "Gala event page: what to wear image options". One row at equal height from 560 px, three then two on phones. A credit line names the photographers.
+
+| File | Pill | Unsplash page | Photographer |
+| --- | --- | --- | --- |
+| img/wear-ruby-satin.jpg | Ruby | unsplash.com/photos/woman-in-a-red-dress-with-a-high-slit-_kx6ShhfCvs | FOTOGRAFÍA EDITORIAL |
+| img/wear-emerald-gown.jpg | Emerald | unsplash.com/photos/woman-in-a-long-emerald-green-gown-with-lace-er3bBysHPI8 | FOTOGRAFÍA EDITORIAL |
+| img/wear-sapphire-sparkle.jpg | Sapphire | unsplash.com/photos/woman-in-a-sparkling-blue-dress-on-red-background-Y1VzhoaULkM | Brooke Balentine |
+| img/wear-ruby-blazer.jpg | Ruby | unsplash.com/photos/man-in-red-coat-standing-on-road-during-daytime-ssnSQS6-UbA | Brock Wegner |
+| img/wear-plum-jacket.jpg | Plum | unsplash.com/photos/man-in-purple-and-black-suit-sitting-on-black-armchair-20XqbpJJn0U | Bulbul Ahmed |
+
+- **"What to expect" order (staff request):** hors d'oeuvres, a drink on us, bike valet, photo booth, then "Holiday cheer" (was "Fun times").
+- Tested on the local copy at 390 and 1440 px: nothing scrolls sideways, every photo shows whole.
+
 Remove (or swap back to plain text) after December 15, 2026.
