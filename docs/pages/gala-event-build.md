@@ -53,5 +53,6 @@ Staff's fuller wording: "Bold jewel tones such as ruby red, emerald green, sapph
 
 - **"What to expect" order (staff request):** hors d'oeuvres, a drink on us, bike valet, photo booth, then "Holiday cheer" (was "Fun times").
 - Tested on the local copy at 390 and 1440 px: nothing scrolls sideways, every photo shows whole.
+- Live November 23, 2026: pasted into the event's Code block (it held the previous version exactly; it now matches this file). Checked live at 1440 and 390 px: the group photo and all five outfit photos render at their own shape (nothing cropped), the tiles read in the new order, and nothing from the section runs past the column.
 
 Remove (or swap back to plain text) after December 15, 2026.
