@@ -23,9 +23,9 @@
 .bc-ciclo h1,.bc-ciclo h2,.bc-ciclo h3,.bc-ciclo p,.bc-ciclo blockquote{color:inherit;font-style:normal;font-variant:normal}
 
 /* Let the block fill its Squarespace section edge to edge, with no section padding or grid placement. */
-section.page-section:has(.bc-ciclo){padding:0 !important;min-height:0 !important}
-section.page-section:has(.bc-ciclo) .content-wrapper{padding:0 !important;max-width:none !important}
-section.page-section:has(.bc-ciclo) .content{max-width:none !important;padding:0 !important}
+section.page-section.page-section:has(.bc-ciclo){padding:0 !important;min-height:0 !important}
+section.page-section.page-section:has(.bc-ciclo) .content-wrapper{padding:0 !important;max-width:none !important}
+section.page-section.page-section:has(.bc-ciclo) .content{max-width:none !important;padding:0 !important}
 .fluid-engine:has(.bc-ciclo){display:block !important;overflow:visible !important;padding:0 !important}
 .fe-block:has(.bc-ciclo){grid-area:auto !important}
 .sqs-block:has(.bc-ciclo),.sqs-block-content:has(.bc-ciclo){padding:0 !important;overflow:visible !important}

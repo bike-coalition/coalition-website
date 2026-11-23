@@ -80,6 +80,8 @@ Swap the slugs back (new page to `/bike-share-preview`, old page to `/bike-share
 
 - **v0.12.8 (November 20, 2026):** "e-bike" and "electric assist" became "pedal-assist bike" and "pedal assist" everywhere in our own copy and alt text, so the page feels less intense to people on the fence (staff request). Left as is: the FOX 5 story's web address, and anything inside the Action Network petition, which Action Network serves.
 
+- **v0.13.3 (November 23, 2026):** the block's "fill the section" rules are scoped to `section.page-section:has(.bc-bshare)`, so they can never reach other sections (the homepage teaser lesson in docs/jsdelivr-plan.md).
+
 ## To change later
 
 - A local San Diego photo for the Unlock, Ride and Dock steps (today: Unsplash photos from France and a Honolulu station) and for the docked section.

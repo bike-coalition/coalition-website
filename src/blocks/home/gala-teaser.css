@@ -41,6 +41,26 @@ section.page-section:has(.bc-gala) .sqs-block-code,section.page-section:has(.bc-
 .bc-gala .bc-gala__pause{position:absolute;right:16px;bottom:16px;width:44px;height:44px;margin:0;padding:0;border-radius:50%;border:none;background:var(--green);color:var(--teal);font:700 15px/1 Inter,system-ui,sans-serif;display:flex;align-items:center;justify-content:center;cursor:pointer}
 .bc-gala .bc-gala__pause[hidden]{display:none}
 
+/* Ticket stub with the details and a countdown: only on very wide screens, where the two columns leave empty space */
+.bc-gala .bc-gala__stub{display:none}
+@media (min-width:1500px){
+ .bc-gala .bc-gala__inner{max-width:1600px;grid-template-columns:minmax(0,1fr) 280px 340px;gap:56px}
+ .bc-gala .bc-gala__reel{max-width:340px}
+ .bc-gala .bc-gala__stub{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;align-self:center;padding:40px 24px;border-radius:28px;background:var(--teal);color:#fff;box-shadow:0 24px 60px -24px rgba(16,58,45,0.5)}
+ .bc-gala .bc-gala__stub::before,.bc-gala .bc-gala__stub::after{content:"";position:absolute;left:50%;width:40px;height:40px;margin-left:-20px;border-radius:50%;background:var(--peach)}
+ .bc-gala .bc-gala__stub::before{top:-20px}
+ .bc-gala .bc-gala__stub::after{bottom:-20px}
+ .bc-gala .bc-gala__stub-day{font-weight:600;font-size:14px;letter-spacing:0.12em;text-transform:uppercase;color:var(--green)}
+ .bc-gala .bc-gala__stub-mon,.bc-gala .bc-gala__stub-date{font-family:var(--bc-font-display,'Obviously','Archivo Black','Archivo',system-ui,sans-serif);font-weight:800;line-height:0.85;text-transform:uppercase}
+ .bc-gala .bc-gala__stub-mon{font-size:44px;color:#fff}
+ .bc-gala .bc-gala__stub-date{font-size:120px;color:var(--green)}
+ .bc-gala .bc-gala__stub-time{font-weight:700;font-size:18px;margin-top:6px}
+ .bc-gala .bc-gala__stub-place{font-size:15px;color:#EEF3EA;line-height:1.4}
+ .bc-gala .bc-gala__stub-price{font-weight:700;font-size:16px;border-top:2px dashed rgba(199,236,122,0.5);padding-top:10px;margin-top:4px}
+ .bc-gala .bc-gala__count{margin-top:6px;background:var(--green);color:var(--teal);border-radius:999px;padding:6px 14px;font-weight:700;font-size:14px}
+ .bc-gala .bc-gala__count[hidden]{display:none}
+}
+
 /* Tablets and small laptops: keep the two columns, shorter section */
 @media (max-width:1024px){
  .bc-gala .bc-gala__inner{min-height:0}

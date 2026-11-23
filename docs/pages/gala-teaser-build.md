@@ -44,6 +44,10 @@ Fix: v0.13.2 scopes every one of those rules to `section.page-section:has(.bc-ga
 
 **Lesson for every custom block:** scope section rules to `section.page-section:has(...)`, never plain `section:has(...)`, and on any page with more than one section, check the sections around the block, not just the block.
 
+## v0.13.3 (November 23, 2026): wide screens
+
+On screens 1500 px and wider, a Teal Green ticket stub sits between the text and the reel: Tuesday, DEC 15, 6 to 9 PM, Négociant Winery, 1263 University Ave, Hillcrest, Tickets $100, and a countdown ("22 days to go", counted in Pacific calendar days, "Tomorrow night" and "Tonight" near the end, hidden after 9 PM on December 15). The reel grows to 340 px wide there. Below 1500 px nothing changes.
+
 ## Remove after the gala
 
 Delete the section after December 15, 2026. Nothing else on the page depends on it.

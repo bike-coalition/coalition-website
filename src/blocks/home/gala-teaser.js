@@ -3,6 +3,7 @@
   The video only starts if the visitor's device doesn't ask for less motion; otherwise it shows the poster
   with a play button. It also pauses while scrolled out of view, to save battery and data.
   Without this script the video shows its poster (the title card) and stays still.
+  It also fills in the countdown on the wide-screen ticket stub ("22 days to go"), hidden after the gala starts.
 */
 (function(){
  function init(root){
@@ -25,5 +26,15 @@
   } else if(wanted){ play(); }
   label();
  }
- [].forEach.call(document.querySelectorAll('[data-bc-gala]'),init);
+ function countdown(root){
+  var el=root.querySelector('[data-bc-gala-count]'); if(!el) return;
+  if(Date.now()>Date.UTC(2026,11,16,5,0,0)) return; // after 9 PM Pacific, December 15, 2026
+  var today;
+  try { today=new Intl.DateTimeFormat('en-CA',{timeZone:'America/Los_Angeles'}).format(new Date()); } catch(e){ return; }
+  var days=Math.round((Date.UTC(2026,11,15)-Date.parse(today+'T00:00:00Z'))/86400000); // calendar days, Pacific time
+  if(isNaN(days)||days<0) return;
+  el.textContent=days===0?'Tonight':days===1?'Tomorrow night':days+' days to go';
+  el.hidden=false;
+ }
+ [].forEach.call(document.querySelectorAll('[data-bc-gala]'),function(r){ init(r); countdown(r); });
 })();
