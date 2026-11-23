@@ -53,11 +53,10 @@
 /* What to wear */
 .bc-gev .bc-gev__wear{display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;border:2px solid var(--green);border-radius:20px;padding:20px 24px}
 .bc-gev .bc-gev__wear p{font-size:18px;color:#fff}
-/* Fabric swatches: five square swatches (ruby satin, emerald velvet, sapphire velvet, amethyst silk, tweed), each in a white frame.
-   Narrow columns: three, then two centered, with the name underneath. From 560 px: one row. From 720 px: the name sits in a pill. */
-.bc-gev .bc-gev__swatches{flex:1 1 100%;list-style:none;margin:6px 0 0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px 12px}
-.bc-gev .bc-gev__swatch{grid-column:span 2;display:flex;flex-direction:column;align-items:center;margin:0;padding:0;transition:transform .2s}
-.bc-gev .bc-gev__swatch:nth-child(4){grid-column:2 / span 2}
+/* Fabric swatches: four square swatches (ruby satin, emerald velvet, sapphire velvet, amethyst silk), each in a white frame.
+   Narrow columns: two by two, with the name underneath. From 560 px: one row. From 720 px: the name sits in a pill. */
+.bc-gev .bc-gev__swatches{flex:1 1 100%;list-style:none;margin:6px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 14px}
+.bc-gev .bc-gev__swatch{display:flex;flex-direction:column;align-items:center;margin:0;padding:0;transition:transform .2s}
 .bc-gev .bc-gev__swatch::before{content:none}
 .bc-gev .bc-gev__swatch img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border:4px solid #fff;border-radius:16px;background:var(--deep)}
 .bc-gev .bc-gev__pill{margin:6px 0 0;max-width:100%;text-align:center;color:var(--green);font-weight:700;font-size:14px;line-height:1.25}
@@ -73,8 +72,7 @@
  .bc-gev .bc-gev__snap:nth-child(4){margin-top:22px}
  .bc-gev .bc-gev__tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
  .bc-gev .bc-gev__tile:last-child{grid-column:1 / -1}
- .bc-gev .bc-gev__swatches{grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
- .bc-gev .bc-gev__swatch,.bc-gev .bc-gev__swatch:nth-child(4){grid-column:auto}
+ .bc-gev .bc-gev__swatches{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
 }
 /* The laptop column (about 900 px): the reel beside the words, five tiles in a row */
 @container (min-width:720px){

@@ -71,4 +71,8 @@ Tested on the local copy at 390 and 1440 px: nothing scrolls sideways.
 
 Live November 23, 2026: pasted into the event's Code block (it held v0.15.0 exactly; it now matches this file). Checked live at 1440 px (one row, names in pills) and 390 px (three then two, everything inside the column).
 
+## v0.16.1 (November 23, 2026): tweed swatch removed
+
+At staff's request the tweed swatch came out (its file stays in tag v0.16.0). Four swatches now: two by two on narrow columns, one row from 560 px. The "What to wear" wording still names tweed. An emerald swatch closer to the brand's Teal Green is being chosen.
+
 Remove (or swap back to plain text) after December 15, 2026.
