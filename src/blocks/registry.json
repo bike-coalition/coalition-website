@@ -212,7 +212,9 @@
     {
       "file": "src/blocks/events/gala-event.html",
       "title": "Event: Golden Gear Gala custom section (top of the description, seasonal)",
-      "squarespace_block_id": [],
+      "squarespace_block_id": [
+        "block-yui_3_17_2_1_1795473296867_3027"
+      ],
       "pages": [
         "/calendar/golden-gear-gala"
       ],
@@ -228,7 +230,7 @@
       "script": "src/blocks/events/gala-event.js",
       "jsdelivr": {
         "tag": "v0.14.0",
-        "status": "built November 23, 2026; remove after December 15, 2026 (docs/pages/gala-event-build.md)"
+        "status": "live since November 23, 2026; remove after December 15, 2026 (docs/pages/gala-event-build.md)"
       }
     }
   ]

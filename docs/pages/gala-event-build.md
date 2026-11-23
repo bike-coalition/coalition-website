@@ -24,6 +24,14 @@ The section sits in the event description column, which is about 900 px wide on 
 ## v0.14.0 (November 23, 2026)
 
 - Tested on a local copy of the page layout at 390, 768, 1024 and 1440 px: nothing scrolls sideways, the reel plays, "Get tickets" scrolls to the widget and moves keyboard focus there.
-- Go live: the old description's intro text, collage image and video blocks are replaced by one Code block holding `gala-event.html`. Saved first in docs/baseline/gala-event-2026-11-23.md.
+- Old description saved first in docs/baseline/gala-event-2026-11-23.md.
+
+## Go-live record (November 23, 2026)
+
+- At Jason's go-ahead ("option B please build and publish to the website"): in the event's editor, added a Code block at the top of the description (`block-yui_3_17_2_1_1795473296867_3027`) holding `gala-event.html` from v0.14.0. Its text matches the repo file exactly.
+- Removed the old intro text block, the collage image block and the video block (the same 28.6 second reel the section now plays). Kept the "Tickets are $100" text block and the Givebutter widget Code block, unchanged.
+- **Watch out:** removing the image first made Squarespace merge the two text blocks on either side of it into one. Undone; remove a text block before the block that separates it from another text block.
+- Checked live: the description now runs section, "Tickets are $100" text, Givebutter widget. At 1440 px the reel sits beside the words and plays, the four snapshots and five tiles sit in rows, and "Get tickets" scrolls to the widget and moves focus there. At 390 px everything stacks inside the column and nothing from the section runs past it.
+- Not checked by Claude: buying a ticket.
 
 Remove (or swap back to plain text) after December 15, 2026.
