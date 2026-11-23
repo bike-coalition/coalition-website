@@ -52,6 +52,10 @@ On screens 1500 px and wider, a Teal Green ticket stub sits between the text and
 
 The ticket stub looked off (its bottom notch hung below the card), so it was scrapped. On screens 1500 px and wider the text column now does the work instead: a bigger title, a When / Where / Tickets row (Tuesday, December 15, 6 to 9 PM; Négociant Winery, 1263 University Ave, Hillcrest; $100) and a countdown pill next to the eyebrow, counted the same way as before. The one-line "when" is hidden there because the row repeats it. The reel is 360 px wide. Below 1500 px nothing changes.
 
+## v0.13.5 (November 23, 2026): closer to the reel
+
+On laptop screens (about 1100 to 1499 px) the text column stretched while its words didn't, leaving up to 275 px between the text and the reel. The text column is now capped (680 px, or 1040 px at 1500 px and wider) and the text and reel sit centered as a pair, so the space between them stays about 75 to 95 px at every width.
+
 ## Remove after the gala
 
 Delete the section after December 15, 2026. Nothing else on the page depends on it.
