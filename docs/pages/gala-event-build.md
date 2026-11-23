@@ -55,4 +55,18 @@ Staff's fuller wording: "Bold jewel tones such as ruby red, emerald green, sapph
 - Tested on the local copy at 390 and 1440 px: nothing scrolls sideways, every photo shows whole.
 - Live November 23, 2026: pasted into the event's Code block (it held the previous version exactly; it now matches this file). Checked live at 1440 and 390 px: the group photo and all five outfit photos render at their own shape (nothing cropped), the tiles read in the new order, and nothing from the section runs past the column.
 
+## v0.16.0 (November 23, 2026): fabric swatches instead of outfits
+
+Staff asked for fabric swatches only, not full outfits, so the five outfit photos came out (they stay in tag v0.15.0) and "What to wear" now shows five square swatches. Narrow columns: three, then two, with the name underneath. From 560 px: one row. From 720 px: the names sit in Spring Green pills.
+
+| File | Name | Unsplash page | Photographer |
+| --- | --- | --- | --- |
+| img/swatch-ruby-satin.jpg | Ruby satin | unsplash.com/photos/red-textile-HyBXy5PHQR8 | MontyLov |
+| img/swatch-emerald-velvet.jpg | Emerald velvet | unsplash.com/photos/green-textile-in-close-up-image-HEMIBJ8QQuA | engin akyurt |
+| img/swatch-sapphire-velvet.jpg | Sapphire velvet | unsplash.com/photos/blue-textile-in-close-up-photography-A4rqd2g-eLo | Kseniya Lapteva |
+| img/swatch-amethyst-silk.jpg | Amethyst silk | unsplash.com/photos/purple-fabric-with-soft-folds-LnrNWayL4rE | Alexander Grey |
+| img/swatch-tweed.jpg | Tweed | unsplash.com/photos/a-close-up-of-a-blue-and-white-tweed-fabric-B8ZmImP2ww4 | Divazus Fabric Store |
+
+Tested on the local copy at 390 and 1440 px: nothing scrolls sideways.
+
 Remove (or swap back to plain text) after December 15, 2026.

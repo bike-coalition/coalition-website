@@ -53,14 +53,15 @@
 /* What to wear */
 .bc-gev .bc-gev__wear{display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;border:2px solid var(--green);border-radius:20px;padding:20px 24px}
 .bc-gev .bc-gev__wear p{font-size:18px;color:#fff}
-/* Outfit ideas: five photos shown whole (no cropping), each in a white frame with a color pill.
-   Phones: three, then two. From 560 px: one row, every photo the same height (each one's width follows its shape). */
-.bc-gev .bc-gev__looks{flex:1 1 100%;list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-end;gap:22px 12px}
-.bc-gev .bc-gev__look{position:relative;flex:0 0 calc((100% - 24px) / 3);margin:0 0 10px;padding:0;transition:transform .2s}
-.bc-gev .bc-gev__look::before{content:none}
-.bc-gev .bc-gev__look img{display:block;width:100%;height:auto;border:4px solid #fff;border-radius:14px;background:var(--deep)}
-.bc-gev .bc-gev__pill{position:absolute;left:50%;bottom:-11px;transform:translateX(-50%);white-space:nowrap;background:var(--green);color:var(--teal);border-radius:999px;padding:3px 12px;font-weight:700;font-size:14px;line-height:1.3}
-.bc-gev .bc-gev__look:hover{transform:translateY(-4px)}
+/* Fabric swatches: five square swatches (ruby satin, emerald velvet, sapphire velvet, amethyst silk, tweed), each in a white frame.
+   Narrow columns: three, then two centered, with the name underneath. From 560 px: one row. From 720 px: the name sits in a pill. */
+.bc-gev .bc-gev__swatches{flex:1 1 100%;list-style:none;margin:6px 0 0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px 12px}
+.bc-gev .bc-gev__swatch{grid-column:span 2;display:flex;flex-direction:column;align-items:center;margin:0;padding:0;transition:transform .2s}
+.bc-gev .bc-gev__swatch:nth-child(4){grid-column:2 / span 2}
+.bc-gev .bc-gev__swatch::before{content:none}
+.bc-gev .bc-gev__swatch img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border:4px solid #fff;border-radius:16px;background:var(--deep)}
+.bc-gev .bc-gev__pill{margin:6px 0 0;max-width:100%;text-align:center;color:var(--green);font-weight:700;font-size:14px;line-height:1.25}
+.bc-gev .bc-gev__swatch:hover{transform:translateY(-4px)}
 .bc-gev .bc-gev__wear .bc-gev__credit{flex:1 1 100%;margin:2px 0 0;font-size:14px;line-height:1.4;color:var(--mist);text-align:center}
 
 /* Wider columns (a tablet or a laptop): four snapshots in a row, tiles in two columns */
@@ -72,14 +73,14 @@
  .bc-gev .bc-gev__snap:nth-child(4){margin-top:22px}
  .bc-gev .bc-gev__tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
  .bc-gev .bc-gev__tile:last-child{grid-column:1 / -1}
- .bc-gev .bc-gev__looks{flex-wrap:nowrap;gap:16px}
- .bc-gev .bc-gev__look{flex:0.6667 1 0;min-width:0}
- .bc-gev .bc-gev__look.is-45{flex-grow:0.8}
- .bc-gev .bc-gev__look:nth-child(even){margin-bottom:22px}
+ .bc-gev .bc-gev__swatches{grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+ .bc-gev .bc-gev__swatch,.bc-gev .bc-gev__swatch:nth-child(4){grid-column:auto}
 }
 /* The laptop column (about 900 px): the reel beside the words, five tiles in a row */
 @container (min-width:720px){
  .bc-gev .bc-gev__intro{grid-template-columns:minmax(0,1fr) 300px;gap:44px}
+ .bc-gev .bc-gev__swatch:nth-child(even){margin-top:12px}
+ .bc-gev .bc-gev__pill{position:relative;margin:-13px 0 0;white-space:nowrap;background:var(--green);color:var(--teal);border-radius:999px;padding:3px 10px}
  .bc-gev .bc-gev__reel{max-width:300px}
 }
 @container (min-width:820px){
@@ -92,8 +93,8 @@
 }
 
 @media (prefers-reduced-motion:reduce){
- .bc-gev .bc-gev__btn,.bc-gev .bc-gev__snap,.bc-gev .bc-gev__look{transition:none}
- .bc-gev .bc-gev__look:hover{transform:none}
+ .bc-gev .bc-gev__btn,.bc-gev .bc-gev__snap,.bc-gev .bc-gev__swatch{transition:none}
+ .bc-gev .bc-gev__swatch:hover{transform:none}
  .bc-gev .bc-gev__btn:hover{transform:none}
  .bc-gev .bc-gev__snap:hover{transform:rotate(var(--tilt,0deg))}
 }
