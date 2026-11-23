@@ -3,7 +3,7 @@
   The video only starts if the visitor's device doesn't ask for less motion; otherwise it shows the poster
   with a play button. It also pauses while scrolled out of view, to save battery and data.
   Without this script the video shows its poster (the title card) and stays still.
-  It also fills in the countdown on the wide-screen ticket stub ("22 days to go"), hidden after the gala starts.
+  It also fills in the countdown next to the eyebrow ("22 days to go", shown on screens 1500 px and wider), hidden after the gala starts.
 */
 (function(){
  function init(root){

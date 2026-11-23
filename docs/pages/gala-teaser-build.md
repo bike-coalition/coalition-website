@@ -48,6 +48,10 @@ Fix: v0.13.2 scopes every one of those rules to `section.page-section:has(.bc-ga
 
 On screens 1500 px and wider, a Teal Green ticket stub sits between the text and the reel: Tuesday, DEC 15, 6 to 9 PM, Négociant Winery, 1263 University Ave, Hillcrest, Tickets $100, and a countdown ("22 days to go", counted in Pacific calendar days, "Tomorrow night" and "Tonight" near the end, hidden after 9 PM on December 15). The reel grows to 340 px wide there. Below 1500 px nothing changes.
 
+## v0.13.4 (November 23, 2026): wide screens, take two
+
+The ticket stub looked off (its bottom notch hung below the card), so it was scrapped. On screens 1500 px and wider the text column now does the work instead: a bigger title, a When / Where / Tickets row (Tuesday, December 15, 6 to 9 PM; Négociant Winery, 1263 University Ave, Hillcrest; $100) and a countdown pill next to the eyebrow, counted the same way as before. The one-line "when" is hidden there because the row repeats it. The reel is 360 px wide. Below 1500 px nothing changes.
+
 ## Remove after the gala
 
 Delete the section after December 15, 2026. Nothing else on the page depends on it.
