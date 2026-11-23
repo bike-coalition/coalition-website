@@ -7,7 +7,7 @@
       "path": "/",
       "title": "Homepage",
       "build": "native",
-      "status": "keeping the current homepage for now; new directions on hold. Live page styled by src/pages/home.css (Nov 13, 2026: no empty space below the goals accordion)"
+      "status": "keeping the current homepage for now; new directions on hold. Live page styled by src/pages/home.css (Nov 13, 2026: no empty space below the goals accordion). Nov 23, 2026: Golden Gear Gala teaser section added at the top (src/blocks/home/gala-teaser.html, v0.13.1); remove after December 15, 2026"
     },
     {
       "path": "/calendar",

@@ -30,6 +30,12 @@ A hidden copy of the homepage with this section added at the top: see "Test page
 
 Add a section at the very top of the live homepage, with one Code block holding `gala-teaser.html`. Check it logged out at 1440 and 390 px.
 
+## Go-live record (November 23, 2026)
+
+- At Jason's go-ahead after reviewing the test page: added a blank section at the very top of the live homepage (`/home`, section `6b048ef0ef26100db08d1468`, above the "Bike for a Better San Diego" hero) with one Code block holding `gala-teaser.html` from v0.13.1 (its text matches the repo file exactly). Nothing else on the homepage changed; its header code still loads home.css v0.11.0.
+- Checked live, logged out: sdbikecoalition.org serves the teaser first, then the hero. In the browser at 1440, 745 and 390 px nothing scrolls sideways, the reel loads and plays, and phones stack the text above the reel.
+- Not checked by Claude: buying a ticket. The hidden test page `/home-gala-preview` is still in Not Linked; disable or delete it whenever it's no longer needed.
+
 ## Remove after the gala
 
 Delete the section after December 15, 2026. Nothing else on the page depends on it.
