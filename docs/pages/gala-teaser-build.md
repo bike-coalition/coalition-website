@@ -17,6 +17,13 @@ The reel is "Golden Gear Gala final edit.mp4" from the shared Drive, re-encoded 
 
 A hidden copy of the homepage with this section added at the top: see "Test page record" below. The live homepage is not changed until staff approve it.
 
+## Test page record (November 23, 2026)
+
+- Duplicated the homepage in Squarespace as "Homepage preview (gala teaser)", slug `/home-gala-preview`, in Not Linked, Hide from Search on (left out of the sitemap; Squarespace adds no `noindex` tag, so keep it unlinked). The homepage's own header code (home.css v0.11.0) came with the copy.
+- Added a blank section at the very top with one Code block holding `gala-teaser.html` from v0.13.0 (its text matches the repo file exactly).
+- Checked on the published test page: at 1440 px the teaser is 632 px tall under the header and the hero follows it; at 390 px it stacks (text, then the reel), nothing scrolls sideways, and the reel plays muted on a loop.
+- The live homepage was not changed.
+
 ## Go live
 
 Add a section at the very top of the live homepage, with one Code block holding `gala-teaser.html`. Check it logged out at 1440 and 390 px.
