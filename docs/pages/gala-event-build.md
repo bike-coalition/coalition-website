@@ -69,4 +69,6 @@ Staff asked for fabric swatches only, not full outfits, so the five outfit photo
 
 Tested on the local copy at 390 and 1440 px: nothing scrolls sideways.
 
+Live November 23, 2026: pasted into the event's Code block (it held v0.15.0 exactly; it now matches this file). Checked live at 1440 px (one row, names in pills) and 390 px (three then two, everything inside the column).
+
 Remove (or swap back to plain text) after December 15, 2026.
