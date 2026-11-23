@@ -84,3 +84,7 @@ On October 21, swapping the ticker block made the whole footer about 3,300 px ta
 - **Prevention, every block that moves:** keep a one-line inline `<style>` in the block with just enough layout (flex, no wrapping, a max height) that the unstyled content is already about the right size. See the first lines of `src/blocks/footer/cities-ticker.html`.
 - **Squarespace trap:** the editor redraws a section to fit its content while editing, so a section that saved too tall can look correct in the editor, and Save stays gray with nothing to save. The fix was to nudge the section so Save turned black, then save. Afterwards, check the published row count, not the editor.
 - **After every swap, check on the live site, logged out:** the block's grid size and its section's height at desktop and phone width, not just how the block itself looks.
+
+## Lesson from the gala teaser (November 23, 2026)
+
+A block's "fill the section" rules must be scoped to `section.page-section:has(.block)`. Squarespace wraps a page's sections in an outer `<section class="region">`, so a plain `section:has(.block)` also matches that wrapper and switches off the grid in every other section on the page. The homepage teaser did this until v0.13.2 (docs/pages/gala-teaser-build.md). Bike Share, Board Candidates and CicloSDias still use the plain form; it is harmless only while each of those pages has a single section.

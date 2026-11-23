@@ -36,6 +36,14 @@ Add a section at the very top of the live homepage, with one Code block holding 
 - Checked live, logged out: sdbikecoalition.org serves the teaser first, then the hero. In the browser at 1440, 745 and 390 px nothing scrolls sideways, the reel loads and plays, and phones stack the text above the reel.
 - Not checked by Claude: buying a ticket. The hidden test page `/home-gala-preview` is still in Not Linked; disable or delete it whenever it's no longer needed.
 
+## Incident and fix: v0.13.2 (November 23, 2026)
+
+Right after go-live, the rest of the homepage collapsed (hero 228 px tall instead of about 540, every section's grid switched off). Cause: the block's "fill the section" rules used `section:has(.bc-gala)`, and the homepage wraps all its sections in an outer `<section class="region">`, which also "has" the teaser, so the rules reached every section. Single-section pages (Bike Share, Board Candidates, CicloSDias) use the same pattern without visible harm, which is why it wasn't caught there. The test page had the same problem; only the teaser itself was checked there, not the sections below it.
+
+Fix: v0.13.2 scopes every one of those rules to `section.page-section:has(.bc-gala)`. Pasted into the live homepage the same day. Checked live at 1440 px: the teaser's section is the only one matched, every other homepage section's grid is back, and the hero, Vision, goals, "Where do I start?", membership, testimonials and shop sections render as before.
+
+**Lesson for every custom block:** scope section rules to `section.page-section:has(...)`, never plain `section:has(...)`, and on any page with more than one section, check the sections around the block, not just the block.
+
 ## Remove after the gala
 
 Delete the section after December 15, 2026. Nothing else on the page depends on it.
