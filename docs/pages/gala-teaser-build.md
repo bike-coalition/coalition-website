@@ -60,6 +60,8 @@ On laptop screens (about 1100 to 1499 px) the text column stretched while its wo
 
 "Get tickets" now links to `/gala`, a URL mapping (Settings > Developer Tools > URL Mappings) that sends visitors to the invite page at `/calendar/golden-gear-gala`. The line was `/gala -> /full-calendar/golden-gear-awards 301` (last year's page, now a 404) and is now `/gala -> /calendar/golden-gear-gala 302`. It's a 302 so the link can be pointed at next year's gala without browsers holding on to this year's page. The full list as it was before the change is saved in `docs/baseline/url-mappings-2026-11-23.txt`. "Can't make it? Join in spirit" still goes straight to Givebutter.
 
+A second line, `/full-calendar/golden-gear-awards -> /calendar/golden-gear-gala 302`, catches visitors whose browsers remembered the old permanent `/gala` redirect to last year's page (which is gone).
+
 ## Remove after the gala
 
 Delete the section after December 15, 2026. Nothing else on the page depends on it.
