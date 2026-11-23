@@ -61,7 +61,6 @@
 .bc-gev .bc-gev__swatch img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border:4px solid #fff;border-radius:16px;background:var(--deep)}
 .bc-gev .bc-gev__pill{margin:6px 0 0;max-width:100%;text-align:center;color:var(--green);font-weight:700;font-size:14px;line-height:1.25}
 .bc-gev .bc-gev__swatch:hover{transform:translateY(-4px)}
-.bc-gev .bc-gev__wear .bc-gev__credit{flex:1 1 100%;margin:2px 0 0;font-size:14px;line-height:1.4;color:var(--mist);text-align:center}
 
 /* Wider columns (a tablet or a laptop): four snapshots in a row, tiles in two columns */
 @container (min-width:560px){

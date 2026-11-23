@@ -83,4 +83,8 @@ Staff picked option 1 from the board "Gala event page: emerald swatch options" (
 | --- | --- | --- | --- |
 | img/swatch-emerald-satin.jpg | Emerald satin | unsplash.com/photos/a-close-up-view-of-a-teal-colored-fabric-dQO-3ud96rQ | Jatin Gajjar |
 
+## v0.16.3 (November 23, 2026): no photo credit line
+
+At staff's request the "Swatch photos: ..." credit line under the swatches came out. The Unsplash License doesn't require credit; the photographers stay recorded in the tables above.
+
 Remove (or swap back to plain text) after December 15, 2026.
