@@ -1,0 +1,49 @@
+/*
+  Homepage: Golden Gear Gala teaser (one section at the top of the homepage, December 2026).
+  Markup: src/blocks/home/gala-teaser.html (pasted in a Squarespace Code block). Behavior: gala-teaser.js.
+  Design: option B on the canvas board "Homepage: Golden Gear Gala teaser options".
+  Brand colors come from src/tokens.css, with the same hex as fallback. Every rule is scoped under .bc-gala.
+*/
+
+/* Let the block fill its Squarespace section edge to edge, with no section padding or grid placement. */
+section:has(.bc-gala){min-height:0!important}
+section:has(.bc-gala) .section-border,section:has(.bc-gala) .section-background{min-height:0!important}
+section:has(.bc-gala) .section-divider-display{display:none!important}
+section:has(.bc-gala) .content-wrapper{padding:0!important}
+section:has(.bc-gala) .content{max-width:none!important;width:100%!important;padding:0!important}
+section:has(.bc-gala) .fluid-engine{display:block!important;padding:0!important;margin:0!important}
+section:has(.bc-gala) .fe-block{grid-area:auto!important;margin:0!important}
+section:has(.bc-gala) .sqs-block-code,section:has(.bc-gala) .sqs-block-content{height:auto!important;min-height:0!important;padding:0!important}
+
+.bc-gala{--teal:var(--bc-teal-green,#226550);--deep:var(--bc-teal-deep,#1A4D3D);--green:var(--bc-spring-green,#C7EC7A);--peach:var(--bc-peachy,#FFCF90);
+ width:100vw;box-sizing:border-box;margin-left:calc(50% - 50vw);background:var(--peach);color:var(--teal);font-family:Inter,system-ui,sans-serif;font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.bc-gala *{box-sizing:border-box}
+.bc-gala p{margin:0}
+.bc-gala h2{margin:0;padding:0;letter-spacing:normal}
+.bc-gala .bc-gala__inner{max-width:1320px;margin:0 auto;padding:56px 32px;min-height:600px;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:56px;align-items:center}
+.bc-gala .bc-gala__text{display:flex;flex-direction:column;gap:20px}
+.bc-gala .bc-gala__eyebrow{font-weight:600;font-size:14px;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal)}
+.bc-gala .bc-gala__title{font-family:var(--bc-font-display,'Obviously','Archivo Black','Archivo',system-ui,sans-serif);font-weight:800;font-size:clamp(52px,6vw,88px);line-height:0.95;letter-spacing:-0.02em;text-transform:uppercase;color:var(--teal);text-wrap:balance}
+.bc-gala .bc-gala__lead{font-size:20px;color:var(--deep);max-width:520px}
+.bc-gala .bc-gala__when{font-size:17px;font-weight:700;color:var(--deep)}
+.bc-gala .bc-gala__btns{display:flex;flex-wrap:wrap;gap:12px}
+.bc-gala .bc-gala__btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;border-radius:999px;font-weight:700;font-size:17px;line-height:1.2;text-decoration:none;border:2px solid var(--teal);transition:transform .15s}
+.bc-gala .bc-gala__btn:hover{transform:translateY(-2px)}
+.bc-gala .bc-gala__btn.is-solid{background:var(--teal);color:#fff}
+.bc-gala .bc-gala__btn.is-outline{background:transparent;color:var(--teal)}
+.bc-gala a:focus-visible,.bc-gala button:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+
+/* The reel, cropped to the sprocket arch */
+.bc-gala .bc-gala__reel{position:relative;justify-self:center;width:300px;height:520px;border-radius:150px 150px 28px 28px;overflow:hidden;background:#161614;box-shadow:0 24px 60px -24px rgba(16,58,45,0.5)}
+.bc-gala .bc-gala__reel video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.bc-gala .bc-gala__pause{position:absolute;right:16px;bottom:16px;width:44px;height:44px;margin:0;padding:0;border-radius:50%;border:none;background:var(--green);color:var(--teal);font:700 15px/1 Inter,system-ui,sans-serif;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.bc-gala .bc-gala__pause[hidden]{display:none}
+
+@media (max-width:800px){
+ .bc-gala .bc-gala__inner{grid-template-columns:1fr;padding:48px 16px;gap:40px;min-height:0}
+ .bc-gala .bc-gala__reel{width:min(300px,80vw);height:auto;aspect-ratio:300/520}
+}
+@media (prefers-reduced-motion:reduce){
+ .bc-gala .bc-gala__btn{transition:none}
+ .bc-gala .bc-gala__btn:hover{transform:none}
+}
