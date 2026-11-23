@@ -75,4 +75,12 @@ Live November 23, 2026: pasted into the event's Code block (it held v0.15.0 exac
 
 At staff's request the tweed swatch came out (its file stays in tag v0.16.0). Four swatches now: two by two on narrow columns, one row from 560 px. The "What to wear" wording still names tweed. An emerald swatch closer to the brand's Teal Green is being chosen.
 
+## v0.16.2 (November 23, 2026): emerald closer to the brand
+
+Staff picked option 1 from the board "Gala event page: emerald swatch options" (five emerald fabrics chosen to sit near Teal Green #226550). The grass-green velvet swatch is replaced by a teal satin, labeled "Emerald satin".
+
+| File | Name | Unsplash page | Photographer |
+| --- | --- | --- | --- |
+| img/swatch-emerald-satin.jpg | Emerald satin | unsplash.com/photos/a-close-up-view-of-a-teal-colored-fabric-dQO-3ud96rQ | Jatin Gajjar |
+
 Remove (or swap back to plain text) after December 15, 2026.

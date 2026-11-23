@@ -53,7 +53,7 @@
 /* What to wear */
 .bc-gev .bc-gev__wear{display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;border:2px solid var(--green);border-radius:20px;padding:20px 24px}
 .bc-gev .bc-gev__wear p{font-size:18px;color:#fff}
-/* Fabric swatches: four square swatches (ruby satin, emerald velvet, sapphire velvet, amethyst silk), each in a white frame.
+/* Fabric swatches: four square swatches (ruby satin, emerald satin, sapphire velvet, amethyst silk), each in a white frame.
    Narrow columns: two by two, with the name underneath. From 560 px: one row. From 720 px: the name sits in a pill. */
 .bc-gev .bc-gev__swatches{flex:1 1 100%;list-style:none;margin:6px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 14px}
 .bc-gev .bc-gev__swatch{display:flex;flex-direction:column;align-items:center;margin:0;padding:0;transition:transform .2s}

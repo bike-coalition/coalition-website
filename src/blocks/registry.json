@@ -219,7 +219,7 @@
         "/calendar/golden-gear-gala"
       ],
       "location": "event description, first block",
-      "bytes": 10584,
+      "bytes": 10581,
       "has_css": true,
       "has_js": true,
       "external": [
@@ -229,7 +229,7 @@
       "styles": "src/blocks/events/gala-event.css",
       "script": "src/blocks/events/gala-event.js",
       "jsdelivr": {
-        "tag": "v0.16.1",
+        "tag": "v0.16.2",
         "status": "live since November 23, 2026; remove after December 15, 2026 (docs/pages/gala-event-build.md)"
       }
     }
