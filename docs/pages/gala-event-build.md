@@ -87,4 +87,6 @@ Staff picked option 1 from the board "Gala event page: emerald swatch options" (
 
 At staff's request the "Swatch photos: ..." credit line under the swatches came out. The Unsplash License doesn't require credit; the photographers stay recorded in the tables above.
 
+Live November 23, 2026: v0.16.2 (emerald satin) and then v0.16.3 (no credit line) pasted into the event's Code block, each time over the exact previous version. Checked live at 1440 px: four swatches (Ruby satin, Emerald satin, Sapphire velvet, Amethyst silk), no credit line, nothing scrolls sideways.
+
 Remove (or swap back to plain text) after December 15, 2026.
