@@ -208,6 +208,28 @@
       "has_js": false,
       "bytes": 59,
       "status": "duplicate Givebutter script removed from all five blocks on 2026-10-26; relies on the site-wide script"
+    },
+    {
+      "file": "src/blocks/events/gala-event.html",
+      "title": "Event: Golden Gear Gala custom section (top of the description, seasonal)",
+      "squarespace_block_id": [],
+      "pages": [
+        "/calendar/golden-gear-gala"
+      ],
+      "location": "event description, first block",
+      "bytes": 8354,
+      "has_css": true,
+      "has_js": true,
+      "external": [
+        "https://cdn.jsdelivr.net",
+        "https://fonts.googleapis.com"
+      ],
+      "styles": "src/blocks/events/gala-event.css",
+      "script": "src/blocks/events/gala-event.js",
+      "jsdelivr": {
+        "tag": "v0.14.0",
+        "status": "built November 23, 2026; remove after December 15, 2026 (docs/pages/gala-event-build.md)"
+      }
     }
   ]
 }
