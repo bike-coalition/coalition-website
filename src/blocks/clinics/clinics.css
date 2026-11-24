@@ -49,6 +49,10 @@ body:not(.sqs-edit-mode) section.page-section:has(.bc-clinic) .fe-block:has(.sqs
   body:not(.sqs-edit-mode) section.page-section:has(.bc-clinic) .fe-block:has(.sqs-block-embed) .sqs-block-content{padding:0}
 }
 
+/* In the Squarespace editor the blocks keep the editor's grid, so each one shows as a short preview that scrolls.
+   Without this the editor measures a block's full content in a narrow cell and grows it thousands of pixels tall. */
+body.sqs-edit-mode .bc-clinic{max-height:360px;overflow:auto}
+
 /* The blocks themselves */
 .bc-clinic{--teal:var(--bc-teal-green,#226550);--deep:var(--bc-teal-deep,#1A4D3D);--green:var(--bc-spring-green,#C7EC7A);--mist:var(--bc-mist,#EEF3EA);--peach:var(--bc-peachy,#FFCF90);--ink:#161614;
   box-sizing:border-box;font-family:var(--bc-font-body,'Inter',system-ui,sans-serif);font-size:18px;line-height:1.55;color:var(--deep)}
