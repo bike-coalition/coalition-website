@@ -36,3 +36,41 @@ For each page, `/repair` first:
 ## Undo
 
 Swap the slugs back (new page to `/<slug>-preview`, old page to `/<slug>`, turn the old page back on) and swap the menu item back. Keep the old pages for a month, then delete them.
+
+## Release history
+
+- **v0.19.0** (November 24, 2026): first build. Tested on a local copy of each live page at 1440 and 390 px before tagging.
+- **v0.19.1**: the section layout rules skip the Squarespace editor (`body:not(.sqs-edit-mode)`). The editor puts its own row and column guides inside the section, and the grid squeezed them.
+- **v0.19.2**: in the editor each block shows as a short preview that scrolls (`max-height: 360px`). Without it the editor measured a block's full content in its narrow default cell and grew it to 6,400 px. This is the tag live on both pages.
+- **jsDelivr lesson:** a request for a file at a tag that isn't pushed yet gets a cached "not found". A GitHub push failed once, a check ran meanwhile, and `clinics.css` and `rolling-forward-booking.html` at v0.19.2 had to be purged (`purge.jsdelivr.net/gh/...`). Don't fetch a tag's files until the push has gone through.
+
+## In the editor
+
+The published page lays the blocks out with `clinics.css`. The editor keeps Squarespace's own grid, so there the Code blocks sit in narrow cells near the top of their section and scroll inside. That is expected; their editor positions don't change the published page. To edit a Code block, select it from the section's **Layers** list (the calendar Embed sits under them, and a click can land on it).
+
+## Go-live record (November 24, 2026)
+
+At staff's go-ahead ("Yes, swap both"), one page at a time:
+
+**/repair**
+- Old page: renamed "Repair Clinic (old, Nov 2026)", slug `/repair-old`, Enable Page off, in Not Linked. It still holds every original section and its own copy of the booking embed.
+- New page (was `/repair-preview`): title and navigation title "Repair Clinic", slug `/repair`, Hide from Search off. SEO title and description are the old page's, unchanged. Moved into Classes + Events, after Rides and before Bike the Bay, where the old page sat.
+- Blocks: section `6b05eb9838a3e67c2969c0d4` holds the hero (`block-yui_3_17_2_1_1795550429548_1447`). Section `6b05eb9838a3e67c2969c0dc` (anchor `reservations`) holds the facts (`..._1970`), the photo band (`..._2224`) and the Embed block `block-7e2de60ec9be7cb68d2f` (Sunday Bike Clinic, schedule `AcZssZ1G2Unp...`, the same as calendar.app.google/Z5iFWf58bZePCJER9). Each Code block's text matches the v0.19.2 file exactly (SHA-256 checked after pasting). The old middle section (text and two photos) was removed on the copy.
+- While moving the old page to Not Linked it was dropped into the "LCI Resources" member site by mistake. It was disabled the whole time; it was moved straight back out with "Move out of Member Site", which put it in Not Linked.
+
+**/rolling-forward**
+- Old page: renamed "SDSU Rolling Forward (old, Nov 2026)", slug `/rolling-forward-old`, Enable Page off, in Not Linked (it was never in a menu).
+- New page (was `/rolling-forward-preview`): title and navigation title "SDSU Rolling Forward", slug `/rolling-forward`, Hide from Search off. New SEO title "SDSU Rolling Forward | Free Tune-Ups on Campus" and description (the old ones had em dashes).
+- Blocks: one section `6b05ee5e04e0be2393b9f445`: hero (`block-yui_3_17_2_1_1795550888947_2748`), facts (`..._2995`, anchor `#reserve`), Find us band (`..._3250`, anchor `#find-us`) and the Embed block `block-48b0716732d715f3038e` (SDSU Rolling Forward Tune-Up, schedule `AcZssZ35-WST...`, the same as calendar.app.google/FHQf88Shsitc7CaD7). Each Code block's text matches the v0.19.2 file exactly. The nine old text and image blocks were removed on the copy (the Embed was removed once by a stray click and restored with Undo before saving; same block, same calendar).
+
+**Checked live, logged out:** `/repair` and `/rolling-forward` return 200 with the new blocks and no `noindex`; the `-old` and `-preview` slugs return 404. The Classes + Events menu links Repair Clinic to `/repair`. At 1440 px the facts sit beside the calendar; at 390 px everything stacks (hero, facts, calendar, band); nothing scrolls sideways at either width. Buttons are 52 px tall; "Book a slot" buttons jump to the facts; all photos load. Both calendars load and show open slots (Sunday December 6 from 11:00 am; Thursday December 3 from 11:30 am). The URL mappings saved November 23 have no rule for either slug.
+
+**Not checked by Claude:** making a real booking. Book and cancel one test slot on each page to be sure.
+
+Delete the two old pages after a month (late December 2026) if nothing needs them.
+
+## Open items
+
+- At 1024 px (small laptops) the hero stacks (words above the photo) and runs about 1,300 px tall. Lowering the hero's column minimum in `clinics.css` would keep it side by side; that needs a new tag and a re-paste of all six blocks.
+- The site-wide title format adds " — San Diego County Bike Coalition" (an em dash) to every page title. That is a site setting, not part of these pages.
+- `CLAUDE.md` says "the Coalition" after the first full name; staff chose "the Bike Coalition" for these two pages. Settle one rule for the whole repo.

@@ -17,7 +17,7 @@ The design canvas now has a future draft beside every live page (October 20, 202
 ## Facts to fill in
 
 - Tacos: pickup time and place, items, prices.
-- Rolling Forward: clinic dates and hours.
+- ~~Rolling Forward: clinic dates and hours.~~ Thursdays, 11:30 am to 2:30 pm during the school year, at the Sundial outside Hepner Hall (from the SDSU booking page; live November 24, 2026).
 - Advocacy: link to the current budget priority letter.
 - Ambassador Program: who receives applications and replies.
 - Privacy Policy: effective date (and should the board or counsel review the light wording edits?).
@@ -32,7 +32,7 @@ The design canvas now has a future draft beside every live page (October 20, 202
 
 - Bylaws: which version is current, the PDF linked from Staff & Board or the Google Doc on /bylaws?
 - Statistics carried over from the live pages that aren't in the approved stats yet: "6% of roadways, 54% of collisions", "30 LCIs", "20x more space-efficient" bike parking, ~~CicloSDias figures~~ (handled November 2, 2026), membership and corporate level prices and perks, the 10-hour volunteer T-shirt, and staff and board bio numbers.
-- Repair Clinic: is it held at the Coalition office, 300 15th Street?
+- ~~Repair Clinic: is it held at the Coalition office, 300 15th Street?~~ Yes, per the Sunday booking page (November 24, 2026).
 - Contact: should 619.786.5880 say "texting only"?
 - Classes: parents are told "ask your school to send the request". Is that right?
 - Clubs: club membership fee or benefits? Should City Cycling Classes link to /classes instead of /calendar?

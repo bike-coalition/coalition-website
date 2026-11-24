@@ -232,6 +232,150 @@
         "tag": "v0.16.4",
         "status": "live since November 23, 2026; remove after December 15, 2026 (docs/pages/gala-event-build.md)"
       }
+    },
+    {
+      "file": "src/blocks/clinics/repair-hero.html",
+      "title": "Repair Clinic: hero",
+      "squarespace_block_id": [
+        "block-yui_3_17_2_1_1795550429548_1447"
+      ],
+      "pages": [
+        "/repair"
+      ],
+      "location": "section 6b05eb9838a3e67c2969c0d4 (first section)",
+      "bytes": 8926,
+      "has_css": true,
+      "has_js": false,
+      "external": [
+        "https://cdn.jsdelivr.net",
+        "https://fonts.googleapis.com",
+        "https://images.squarespace-cdn.com"
+      ],
+      "styles": "src/blocks/clinics/clinics.css",
+      "jsdelivr": {
+        "tag": "v0.19.2",
+        "status": "live since November 24, 2026 (docs/pages/clinics-build.md)"
+      }
+    },
+    {
+      "file": "src/blocks/clinics/repair-booking.html",
+      "title": "Repair Clinic: facts beside the booking calendar",
+      "squarespace_block_id": [
+        "block-yui_3_17_2_1_1795550429548_1970"
+      ],
+      "pages": [
+        "/repair"
+      ],
+      "location": "section 6b05eb9838a3e67c2969c0dc (anchor reservations), with the native Embed",
+      "bytes": 8832,
+      "has_css": true,
+      "has_js": false,
+      "external": [
+        "https://cdn.jsdelivr.net",
+        "https://fonts.googleapis.com",
+        "https://images.squarespace-cdn.com"
+      ],
+      "styles": "src/blocks/clinics/clinics.css",
+      "jsdelivr": {
+        "tag": "v0.19.2",
+        "status": "live since November 24, 2026 (docs/pages/clinics-build.md)"
+      }
+    },
+    {
+      "file": "src/blocks/clinics/repair-photo.html",
+      "title": "Repair Clinic: photo band",
+      "squarespace_block_id": [
+        "block-yui_3_17_2_1_1795550429548_2224"
+      ],
+      "pages": [
+        "/repair"
+      ],
+      "location": "section 6b05eb9838a3e67c2969c0dc, after the booking row",
+      "bytes": 8077,
+      "has_css": true,
+      "has_js": false,
+      "external": [
+        "https://cdn.jsdelivr.net",
+        "https://fonts.googleapis.com",
+        "https://images.squarespace-cdn.com"
+      ],
+      "styles": "src/blocks/clinics/clinics.css",
+      "jsdelivr": {
+        "tag": "v0.19.2",
+        "status": "live since November 24, 2026 (docs/pages/clinics-build.md)"
+      }
+    },
+    {
+      "file": "src/blocks/clinics/rolling-forward-hero.html",
+      "title": "Rolling Forward: hero",
+      "squarespace_block_id": [
+        "block-yui_3_17_2_1_1795550888947_2748"
+      ],
+      "pages": [
+        "/rolling-forward"
+      ],
+      "location": "section 6b05ee5e04e0be2393b9f445 (the page's one section)",
+      "bytes": 8901,
+      "has_css": true,
+      "has_js": false,
+      "external": [
+        "https://cdn.jsdelivr.net",
+        "https://fonts.googleapis.com",
+        "https://images.squarespace-cdn.com"
+      ],
+      "styles": "src/blocks/clinics/clinics.css",
+      "jsdelivr": {
+        "tag": "v0.19.2",
+        "status": "live since November 24, 2026 (docs/pages/clinics-build.md)"
+      }
+    },
+    {
+      "file": "src/blocks/clinics/rolling-forward-booking.html",
+      "title": "Rolling Forward: facts beside the booking calendar",
+      "squarespace_block_id": [
+        "block-yui_3_17_2_1_1795550888947_2995"
+      ],
+      "pages": [
+        "/rolling-forward"
+      ],
+      "location": "section 6b05ee5e04e0be2393b9f445, with the native Embed",
+      "bytes": 8518,
+      "has_css": true,
+      "has_js": false,
+      "external": [
+        "https://cdn.jsdelivr.net",
+        "https://fonts.googleapis.com",
+        "https://images.squarespace-cdn.com"
+      ],
+      "styles": "src/blocks/clinics/clinics.css",
+      "jsdelivr": {
+        "tag": "v0.19.2",
+        "status": "live since November 24, 2026 (docs/pages/clinics-build.md)"
+      }
+    },
+    {
+      "file": "src/blocks/clinics/rolling-forward-find-us.html",
+      "title": "Rolling Forward: Find us band",
+      "squarespace_block_id": [
+        "block-yui_3_17_2_1_1795550888947_3250"
+      ],
+      "pages": [
+        "/rolling-forward"
+      ],
+      "location": "section 6b05ee5e04e0be2393b9f445, after the booking row",
+      "bytes": 8796,
+      "has_css": true,
+      "has_js": false,
+      "external": [
+        "https://cdn.jsdelivr.net",
+        "https://fonts.googleapis.com",
+        "https://images.squarespace-cdn.com"
+      ],
+      "styles": "src/blocks/clinics/clinics.css",
+      "jsdelivr": {
+        "tag": "v0.19.2",
+        "status": "live since November 24, 2026 (docs/pages/clinics-build.md)"
+      }
     }
   ]
 }

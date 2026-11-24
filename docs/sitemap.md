@@ -10,7 +10,7 @@ Join and Donate sit in the header as buttons, outside the menus.
 | --- | --- | --- |
 | Calendar | /calendar | Native Squarespace |
 | Classes | /classes | |
-| Repair Clinic | /repair | |
+| Repair Clinic | /repair | Refreshed November 24, 2026; links to SDSU Rolling Forward (/rolling-forward) |
 | Group Rides & Clubs | /clubs | Fix first: dead-end button |
 | Open Streets | new | Evergreen CicloSDias page |
 | Bike the Bay | bikethebay.net | External, registration on BikeReg |
