@@ -229,3 +229,22 @@ body:not(.sqs-edit-mode-active) section[data-section-id="69b0b56f01a68c38666a8d7
     margin-top: 12px;
   }
 }
+
+/* Repair clinics section: size its grid rows to the cards' content, so the cards end at their
+   buttons instead of filling Squarespace's fixed rows, and keep space before the calendar below.
+   Same approach as the Classes section above. The editor keeps Squarespace's own rows. */
+body:not(.sqs-edit-mode-active) section[data-section-id="69d048ae2b29ce400aff4e9a"] .fluid-engine {
+  grid-template-rows: none;
+  grid-auto-rows: minmax(0, auto);
+  padding-bottom: 32px;
+}
+
+body:not(.sqs-edit-mode-active) .fe-block-7f4ee817a576e54167f9 {
+  margin-bottom: 16px; /* "Free repair help in two places." to the cards */
+}
+
+@media (min-width: 768px) {
+  body:not(.sqs-edit-mode-active) section[data-section-id="69d048ae2b29ce400aff4e9a"] .fluid-engine {
+    padding-bottom: 56px;
+  }
+}
