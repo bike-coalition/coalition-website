@@ -91,6 +91,6 @@ Live November 23, 2026: v0.16.2 (emerald satin) and then v0.16.3 (no credit line
 
 ## v0.16.4 (November 23, 2026): new headline
 
-At staff's request the headline is now "Gear Up for a Golden Night" (was "An evening for safer streets"). Markup only; the stylesheet and script are unchanged.
+At staff's request the headline is now "Gear Up for a Golden Night" (was "An evening for safer streets"). Markup only; the stylesheet and script are unchanged. Live November 23, 2026: pasted over the exact v0.16.3 block. Checked live at 1440 px (three lines beside the reel) and 390 px (fits the column).
 
 Remove (or swap back to plain text) after December 15, 2026.
