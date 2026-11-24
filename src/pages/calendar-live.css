@@ -168,3 +168,64 @@ body:not(.sqs-edit-mode-active) section[data-section-id="69b0b56f01a68c38666a8d7
   padding-top: max(29.7px, 3.3vw) !important;
   padding-bottom: 0 !important;
 }
+
+/* ---------------------------------------------------------------
+   Repair clinics (section 69d048ae2b29ce400aff4e9a, since November 24, 2026): two native text
+   blocks side by side, one per clinic, each drawn as a light card. Staff edit them as normal text.
+   Left: Sundays at our office (block ...8327). Right: At SDSU (block f67ead40e12ac225d1af).
+   Each card's last paragraph, when it holds only a link, is drawn as a Teal Green button with
+   Spring Green text (5.16:1), at least 52px tall, like the Donate band on the Newsletter page.
+   Old section content: docs/baseline/calendar-repair-section-2026-11-24.md.
+   --------------------------------------------------------------- */
+#block-yui_3_17_2_1_1775257433394_8327,
+#block-f67ead40e12ac225d1af {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 28px 28px 32px;
+  border-radius: var(--bc-radius-card, 24px);
+  background: var(--bc-mist, #EEF3EA);
+}
+
+#block-yui_3_17_2_1_1775257433394_8327 :is(.sqs-html-content, .ProseMirror) > h3:first-child,
+#block-f67ead40e12ac225d1af :is(.sqs-html-content, .ProseMirror) > h3:first-child {
+  margin-top: 0;
+}
+
+#block-yui_3_17_2_1_1775257433394_8327 :is(.sqs-html-content, .ProseMirror) > p:last-child > a:only-child,
+#block-f67ead40e12ac225d1af :is(.sqs-html-content, .ProseMirror) > p:last-child > a:only-child {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--bc-button-height, 52px);
+  margin-top: 4px;
+  padding: var(--bc-button-pad, 0 26px);
+  border-radius: var(--bc-radius-pill, 999px);
+  background: var(--bc-teal-green, #226550);
+  color: var(--bc-spring-green, #C7EC7A) !important;
+  font-family: var(--bc-font-body, Inter, system-ui, sans-serif);
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+
+#block-yui_3_17_2_1_1775257433394_8327 .sqs-html-content > p:last-child > a:only-child:hover,
+#block-f67ead40e12ac225d1af .sqs-html-content > p:last-child > a:only-child:hover {
+  background: var(--bc-teal-deep, #1A4D3D);
+}
+
+#block-yui_3_17_2_1_1775257433394_8327 .sqs-html-content > p:last-child > a:only-child:focus-visible,
+#block-f67ead40e12ac225d1af .sqs-html-content > p:last-child > a:only-child:focus-visible {
+  outline: 3px solid var(--bc-teal-green, #226550);
+  outline-offset: 3px;
+}
+
+/* Phones: a little more room between the stacked cards */
+@media (max-width: 767px) {
+  #block-yui_3_17_2_1_1775257433394_8327,
+  #block-f67ead40e12ac225d1af {
+    padding: 24px 20px 28px;
+  }
+  .fe-block-f67ead40e12ac225d1af {
+    margin-top: 12px;
+  }
+}
