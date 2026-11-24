@@ -1,0 +1,115 @@
+/*
+  Repair Clinic (/repair) and Rolling Forward (/rolling-forward): shared styles for the clinic Code blocks.
+  Design: option B ("Facts beside booking") on the canvas boards "Repair Clinic: refresh options" and
+  "Rolling Forward: refresh options", November 24, 2026.
+
+  Each page keeps its native Google appointment-calendar Embed block. This stylesheet lays the section out
+  around it: the facts Code block on the left, the booking calendar on the right, and the hero and the band
+  after it full width. On phones everything stacks: hero, facts, calendar, band.
+  The layout uses `order`, not the editor's grid positions, so it holds however the blocks sit in the editor.
+  Every rule that reaches outside the blocks is scoped to section.page-section:has(.bc-clinic), never a plain
+  section:has() (docs/jsdelivr-plan.md, gala teaser lesson).
+*/
+
+/* Sections that hold a clinic block: drop Squarespace's padding, size and background, and run our own grid. */
+section.page-section:has(.bc-clinic){min-height:0!important;padding-bottom:0!important;background:var(--bc-white,#FFFFFF)}
+section.page-section:has(.bc-clinic) .section-border,
+section.page-section:has(.bc-clinic) .section-background{min-height:0!important}
+section.page-section:has(.bc-clinic) .section-background{display:none!important}
+section.page-section:has(.bc-clinic) .section-divider-display{display:none!important}
+section.page-section:has(.bc-clinic) .content-wrapper{padding:0!important}
+section.page-section:has(.bc-clinic) .content{max-width:none!important;width:100%!important;padding:0!important}
+section.page-section:has(.bc-clinic) .fluid-engine{
+  display:grid!important;
+  grid-template-columns:minmax(32px,1fr) minmax(0,560px) minmax(0,720px) minmax(32px,1fr)!important;
+  grid-template-rows:none!important;grid-auto-rows:auto!important;grid-auto-flow:row!important;
+  column-gap:40px!important;row-gap:0!important;padding:0!important;margin:0!important;
+  width:100%!important;max-width:none!important;min-height:0!important}
+section.page-section:has(.bc-clinic) .fe-block{grid-area:auto!important;margin:0!important;min-width:0}
+section.page-section:has(.bc-clinic) .sqs-block-code,
+section.page-section:has(.bc-clinic) .sqs-block-code .sqs-block-content{height:auto!important;min-height:0!important;padding:0!important}
+section.page-section:has(.bc-clinic__facts){background:var(--bc-mist,#EEF3EA)}
+
+/* Block order and columns */
+section.page-section:has(.bc-clinic) .fe-block:has(.bc-clinic__hero){order:1;grid-column:1/-1!important}
+section.page-section:has(.bc-clinic) .fe-block:has(.bc-clinic__facts){order:2;grid-column:2!important;padding:clamp(64px,8vw,96px) 0!important}
+section.page-section:has(.bc-clinic) .fe-block:has(.sqs-block-embed){order:3;grid-column:3!important;padding:clamp(64px,8vw,96px) 0!important}
+section.page-section:has(.bc-clinic) .fe-block:has(.bc-clinic__after){order:4;grid-column:1/-1!important}
+
+/* The booking calendar: a white card with rounded corners. Its iframe stays exactly as Google draws it. */
+section.page-section:has(.bc-clinic) .fe-block:has(.sqs-block-embed) .sqs-block-embed{height:auto!important;padding:0!important}
+section.page-section:has(.bc-clinic) .fe-block:has(.sqs-block-embed) .sqs-block-content{background:var(--bc-white,#FFFFFF);border-radius:24px;overflow:hidden;padding:8px}
+section.page-section:has(.bc-clinic) .fe-block:has(.sqs-block-embed) iframe{display:block;width:100%!important;min-height:700px;border:0}
+
+@media (max-width:860px){
+  section.page-section:has(.bc-clinic) .fluid-engine{grid-template-columns:16px minmax(0,1fr) 16px!important;column-gap:0!important}
+  section.page-section:has(.bc-clinic) .fe-block:has(.bc-clinic__facts){grid-column:2!important;padding:56px 0 24px!important}
+  section.page-section:has(.bc-clinic) .fe-block:has(.sqs-block-embed){grid-column:2!important;padding:0 0 56px!important}
+  section.page-section:has(.bc-clinic) .fe-block:has(.sqs-block-embed) .sqs-block-content{padding:0}
+}
+
+/* The blocks themselves */
+.bc-clinic{--teal:var(--bc-teal-green,#226550);--deep:var(--bc-teal-deep,#1A4D3D);--green:var(--bc-spring-green,#C7EC7A);--mist:var(--bc-mist,#EEF3EA);--peach:var(--bc-peachy,#FFCF90);--ink:#161614;
+  box-sizing:border-box;font-family:var(--bc-font-body,'Inter',system-ui,sans-serif);font-size:18px;line-height:1.55;color:var(--deep)}
+.bc-clinic *{box-sizing:border-box}
+.bc-clinic p{margin:0}
+.bc-clinic img{max-width:100%;display:block}
+.bc-clinic h1,.bc-clinic h2,.bc-clinic h3{margin:0;padding:0;letter-spacing:normal;text-transform:none}
+.bc-clinic a{color:var(--teal);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.bc-clinic a:hover{color:var(--deep)}
+.bc-clinic a:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.bc-clinic .bc-clinic__wrap{max-width:1320px;margin:0 auto;padding-left:32px;padding-right:32px}
+.bc-clinic .bc-clinic__d{font-family:var(--bc-font-display,'Obviously','Archivo Black','Archivo',system-ui,sans-serif);font-weight:800;letter-spacing:-0.02em;word-spacing:0.1em;line-height:0.95;text-wrap:balance}
+.bc-clinic .bc-clinic__c{font-weight:500;font-size:14px;letter-spacing:0.12em;text-transform:uppercase}
+
+/* Hero */
+.bc-clinic__hero{background:var(--green);color:var(--teal)}
+.bc-clinic__hero .bc-clinic__grid{padding-top:clamp(48px,7vw,80px);padding-bottom:clamp(56px,8vw,88px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(460px,100%),1fr));gap:40px 56px;align-items:center}
+.bc-clinic__hero .bc-clinic__text{display:flex;flex-direction:column;gap:24px}
+.bc-clinic__hero .bc-clinic__c{color:var(--teal)}
+.bc-clinic__hero h1.bc-clinic__d{font-size:clamp(52px,7.6vw,112px);text-transform:uppercase;color:var(--teal);display:flex;flex-direction:column}
+.bc-clinic__hero .bc-clinic__lead{font-size:clamp(19px,1.6vw,21px);max-width:560px;color:var(--deep)}
+.bc-clinic__hero img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:28px;background:var(--mist)}
+.bc-clinic .bc-clinic__btns{display:flex;flex-wrap:wrap;gap:14px}
+.bc-clinic a.bc-clinic__btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;border-radius:999px;font-weight:700;font-size:17px;line-height:1.2;text-decoration:none;border:2px solid var(--teal)}
+.bc-clinic a.bc-clinic__btn.is-teal{background:var(--teal);color:#FFFFFF}
+.bc-clinic a.bc-clinic__btn.is-teal:hover{background:var(--deep);border-color:var(--deep);color:#FFFFFF}
+.bc-clinic a.bc-clinic__btn.is-outline{background:transparent;color:var(--teal)}
+.bc-clinic a.bc-clinic__btn.is-outline:hover{background:var(--teal);color:#FFFFFF}
+
+/* Facts, beside the booking calendar */
+.bc-clinic__facts{display:flex;flex-direction:column;gap:20px;scroll-margin-top:180px}
+.bc-clinic__facts h2.bc-clinic__d{font-size:clamp(40px,4.4vw,56px);text-transform:uppercase;color:var(--teal)}
+.bc-clinic__facts dl{margin:0;background:#FFFFFF;border-radius:24px;padding:28px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px 20px}
+.bc-clinic__facts dt{font-weight:700;color:var(--teal)}
+.bc-clinic__facts dd{margin:0}
+.bc-clinic__facts .bc-clinic__box{border-radius:24px;padding:24px 28px;display:flex;flex-direction:column;gap:8px;font-size:16px}
+.bc-clinic__facts .bc-clinic__box.is-peach{background:var(--peach);color:var(--ink)}
+.bc-clinic__facts .bc-clinic__box.is-white{background:#FFFFFF}
+.bc-clinic__facts .bc-clinic__box h3{font-family:var(--bc-font-body,'Inter',system-ui,sans-serif);font-weight:700;font-size:18px;line-height:1.3;color:inherit}
+.bc-clinic__facts .bc-clinic__box.is-white h3{color:var(--teal)}
+.bc-clinic__facts ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.bc-clinic__facts li{margin:0;padding:0}
+.bc-clinic__facts .bc-clinic__small{font-size:16px}
+@media (max-width:420px){.bc-clinic__facts dl{grid-template-columns:minmax(0,1fr);gap:2px 0;padding:24px}.bc-clinic__facts dd{margin-bottom:12px}.bc-clinic__facts dd:last-child{margin-bottom:0}}
+
+/* The band after the booking section */
+.bc-clinic__after{background:#FFFFFF;scroll-margin-top:180px}
+.bc-clinic__after .bc-clinic__pad{padding-top:clamp(56px,7vw,88px);padding-bottom:clamp(56px,7vw,88px)}
+.bc-clinic__after figure{margin:0;display:flex;flex-direction:column;gap:14px}
+.bc-clinic__after figure img{width:100%;height:auto;border-radius:28px}
+.bc-clinic__after figcaption{font-size:16px;color:var(--deep)}
+.bc-clinic__after.is-dark{background:var(--teal);color:#FFFFFF}
+.bc-clinic__after.is-dark .bc-clinic__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:40px 56px;align-items:center}
+.bc-clinic__after.is-dark .bc-clinic__text{display:flex;flex-direction:column;gap:20px}
+.bc-clinic__after.is-dark .bc-clinic__c{color:var(--green)}
+.bc-clinic__after.is-dark h2.bc-clinic__d{font-size:clamp(36px,4.2vw,56px);color:var(--green)}
+.bc-clinic__after.is-dark p{color:#FFFFFF}
+.bc-clinic__after.is-dark a{color:var(--green)}
+.bc-clinic__after.is-dark a:hover{color:#FFFFFF}
+.bc-clinic__after.is-dark a:focus-visible{outline-color:var(--green)}
+.bc-clinic__after.is-dark .bc-clinic__map{width:100%;height:auto;border-radius:28px;background:#FFFFFF}
+.bc-clinic__after.is-dark .bc-clinic__helmet{display:flex;gap:18px;align-items:center}
+.bc-clinic__after.is-dark .bc-clinic__helmet img{width:120px;height:120px;object-fit:cover;border-radius:20px;flex:none}
+
+@media (max-width:600px){.bc-clinic .bc-clinic__wrap{padding-left:16px;padding-right:16px}}
