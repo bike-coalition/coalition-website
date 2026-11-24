@@ -114,7 +114,10 @@ body.sqs-edit-mode .bc-clinic{max-height:360px;overflow:auto}
 .bc-clinic__after.is-dark a:hover{color:#FFFFFF}
 .bc-clinic__after.is-dark a:focus-visible{outline-color:var(--green)}
 .bc-clinic__after.is-dark .bc-clinic__map{width:100%;height:auto;border-radius:28px;background:#FFFFFF}
-.bc-clinic__after.is-dark .bc-clinic__helmet{display:flex;gap:18px;align-items:center}
-.bc-clinic__after.is-dark .bc-clinic__helmet img{width:120px;height:120px;object-fit:cover;border-radius:20px;flex:none}
+/* Helmet photo beside its line: half the text column on laptops, full width on phones. The photo is portrait (3:4) and shown whole. New class name (was __helmet) so the old 120 px rule in the other blocks' inline guards can't shrink it. */
+.bc-clinic__after.is-dark .bc-clinic__gear{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 28px;align-items:center}
+.bc-clinic__after.is-dark .bc-clinic__gear img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:20px}
+.bc-clinic__after.is-dark .bc-clinic__gear p{font-size:clamp(20px,1.8vw,24px);font-weight:600;line-height:1.35}
+@media (max-width:600px){.bc-clinic__after.is-dark .bc-clinic__gear{grid-template-columns:minmax(0,1fr);gap:14px}}
 
 @media (max-width:600px){.bc-clinic .bc-clinic__wrap{padding-left:16px;padding-right:16px}}
