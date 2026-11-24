@@ -363,7 +363,7 @@
         "/rolling-forward"
       ],
       "location": "section 6b05ee5e04e0be2393b9f445, after the booking row",
-      "bytes": 8796,
+      "bytes": 9083,
       "has_css": true,
       "has_js": false,
       "external": [
@@ -373,8 +373,8 @@
       ],
       "styles": "src/blocks/clinics/clinics.css",
       "jsdelivr": {
-        "tag": "v0.19.2",
-        "status": "live since November 24, 2026 (docs/pages/clinics-build.md)"
+        "tag": "v0.19.3",
+        "status": "live since November 24, 2026; v0.19.3 (bigger helmet photo) live the same day (docs/pages/clinics-build.md)"
       }
     }
   ]

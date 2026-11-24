@@ -84,7 +84,7 @@
       "path": "/rolling-forward",
       "title": "SDSU Rolling Forward",
       "build": "custom",
-      "status": "three Code blocks around the native booking embed; refresh live November 24, 2026 (src/blocks/clinics, docs/pages/clinics-build.md, release v0.19.2). Not in a menu. Old page saved in docs/baseline/rolling-forward-2026-11-24.md and kept, disabled, at /rolling-forward-old",
+      "status": "three Code blocks around the native booking embed; refresh live November 24, 2026 (src/blocks/clinics, docs/pages/clinics-build.md, release v0.19.2; Find us band v0.19.3, bigger helmet photo). Not in a menu. Old page saved in docs/baseline/rolling-forward-2026-11-24.md and kept, disabled, at /rolling-forward-old",
       "embeds": [
         "Google appointment calendar"
       ]
