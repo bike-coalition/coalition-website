@@ -13,7 +13,7 @@
       "path": "/calendar",
       "title": "Calendar",
       "build": "native",
-      "status": "native blocks; live page styled by src/pages/calendar-live.css (Oct 25, 2026: class level pills, empty Group Rides hidden). Future redesign: src/pages/calendar.css and docs/pages/calendar-build.md. Nov 23, 2026: the Golden Gear Gala event page (/calendar/golden-gear-gala) has a custom section at the top of its description (src/blocks/events/gala-event.html, v0.16.3); the rest of the event page stays native; remove after December 15, 2026"
+      "status": "native blocks; live page styled by src/pages/calendar-live.css (Oct 25, 2026: class level pills, empty Group Rides hidden). Future redesign: src/pages/calendar.css and docs/pages/calendar-build.md. Nov 23, 2026: the Golden Gear Gala event page (/calendar/golden-gear-gala) has a custom section at the top of its description (src/blocks/events/gala-event.html, v0.16.4); the rest of the event page stays native; remove after December 15, 2026"
     },
     {
       "path": "/blog",

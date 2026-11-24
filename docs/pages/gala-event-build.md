@@ -12,7 +12,7 @@ A custom section at the top of the gala's event page, `/calendar/golden-gear-gal
 
 What it shows, top to bottom:
 
-- "You're invited", the headline "An evening for safer streets", two short paragraphs and a Spring Green "Get tickets, $100" button. The gala reel plays muted on a loop in the sprocket arch beside the words (below them on narrow columns), with a pause button. It only plays when the visitor's device allows motion and pauses when scrolled out of view.
+- "You're invited", the headline "Gear Up for a Golden Night" (was "An evening for safer streets" until v0.16.4), two short paragraphs and a Spring Green "Get tickets, $100" button. The gala reel plays muted on a loop in the sprocket arch beside the words (below them on narrow columns), with a pause button. It only plays when the visitor's device allows motion and pauses when scrolled out of view.
 - Four snapshots (the guests at the backdrop, charcuterie, bruschetta, kale salad), tilted like prints on a table. They straighten up when you point at them, unless the visitor's device asks for less motion.
 - "What to expect": five numbered tiles (bike valet, photo booth, hors d'oeuvres, a drink on us, fun times).
 - "What to wear": bold jewel tones (ruby red, emerald green, sapphire blue, amethyst purple) with rich textures (velvet, tweed, silk, satin).
@@ -88,5 +88,9 @@ Staff picked option 1 from the board "Gala event page: emerald swatch options" (
 At staff's request the "Swatch photos: ..." credit line under the swatches came out. The Unsplash License doesn't require credit; the photographers stay recorded in the tables above.
 
 Live November 23, 2026: v0.16.2 (emerald satin) and then v0.16.3 (no credit line) pasted into the event's Code block, each time over the exact previous version. Checked live at 1440 px: four swatches (Ruby satin, Emerald satin, Sapphire velvet, Amethyst silk), no credit line, nothing scrolls sideways.
+
+## v0.16.4 (November 23, 2026): new headline
+
+At staff's request the headline is now "Gear Up for a Golden Night" (was "An evening for safer streets"). Markup only; the stylesheet and script are unchanged.
 
 Remove (or swap back to plain text) after December 15, 2026.
