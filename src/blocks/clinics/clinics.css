@@ -8,44 +8,45 @@
   after it full width. On phones everything stacks: hero, facts, calendar, band.
   The layout uses `order`, not the editor's grid positions, so it holds however the blocks sit in the editor.
   Every rule that reaches outside the blocks is scoped to section.page-section:has(.bc-clinic), never a plain
-  section:has() (docs/jsdelivr-plan.md, gala teaser lesson).
+  section:has() (docs/jsdelivr-plan.md, gala teaser lesson), and to body:not(.sqs-edit-mode): in the editor the
+  section keeps Squarespace's own grid, because the editor puts its row and column guides inside it.
 */
 
 /* Sections that hold a clinic block: drop Squarespace's padding, size and background, and run our own grid. */
-section.page-section:has(.bc-clinic){min-height:0!important;padding-bottom:0!important;background:var(--bc-white,#FFFFFF)}
-section.page-section:has(.bc-clinic) .section-border,
-section.page-section:has(.bc-clinic) .section-background{min-height:0!important}
-section.page-section:has(.bc-clinic) .section-background{display:none!important}
-section.page-section:has(.bc-clinic) .section-divider-display{display:none!important}
-section.page-section:has(.bc-clinic) .content-wrapper{padding:0!important}
-section.page-section:has(.bc-clinic) .content{max-width:none!important;width:100%!important;padding:0!important}
-section.page-section:has(.bc-clinic) .fluid-engine{
+body:not(.sqs-edit-mode) section.page-section:has(.bc-clinic){min-height:0!important;padding-bottom:0!important;background:var(--bc-white,#FFFFFF)}
+body:not(.sqs-edit-mode) section.page-section:has(.bc-clinic) .section-border,
+body:not(.sqs-edit-mode) section.page-section:has(.bc-clinic) .section-background{min-height:0!important}
+body:not(.sqs-edit-mode) section.page-section:has(.bc-clinic) .section-background{display:none!important}
+body:not(.sqs-edit-mode) section.page-section:has(.bc-clinic) .section-divider-display{display:none!important}
+body:not(.sqs-edit-mode) section.page-section:has(.bc-clinic) .content-wrapper{padding:0!important}
+body:not(.sqs-edit-mode) section.page-section:has(.bc-clinic) .content{max-width:none!important;width:100%!important;padding:0!important}
+body:not(.sqs-edit-mode) section.page-section:has(.bc-clinic) .fluid-engine{
   display:grid!important;
   grid-template-columns:minmax(32px,1fr) minmax(0,560px) minmax(0,720px) minmax(32px,1fr)!important;
   grid-template-rows:none!important;grid-auto-rows:auto!important;grid-auto-flow:row!important;
   column-gap:40px!important;row-gap:0!important;padding:0!important;margin:0!important;
   width:100%!important;max-width:none!important;min-height:0!important}
-section.page-section:has(.bc-clinic) .fe-block{grid-area:auto!important;margin:0!important;min-width:0}
-section.page-section:has(.bc-clinic) .sqs-block-code,
-section.page-section:has(.bc-clinic) .sqs-block-code .sqs-block-content{height:auto!important;min-height:0!important;padding:0!important}
-section.page-section:has(.bc-clinic__facts){background:var(--bc-mist,#EEF3EA)}
+body:not(.sqs-edit-mode) section.page-section:has(.bc-clinic) .fe-block{grid-area:auto!important;margin:0!important;min-width:0}
+body:not(.sqs-edit-mode) section.page-section:has(.bc-clinic) .sqs-block-code,
+body:not(.sqs-edit-mode) section.page-section:has(.bc-clinic) .sqs-block-code .sqs-block-content{height:auto!important;min-height:0!important;padding:0!important}
+body:not(.sqs-edit-mode) section.page-section:has(.bc-clinic__facts){background:var(--bc-mist,#EEF3EA)}
 
 /* Block order and columns */
-section.page-section:has(.bc-clinic) .fe-block:has(.bc-clinic__hero){order:1;grid-column:1/-1!important}
-section.page-section:has(.bc-clinic) .fe-block:has(.bc-clinic__facts){order:2;grid-column:2!important;padding:clamp(64px,8vw,96px) 0!important}
-section.page-section:has(.bc-clinic) .fe-block:has(.sqs-block-embed){order:3;grid-column:3!important;padding:clamp(64px,8vw,96px) 0!important}
-section.page-section:has(.bc-clinic) .fe-block:has(.bc-clinic__after){order:4;grid-column:1/-1!important}
+body:not(.sqs-edit-mode) section.page-section:has(.bc-clinic) .fe-block:has(.bc-clinic__hero){order:1;grid-column:1/-1!important}
+body:not(.sqs-edit-mode) section.page-section:has(.bc-clinic) .fe-block:has(.bc-clinic__facts){order:2;grid-column:2!important;padding:clamp(64px,8vw,96px) 0!important}
+body:not(.sqs-edit-mode) section.page-section:has(.bc-clinic) .fe-block:has(.sqs-block-embed){order:3;grid-column:3!important;padding:clamp(64px,8vw,96px) 0!important}
+body:not(.sqs-edit-mode) section.page-section:has(.bc-clinic) .fe-block:has(.bc-clinic__after){order:4;grid-column:1/-1!important}
 
 /* The booking calendar: a white card with rounded corners. Its iframe stays exactly as Google draws it. */
-section.page-section:has(.bc-clinic) .fe-block:has(.sqs-block-embed) .sqs-block-embed{height:auto!important;padding:0!important}
-section.page-section:has(.bc-clinic) .fe-block:has(.sqs-block-embed) .sqs-block-content{background:var(--bc-white,#FFFFFF);border-radius:24px;overflow:hidden;padding:8px}
-section.page-section:has(.bc-clinic) .fe-block:has(.sqs-block-embed) iframe{display:block;width:100%!important;min-height:700px;border:0}
+body:not(.sqs-edit-mode) section.page-section:has(.bc-clinic) .fe-block:has(.sqs-block-embed) .sqs-block-embed{height:auto!important;padding:0!important}
+body:not(.sqs-edit-mode) section.page-section:has(.bc-clinic) .fe-block:has(.sqs-block-embed) .sqs-block-content{background:var(--bc-white,#FFFFFF);border-radius:24px;overflow:hidden;padding:8px}
+body:not(.sqs-edit-mode) section.page-section:has(.bc-clinic) .fe-block:has(.sqs-block-embed) iframe{display:block;width:100%!important;min-height:700px;border:0}
 
 @media (max-width:860px){
-  section.page-section:has(.bc-clinic) .fluid-engine{grid-template-columns:16px minmax(0,1fr) 16px!important;column-gap:0!important}
-  section.page-section:has(.bc-clinic) .fe-block:has(.bc-clinic__facts){grid-column:2!important;padding:56px 0 24px!important}
-  section.page-section:has(.bc-clinic) .fe-block:has(.sqs-block-embed){grid-column:2!important;padding:0 0 56px!important}
-  section.page-section:has(.bc-clinic) .fe-block:has(.sqs-block-embed) .sqs-block-content{padding:0}
+  body:not(.sqs-edit-mode) section.page-section:has(.bc-clinic) .fluid-engine{grid-template-columns:16px minmax(0,1fr) 16px!important;column-gap:0!important}
+  body:not(.sqs-edit-mode) section.page-section:has(.bc-clinic) .fe-block:has(.bc-clinic__facts){grid-column:2!important;padding:56px 0 24px!important}
+  body:not(.sqs-edit-mode) section.page-section:has(.bc-clinic) .fe-block:has(.sqs-block-embed){grid-column:2!important;padding:0 0 56px!important}
+  body:not(.sqs-edit-mode) section.page-section:has(.bc-clinic) .fe-block:has(.sqs-block-embed) .sqs-block-content{padding:0}
 }
 
 /* The blocks themselves */
