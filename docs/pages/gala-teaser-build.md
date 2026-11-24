@@ -71,3 +71,4 @@ Delete the section after December 15, 2026. Nothing else on the page depends on 
 - Under the lead, a Teal Green "On the menu" tag and the line "A generous spread of appetizers and beverages." (staff wording), at every width.
 - "Can't make it? Join in spirit" now goes to /gala (the event page, whose Givebutter widget has the "I'll be there in spirit!" option) instead of straight to Givebutter. Both buttons now go to /gala.
 - Tested on a local copy at 390, 1440 and 1600 px: nothing scrolls sideways.
+- Live November 23, 2026: pasted into the homepage Code block (`block-yui_3_17_2_1_1795460826642_5906`, which held v0.13.6 exactly; it now matches this file). Checked live: at 1440 px the food line shows under the lead and the other homepage sections keep their grids; at 390 px nothing scrolls sideways.
